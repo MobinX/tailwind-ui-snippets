@@ -1,0 +1,24 @@
+{
+  "name": "tailwind-ui-snippets",
+  "displayName": "tailwind_ui_snippets",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "gray-matter": "^4.0.3"
+  }
+}

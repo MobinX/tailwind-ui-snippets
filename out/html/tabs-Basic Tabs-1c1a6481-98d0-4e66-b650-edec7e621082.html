@@ -1,0 +1,22 @@
+<div x-data="{ selectedTab: 'Overview', tabItems: ['Overview', 'Integration', 'Billing', 'Transactions', 'plans'] }">
+    <div class="max-w-screen-xl mx-auto px-4 md:px-8">
+        <div class="w-full border-b flex items-center gap-x-3 overflow-x-auto text-sm" aria-label="Manage your account">
+            <template x-for="(item, index) in tabItems" :key="index">
+                <button
+                    @click="selectedTab = item"
+                    :class="{'border-indigo-600 text-indigo-600': selectedTab === item, 'border-white text-gray-500': selectedTab !== item}"
+                    class="group outline-none py-1.5 border-b-2">
+                    <div class="py-1.5 px-3 rounded-lg duration-150 group-hover:text-indigo-600 group-hover:bg-gray-50 group-active:bg-gray-100 font-medium" x-text="item">
+                    </div>
+                </button>
+            </template>
+        </div>
+        <template x-for="(item, index) in tabItems" :key="index">
+            <div x-show="selectedTab === item" class="py-6">
+                <p class="text-xs leading-normal">
+                    <span>This is </span><b x-text="item"></b><span> Tab</span>
+                </p>
+            </div>
+        </template>
+    </div>
+</div>

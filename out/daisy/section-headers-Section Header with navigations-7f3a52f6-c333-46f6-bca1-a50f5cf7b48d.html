@@ -1,0 +1,37 @@
+<div
+  x-data="{ navigation: [
+  { href: 'javascript:void(0)', name: 'Overview' },
+  { href: 'javascript:void(0)', name: 'Integration' },
+  { href: 'javascript:void(0)', name: 'Billing' },
+  { href: 'javascript:void(0)', name: 'Transactions' },
+  { href: 'javascript:void(0)', name: 'Plans' }
+],
+activeTab: 0
+}"
+  class="max-w-screen-xl mx-auto px-4 pt-4 md:px-8"
+>
+  <div class="max-w-lg">
+    <h3 class="text-gray-800 text-2xl font-bold">Team members</h3>
+    <p class="text-gray-600 mt-2">
+      Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry.
+    </p>
+  </div>
+  <div class="mt-6">
+    <ul class="w-full border-b flex items-center gap-x-3 overflow-x-auto">
+      <template x-for="(item, index) in navigation" :key="index">
+        <li
+          :class="{'py-2 border-b-2 border-indigo-600 text-indigo-600': index === activeTab, 'py-2 border-b-2 border-white text-gray-500': index !== activeTab}"
+        >
+          <a
+            :href="item.href"
+            class="py-2.5 px-4 rounded-lg duration-150 text-sm hover:text-indigo-600 hover:bg-gray-100 active:bg-gray-200 font-medium"
+            x-text="item.name"
+            @click.prevent="activeTab = index"
+          >
+          </a>
+        </li>
+      </template>
+    </ul>
+  </div>
+</div>

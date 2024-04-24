@@ -1,0 +1,21 @@
+<!-- This example uses this library from Tailwind Labs: https://github.com/tailwindlabs/tailwindcss-forms -->
+<div x-data="{ radios: ['Write and Read', 'Read only', 'Write only'], selectedRadio: 'admin' }">
+    <h2 class="text-gray-800 font-medium">Select user role</h2>
+    <ul class="mt-3 space-y-3">
+        <!-- Radio -->
+        <li class="flex items-center gap-x-2.5">
+            <input type="radio" name="role" x-model="selectedRadio" id="admin" value="admin" class="form-radio border-gray-400 text-indigo-600 focus:ring-indigo-600 duration-150" />
+            <label for="admin" class="text-sm text-gray-700 font-medium">
+                Admin
+            </label>
+        </li>
+        <!-- Radio groups -->
+        <template x-for="(item, idx) in radios" :key="idx">
+            <li class="flex items-center gap-x-2.5">
+                <input type="radio" name="role" x-model="selectedRadio" :id="idx" :value="item" class="form-radio border-gray-400 text-indigo-600 focus:ring-indigo-600 duration-150" />
+                <label :for="idx" class="text-sm text-gray-700 font-medium" x-text="item">
+                </label>
+            </li>
+        </template>
+    </ul>
+</div>

@@ -1,0 +1,261 @@
+<div x-data="pricingComponent()">
+  <section class="py-14 text-gray-600">
+    <div
+      class="relative max-w-xl mx-auto space-y-3 px-4 sm:text-center md:px-0"
+    >
+      <h3 class="text-indigo-600 font-semibold">Pricing</h3>
+      <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">
+        Compare our plans and find yours
+      </p>
+      <div class="max-w-xl">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          efficitur consequat nunc.
+        </p>
+      </div>
+    </div>
+    <div class="mt-16">
+      <div class="sticky top-0 py-6 border-b bg-white">
+        <div class="max-w-screen-xl mx-auto">
+          <ul class="ml-auto flex gap-x-6 px-4 md:px-8 lg:max-w-3xl">
+            <template x-for="plan in plans" :key="plan.name">
+              <li
+                :class="{'space-y-4 w-full': true, 'hidden lg:block': selectedPlan !== plan.name}"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-gray-700 font-medium"
+                    x-text="plan.name"
+                  ></span>
+                  <div
+                    class="relative text-gray-500 hover:text-gray-800 lg:hidden"
+                  >
+                    <!-- Dropdown for small devices -->
+                    <svg
+                      class="w-5 h-5 absolute right-0 inset-y-0 my-auto"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <select
+                      class="bg-transparent appearance-none outline-none px-8 cursor-pointer"
+                      x-model="selectedPlan"
+                    >
+                      <option disabled>Switch plan</option>
+                      <template x-for="option in plans" :key="option.name">
+                        <option
+                          x-bind:value="option.name"
+                          x-text="option.name"
+                        ></option>
+                      </template>
+                    </select>
+                  </div>
+                </div>
+                <div class="text-gray-800 text-3xl font-semibold">
+                  <span x-text="`$${plan.price}`"></span>
+                  <span class="text-xl text-gray-600 font-normal">/mo</span>
+                </div>
+                <p class="text-sm" x-text="plan.desc"></p>
+                <button
+                  class="px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150 text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700"
+                >
+                  Get Started
+                </button>
+              </li>
+            </template>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-screen-xl mx-auto mt-10 space-y-4 px-4 overflow-auto md:overflow-visible md:px-8"
+      >
+        <template x-for="table in tables" :key="table.label">
+          <table class="w-full table-auto text-sm text-left">
+            <thead class="text-gray-600 font-medium border-b">
+              <tr>
+                <th class="z-20 top-12 py-6 lg:sticky">
+                  <div class="flex items-center gap-x-3">
+                    <div
+                      class="w-12 h-12 text-indigo-600 rounded-full border flex items-center justify-center"
+                      x-html="table.label_icon"
+                    ></div>
+                    <h4
+                      class="text-gray-800 text-xl font-medium"
+                      x-text="table.label"
+                    ></h4>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-600 divide-y">
+              <template x-for="(item, idx) in table.items" :key="idx">
+                <tr>
+                  <td
+                    class="px-6 py-4 whitespace-nowrap"
+                    x-text="item.name"
+                  ></td>
+                  <td
+                    class="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell"
+                    x-html="item.basic"
+                  ></td>
+                  <td
+                    class="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell"
+                    x-html="item.business"
+                  ></td>
+                  <td
+                    class="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell"
+                    x-html="item.enterprise"
+                  ></td>
+                  <td
+                    class="text-center w-[250px] px-6 py-4 whitespace-nowrap lg:hidden"
+                    x-html="item[selectedPlan.toLowerCase()]"
+                  ></td>
+                </tr>
+              </template>
+            </tbody>
+          </table>
+        </template>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  function pricingComponent() {
+    return {
+      checkIcon: "<div class='text-indigo-600 text-xl'>+</div>",
+      "<div class='text-xl'>-</div>": "<div class='text-xl'>-</div>",
+      plans: [
+        {
+          name: "Basic",
+          desc: "Lorem ipsum dolor sit amet torrel, consectet adipiscing elit.",
+          price: "15",
+        },
+        {
+          name: "Business",
+          desc: "Lorem ipsum dolor sit amet torrel, consectet adipiscing elit.",
+          price: "20",
+        },
+        {
+          name: "Enterprise",
+          desc: "Lorem ipsum dolor sit amet torrel, consectet adipiscing elit.",
+          price: "50",
+        },
+      ],
+      tables: [
+        {
+          label: "Features",
+          label_icon:
+            '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>',
+          items: [
+            {
+              name: "Aliquam finibus",
+              basic: "<div class='text-indigo-600 text-xl'>+</div>",
+              business: "<div class='text-indigo-600 text-xl'>+</div>",
+              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+            },
+            {
+              name: "Vestibulum tristique",
+              basic: "<div class='text-xl'>-</div>",
+              business: "<div class='text-indigo-600 text-xl'>+</div>",
+              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+            },
+            {
+              name: "Aliquam finibus",
+              basic: "<div class='text-xl'>-</div>",
+              business: "<div class='text-xl'>-</div>",
+              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+            },
+            {
+              name: "Praesent aliquet",
+              basic: "<div class='text-xl'>-</div>",
+              business: "150GB",
+              enterprise: "Unlimited",
+            },
+          ],
+        },
+        {
+          label: "Analytics",
+          label_icon:
+            '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg>',
+          items: [
+            {
+              name: "Aliquam finibus",
+              basic: "<div class='text-indigo-600 text-xl'>+</div>",
+              business: "<div class='text-indigo-600 text-xl'>+</div>",
+              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+            },
+            {
+              name: "Vestibulum tristique",
+              basic: "<div class='text-xl'>-</div>",
+              business: "<div class='text-indigo-600 text-xl'>+</div>",
+              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+            },
+            {
+              name: "Aliquam finibus",
+              basic: "<div class='text-xl'>-</div>",
+              business: "<div class='text-xl'>-</div>",
+              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+            },
+            {
+              name: "Lorinto dinor",
+              basic: "30",
+              business: "60",
+              enterprise: "Custom",
+            },
+            {
+              name: "Praesent aliquet",
+              basic: "Limited",
+              business: "Limited",
+              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+            },
+            {
+              name: "Praesent aliquet",
+              basic: "<div class='text-xl'>-</div>",
+              business: "150GB",
+              enterprise: "Unlimited",
+            },
+          ],
+        },
+        {
+          label: "Support",
+          label_icon:
+            '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" /></svg>',
+          items: [
+            {
+              name: "Aliquam finibus",
+              basic: "<div class='text-indigo-600 text-xl'>+</div>",
+              business: "<div class='text-indigo-600 text-xl'>+</div>",
+              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+            },
+            {
+              name: "Vestibulum tristique",
+              basic: "<div class='text-xl'>-</div>",
+              business: "<div class='text-indigo-600 text-xl'>+</div>",
+              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+            },
+            {
+              name: "Aliquam finibus",
+              basic: "<div class='text-xl'>-</div>",
+              business: "<div class='text-xl'>-</div>",
+              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+            },
+            {
+              name: "Praesent aliquet",
+              basic: "<div class='text-xl'>-</div>",
+              business: "150GB",
+              enterprise: "Unlimited",
+            },
+          ],
+        },
+      ],
+      selectedPlan: "Basic",
+    };
+  }
+</script>
