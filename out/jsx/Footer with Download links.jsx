@@ -1,4 +1,4 @@
-<div x-data="{ \n  footerNavs: [\n      {\n          href: 'javascript:void()',\n          name: 'Terms'\n      },\n      {\n          href: 'javascript:void()',\n          name: 'License'\n      },\n      {\n          href: 'javascript:void()',\n          name: 'Privacy'\n      },\n      {\n          href: 'javascript:void()',\n          name: 'About us'\n      }\n  ]\n}">
+<div>
   <footer className="pt-10">
     <div className="max-w-screen-xl mx-auto px-4 text-base-content md:px-8">
       <div className="justify-between sm:flex">
@@ -9,13 +9,16 @@
             efficitur.
           </p>
           <ul className="flex flex-wrap items-center gap-4 text-sm sm:text-base">
-            <template x-for="(item, idx) in footerNavs" key="idx" />
-          </ul>
-        </div>
-        <div className="mt-6">
+           { /*-use a map loop*/ }
+              <li className="text-base-content hover:text-base-content duration-150">
+                <a href="item.href">item.name</a></li><a href="item.href">
+            
+          </a></ul><a href="item.href">
+        </a></div><a href="item.href">
+        </a><div className="mt-6"><a href="item.href">
           <p className="text-base-content font-semibold">Get the app</p>
-          <div className="flex items-center gap-3 mt-3 sm:block">
-            <a href="javascript:void()">
+          </a><div className="flex items-center gap-3 mt-3 sm:block"><a href="item.href">
+            </a><a href="javascript:void()">
               <svg className="w-32" fill="none" viewBox="0 0 338 100">
                 <path fill="#000" d="M324.477 99.751H13.532c-6.841 0-12.438-5.597-12.438-12.438V12.688C1.094 5.846 6.69.249 13.532.249h310.945c6.841 0 12.438 5.597 12.438 12.438v74.627c0 6.84-5.597 12.437-12.438 12.437z" />
                 <path fill="#A6A6A6" d="M324.477.249H13.532C6.69.249 1.094 5.846 1.094 12.687v74.627c0 6.84 5.597 12.437 12.438 12.437h310.945c6.841 0 12.438-5.597 12.438-12.438V12.688c0-6.841-5.597-12.438-12.438-12.438zm0 1.99c5.761 0 10.448 4.687 10.448 10.448v74.627c0 5.76-4.687 10.448-10.448 10.448H13.532c-5.76 0-10.448-4.687-10.448-10.448V12.687c0-5.76 4.687-10.448 10.448-10.448h310.945z" />

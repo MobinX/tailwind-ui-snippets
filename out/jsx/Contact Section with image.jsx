@@ -1,4 +1,4 @@
-<main className="flex overflow-hidden" x-data="{ servicesItems: ['Mobile development', 'UI/UX Design', 'web development', 'SEO'] }">
+<main className="flex overflow-hidden">
   <div className="flex-1 hidden lg:block">
     <img src="https://images.unsplash.com/photo-1697135807547-5fa9fd22d9ec?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="w-full h-screen object-cover" />
   </div>
@@ -37,7 +37,16 @@
         <div>
           <label className="font-medium"> Services </label>
           <ul className="grid gap-y-2 gap-x-6 flex-wrap grid-cols-2 mt-3">
-            <template x-for="(item, idx) in servicesItems" key="idx" />
+           { /*-use a map loop*/ }
+              <li className="flex gap-x-3 text-sm">
+                <div>
+                  <input id="'service-' + idx" type="checkbox" className="checkbox-item peer hidden" />
+                  <label htmlFor="'service-' + idx" className="relative flex w-5 h-5 bg-base-100 peer-checked:bg-primary rounded-md border ring-offset-2 ring-primary duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-base-100 after:rotate-45">
+                  </label>
+                </div>
+                <label htmlFor="'service-' + idx" className="cursor-pointer">item</label>
+              </li>
+            
           </ul>
         </div>
         <div>

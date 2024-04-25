@@ -11,9 +11,19 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus
             </p>
         </div>
-        <div className="mt-12" x-data="{ features: [\n            {\n                title: 'Fast Refresh',\n                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.'\n            },\n            {\n                title: 'Analytics',\n                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.'\n            },\n            {\n                title: 'Datacenter security',\n                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.'\n            },\n            {\n                title: 'Build on your terms',\n                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.'\n            },\n            {\n                title: 'Safe to use',\n                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.'\n            },\n            {\n                title: 'Flexible',\n                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus.'\n            },\n        ]}">
+        <div className="mt-12">
             <ul className="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
-                <template x-for="(item, idx) in features" key="idx" />
+               { /*-use a map loop*/ }
+                    <li className="space-y-3">
+                        <div className="w-12 h-12 border text-primary rounded-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                        </div>
+                        <h4 className="text-lg text-base-content font-semibold">item.title</h4>
+                        <p>item.desc</p>
+                    </li>
+                
             </ul>
         </div>
     </div>

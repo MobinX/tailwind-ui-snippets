@@ -1,4 +1,4 @@
-<div x-data="{\n  checkIcon: \"<div class=`text-primary text-xl`>+</div>\",\n  plans: [\n    {\n      name: \"Basic\",\n      desc: \"Lorem ipsum dolor sit amet torrel, consectet adipiscing elit.\",\n      price: \"15\",\n    },\n    {\n      name: \"Business\",\n      desc: \"Lorem ipsum dolor sit amet torrel, consectet adipiscing elit.\",\n      price: \"20\",\n    },\n    {\n      name: \"Enterprise\",\n      desc: \"Lorem ipsum dolor sit amet torrel, consectet adipiscing elit.\",\n      price: \"50\",\n    },\n  ],\n  tables: [\n    {\n      label: \"Features\",\n      label_icon:\n        `<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" strokeWidth=\"1.5\" stroke=\"currentColor\" class=\"w-6 h-6\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" d=\"M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z\" /></svg>`,\n      items: [\n        {\n          name: \"Aliquam finibus\",\n          basic: \"<div class=`text-primary text-xl`>+</div>\",\n          business: \"<div class=`text-primary text-xl`>+</div>\",\n          enterprise: \"<div class=`text-primary text-xl`>+</div>\",\n        },\n        {\n          name: \"Vestibulum tristique\",\n          basic: \"<div class=`text-xl`>-</div>\",\n          business: \"<div class=`text-primary text-xl`>+</div>\",\n          enterprise: \"<div class=`text-primary text-xl`>+</div>\",\n        },\n        {\n          name: \"Aliquam finibus\",\n          basic: \"<div class=`text-xl`>-</div>\",\n          business: \"<div class=`text-xl`>-</div>\",\n          enterprise: \"<div class=`text-primary text-xl`>+</div>\",\n        },\n        {\n          name: \"Praesent aliquet\",\n          basic: \"<div class=`text-xl`>-</div>\",\n          business: \"150GB\",\n          enterprise: \"Unlimited\",\n        },\n      ],\n    },\n    {\n      label: \"Analytics\",\n      label_icon:\n        `<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" strokeWidth=\"1.5\" stroke=\"currentColor\" class=\"w-6 h-6\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" d=\"M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z\" /></svg>`,\n      items: [\n        {\n          name: \"Aliquam finibus\",\n          basic: \"<div class=`text-primary text-xl`>+</div>\",\n          business: \"<div class=`text-primary text-xl`>+</div>\",\n          enterprise: \"<div class=`text-primary text-xl`>+</div>\",\n        },\n        {\n          name: \"Vestibulum tristique\",\n          basic: \"<div class=`text-xl`>-</div>\",\n          business: \"<div class=`text-primary text-xl`>+</div>\",\n          enterprise: \"<div class=`text-primary text-xl`>+</div>\",\n        },\n        {\n          name: \"Aliquam finibus\",\n          basic: \"<div class=`text-xl`>-</div>\",\n          business: \"<div class=`text-xl`>-</div>\",\n          enterprise: \"<div class=`text-primary text-xl`>+</div>\",\n        },\n        {\n          name: \"Lorinto dinor\",\n          basic: \"30\",\n          business: \"60\",\n          enterprise: \"Custom\",\n        },\n        {\n          name: \"Praesent aliquet\",\n          basic: \"Limited\",\n          business: \"Limited\",\n          enterprise: \"<div class=`text-primary text-xl`>+</div>\",\n        },\n        {\n          name: \"Praesent aliquet\",\n          basic: \"<div class=`text-xl`>-</div>\",\n          business: \"150GB\",\n          enterprise: \"Unlimited\",\n        },\n      ],\n    },\n    {\n      label: \"Support\",\n      label_icon:\n        `<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" strokeWidth=\"1.5\" stroke=\"currentColor\" class=\"w-6 h-6\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" d=\"M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z\" /></svg>`,\n      items: [\n        {\n          name: \"Aliquam finibus\",\n          basic: \"<div class=`text-primary text-xl`>+</div>\",\n          business: \"<div class=`text-primary text-xl`>+</div>\",\n          enterprise: \"<div class=`text-primary text-xl`>+</div>\",\n        },\n        {\n          name: \"Vestibulum tristique\",\n          basic: \"<div class=`text-xl`>-</div>\",\n          business: \"<div class=`text-primary text-xl`>+</div>\",\n          enterprise: \"<div class=`text-primary text-xl`>+</div>\",\n        },\n        {\n          name: \"Aliquam finibus\",\n          basic: \"<div class=`text-xl`>-</div>\",\n          business: \"<div class=`text-xl`>-</div>\",\n          enterprise: \"<div class=`text-primary text-xl`>+</div>\",\n        },\n        {\n          name: \"Praesent aliquet\",\n          basic: \"<div class=`text-xl`>-</div>\",\n          business: \"150GB\",\n          enterprise: \"Unlimited\",\n        },\n      ],\n    },\n  ],\n  selectedPlan: \"Basic\",\n}">
+<div>
   <section className="py-14 text-base-content">
     <div className="relative max-w-xl mx-auto space-y-3 px-4 sm:text-center md:px-0">
       <h3 className="text-primary font-semibold">Pricing</h3>
@@ -16,12 +16,61 @@
       <div className="sticky top-0 py-6 border-b bg-base-100">
         <div className="max-w-screen-xl mx-auto">
           <ul className="ml-auto flex gap-x-6 px-4 md:px-8 lg:max-w-3xl">
-            <template x-for="plan in plans" key="plan.name" />
+           { /*-use a map loop*/ }
+              <li className="{`space-y-4 w-full`: true, `hidden lg:block`: selectedPlan !== plan.name}">
+                <div className="flex items-center justify-between">
+                  <span className="text-base-content font-medium">plan.name</span>
+                  <div className="relative text-base-content hover:text-base-content lg:hidden">
+                    { /* Dropdown for small devices */ }
+                    <svg className="w-5 h-5 absolute right-0 inset-y-0 my-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillrule="evenodd" d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z" cliprule="evenodd" />
+                    </svg>
+                    <select className="bg-transparent appearance-none outline-none px-8 cursor-pointer" x-model="selectedPlan">
+                      <option disabled={true}>Switch plan</option>
+                     { /*-use a map loop*/ }
+                        <option x-bind:value="option.name">option.name</option>
+                      
+                    </select>
+                  </div>
+                </div>
+                <div className="text-base-content text-3xl font-semibold">
+                  <span>`$${ /*$merge: {plan.price}*/ }`</span>
+                  <span className="text-xl text-base-content font-normal">/mo</span>
+                </div>
+                <p className="text-sm">plan.desc</p>
+                <button className="w-full  btn btn-primary duration-150 text-sm">                 Get Started
+                </button>
+              </li>
+            
           </ul>
         </div>
       </div>
       <div className="max-w-screen-xl mx-auto mt-10 space-y-4 px-4 overflow-auto md:overflow-visible md:px-8">
-        <template x-for="table in tables" key="table.label" />
+       { /*-use a map loop*/ }
+          <table className="w-full table-auto text-sm text-left">
+            <thead className="text-base-content font-medium border-b">
+              <tr>
+                <th className="z-20 top-12 py-6 lg:sticky">
+                  <div className="flex items-center gap-x-3">
+                    <div className="w-12 h-12 text-primary rounded-full border flex items-center justify-center">table.label_icon</div>
+                    <h4 className="text-base-content text-xl font-medium">table.label</h4>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody className="text-base-content divide-y">
+             { /*-use a map loop*/ }
+                <tr>
+                  <td className="px-6 py-4 base-100space-nowrap">item.name</td>
+                  <td className="text-center w-[250px] px-6 py-4 base-100space-nowrap hidden lg:table-cell">item.basic</td>
+                  <td className="text-center w-[250px] px-6 py-4 base-100space-nowrap hidden lg:table-cell">item.business</td>
+                  <td className="text-center w-[250px] px-6 py-4 base-100space-nowrap hidden lg:table-cell">item.enterprise</td>
+                  <td className="text-center w-[250px] px-6 py-4 base-100space-nowrap lg:hidden">item[selectedPlan.toLowerCase()]</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
       </div>
     </div>
   </section>

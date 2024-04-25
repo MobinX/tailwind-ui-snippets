@@ -1,4 +1,4 @@
-<div x-data="{ stats: [\n        { data: '35K', desc: 'Customers consectetur adipiscing elit.' },\n        { data: '10K+', desc: 'Downloads efficitur id eu nulla facilisis turpis' },\n        { data: '40+', desc: 'Countries maximus sit amet auctor sed,' },\n        { data: '30M+', desc: 'Total revenue consectetur adipiscing elit' }\n    ] \n}">
+<div>
 
     <section className="py-28 bg-base-content">
         <div className="relative z-10 max-w-screen-xl mx-auto px-4 md:px-8">
@@ -12,7 +12,12 @@
             </div>
             <div className="mt-12">
                 <ul className="flex-wrap gap-x-12 gap-y-10 items-center space-y-8 sm:space-y-0 sm:flex xl:justify-center">
-                    <template x-for="(item, index) in stats" key="index" />
+                   { /*-use a map loop*/ }
+                        <li className="sm:max-w-[15rem]">
+                            <h4 className="text-4xl text-base-100 font-semibold">item.data</h4>
+                            <p className="mt-3 text-base-content font-medium">item.desc</p>
+                        </li>
+                    
                 </ul>
             </div>
         </div>

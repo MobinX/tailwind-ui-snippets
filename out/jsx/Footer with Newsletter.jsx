@@ -1,4 +1,4 @@
-<div x-data="{\n  footerNavs: [\n  {\n    label: 'Resources',\n    items: [\n        {\n            href: 'javascript:void()',\n            name: 'contact'\n        },\n        {\n            href: 'javascript:void()',\n            name: 'Support'\n        },\n        {\n            href: 'javascript:void()',\n            name: 'Documentation'\n        },\n        {\n            href: 'javascript:void()',\n            name: 'Pricing'\n        },\n    ],\n},\n{\n    label: 'About',\n    items: [\n        {\n            href: 'javascript:void()',\n            name: 'Terms'\n        },\n        {\n            href: 'javascript:void()',\n            name: 'License'\n        },\n        {\n            href: 'javascript:void()',\n            name: 'Privacy'\n        },\n        {\n            href: 'javascript:void()',\n            name: 'About US'\n        },\n    ]\n},\n{\n    label: 'Explore',\n    items: [\n        {\n            href: 'javascript:void()',\n            name: 'Showcase'\n        },\n        {\n            href: 'javascript:void()',\n            name: 'Roadmap'\n        },\n        {\n            href: 'javascript:void()',\n            name: 'Languages'\n        },\n        {\n            href: 'javascript:void()',\n            name: 'Blog'\n        },\n    ]\n},\n{\n    label: 'Company',\n    items: [\n        {\n            href: 'javascript:void()',\n            name: 'Partners'\n        },\n        {\n            href: 'javascript:void()',\n            name: 'Team'\n        },\n        {\n            href: 'javascript:void()',\n            name: 'Careers'\n        },\n    ],\n}\n  ]\n}">
+<div>
   <footer className="pt-10">
     <div className="max-w-screen-xl mx-auto px-4 md:px-8">
       <div className="justify-between items-center gap-12 md:flex">
@@ -22,7 +22,16 @@
         </div>
       </div>
       <div className="flex-1 mt-16 space-y-6 justify-between sm:flex md:space-y-0">
-        <template x-for="(item, idx) in footerNavs" key="idx" />
+       { /*-use a map loop*/ }
+          <ul className="space-y-4 text-base-content">
+            <h4 className="text-base-content font-semibold sm:pb-2">item.label</h4>
+           { /*-use a map loop*/ }
+              <li>
+                <a href="el.href" className="hover:text-base-content duration-150">el.name</a>
+              </li>
+            
+          </ul>
+        
       </div>
       <div className="mt-10 py-10 border-t items-center justify-between sm:flex">
         <p className="text-base-content">

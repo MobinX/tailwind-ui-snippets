@@ -1,4 +1,4 @@
-<div x-data="{\n  testimonials: [\n      {\n          avatar: 'https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg',\n          name: 'Martin escobar',\n          title: 'Founder of meta',\n          quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae.'\n      },\n      {\n          avatar: 'https://randomuser.me/api/portraits/women/79.jpg',\n          name: 'Angela stian',\n          title: 'Product designer',\n          quote: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.'\n      },\n      {\n          avatar: 'https://randomuser.me/api/portraits/men/86.jpg',\n          name: 'Karim ahmed',\n          title: 'DevOp engineer',\n          quote: 'There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.'\n      },\n  ]\n}">
+<div>
   <section className="py-14">
     <div className="max-w-screen-xl mx-auto px-4 md:px-8">
       <div className="max-w-xl sm:text-center md:mx-auto">
@@ -13,7 +13,22 @@
       </div>
       <div className="mt-12">
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <template x-for="(item, idx) in testimonials" key="idx" />
+         { /*-use a map loop*/ }
+            <li className="bg-base-200 p-4 rounded-xl">
+              <figure>
+                <div className="flex items-center gap-x-4">
+                  <imgsrc="item.avatar" className="w-16 h-16 rounded-full">
+                  <div>
+                    <span className="block text-base-content font-semibold">item.name</span>
+                    <span className="block text-base-content text-sm mt-0.5">item.title</span>
+                  </div>
+                </imgsrc="item.avatar"></div>
+                <blockquote>
+                  <p className="mt-6 text-base-content">item.quote</p>
+                </blockquote>
+              </figure>
+            </li>
+          
         </ul>
       </div>
     </div>

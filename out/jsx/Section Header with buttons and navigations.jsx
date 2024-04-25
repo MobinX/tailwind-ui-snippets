@@ -1,4 +1,4 @@
-<div x-data="{\n  navigation: [\n      { href: 'javascript:void(0)', name: 'Overview' },\n      { href: 'javascript:void(0)', name: 'Integration' },\n      { href: 'javascript:void(0)', name: 'Billing' },\n      { href: 'javascript:void(0)', name: 'Transactions' },\n      { href: 'javascript:void(0)', name: 'plans' }\n  ]\n}" className="max-w-screen-xl mx-auto px-4 pt-4 md:px-8">
+<div className="max-w-screen-xl mx-auto px-4 pt-4 md:px-8">
   <div className="items-start justify-between md:flex">
     <div>
       <h3 className="text-base-content text-2xl font-bold">Payments</h3>
@@ -17,7 +17,11 @@
   </div>
   <div className="mt-6 md:mt-4">
     <ul className="w-full border-b flex items-center gap-x-3 overflow-x-auto">
-      <template x-for="(item, idx) in navigation" key="idx" />
+     { /*-use a map loop*/ }
+        <li className="{'py-2 border-b-2': true, 'border-primary text-primary': idx == 0, 'border-base-100 text-base-content': idx != 0}">
+          <a href="item.href" className="py-2.5 px-4 rounded-lg duration-150 text-sm hover:text-primary hover:bg-base-300 active:bg-base-300/90 font-medium">item.name</a>
+        </li>
+      
     </ul>
   </div>
 </div>

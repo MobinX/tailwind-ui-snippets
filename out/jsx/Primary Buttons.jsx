@@ -1,6 +1,4 @@
-<>{ /* // sm */ }
-
-<button className="px-4 py-2 text-sm text-base-100 duration-150 bg-primary rounded-md hover:bg-primary active:shadow-lg">
+<>{ /* // sm */ }<button className="px-4 py-2 text-sm text-base-100 duration-150 bg-primary rounded-md hover:bg-primary active:shadow-lg">
   Button
 </button>
 

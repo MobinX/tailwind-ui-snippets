@@ -1,4 +1,4 @@
-<div x-data="{ tableItems: [\n    {\n        name: 'Solo learn app',\n        date: 'Oct 9, 2023',\n        status: 'Active',\n        price: '$35.000',\n        plan: 'Monthly subscription'\n    },\n    {\n        name: 'Window wrapper',\n        date: 'Oct 12, 2023',\n        status: 'Active',\n        price: '$12.000',\n        plan: 'Monthly subscription'\n    },\n    {\n        name: 'Unity loroin',\n        date: 'Oct 22, 2023',\n        status: 'Archived',\n        price: '$20.000',\n        plan: 'Annually subscription'\n    },\n    {\n        name: 'Background remover',\n        date: 'Jan 5, 2023',\n        status: 'Active',\n        price: '$5.000',\n        plan: 'Monthly subscription'\n    },\n    {\n        name: 'Colon tiger',\n        date: 'Jan 6, 2023',\n        status: 'Active',\n        price: '$9.000',\n        plan: 'Annually subscription'\n    }\n] }" className="max-w-screen-xl mx-auto px-4 md:px-8">
+<div className="max-w-screen-xl mx-auto px-4 md:px-8">
 
     <div className="items-start justify-between md:flex">
         <div className="max-w-lg">
@@ -22,7 +22,19 @@
                 </tr>
             </thead>
             <tbody className="text-base-content divide-y">
-                <template x-for="(item, idx) in tableItems" key="idx" />
+               { /*-use a map loop*/ }
+                    <tr>
+                        <td className="pr-6 py-4 base-100space-nowrap">item.name</td>
+                        <td className="pr-6 py-4 base-100space-nowrap">item.date</td>
+                        <td className="pr-6 py-4 base-100space-nowrap">
+                            <spanclass="`px-3 py-2="" rounded-full="" font-semibold="" text-xs@{item.status="==" 'active'="" ?="" 'text-primary="" bg-primary="" 40'="" 35'}`"="">item.status</spanclass="`px-3></td>
+                        <td className="pr-6 py-4 base-100space-nowrap">item.plan</td>
+                        <td className="pr-6 py-4 base-100space-nowrap">item.price</td>
+                        <td className="text-right base-100space-nowrap">
+                            <a href="javascript:void(0)" className="py-1.5 px-3 text-base-content hover:text-base-content duration-150 hover:bg-base-200 border rounded-lg">Manage</a>
+                        </td>
+                    </tr>
+                
             </tbody>
         </table>
     </div>

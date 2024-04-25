@@ -1,4 +1,4 @@
-<div x-data="{\n  footerNavs: [\n      { label: 'Resources', items: [{ href: 'javascript:void()', name: 'contact' }, { href: 'javascript:void()', name: 'Support' }, { href: 'javascript:void()', name: 'Documentation' }, { href: 'javascript:void()', name: 'Pricing' }] },\n      { label: 'About', items: [{ href: 'javascript:void()', name: 'Terms' }, { href: 'javascript:void()', name: 'License' }, { href: 'javascript:void()', name: 'Privacy' }, { href: 'javascript:void()', name: 'About US' }] },\n      { label: 'Explore', items: [{ href: 'javascript:void()', name: 'Showcase' }, { href: 'javascript:void()', name: 'Roadmap' }, { href: 'javascript:void()', name: 'Languages' }, { href: 'javascript:void()', name: 'Blog' }] },\n      { label: 'Company', items: [{ href: 'javascript:void()', name: 'Partners' }, { href: 'javascript:void()', name: 'Team' }, { href: 'javascript:void()', name: 'Careers' }] }\n  ]\n}">
+<div>
   <footer className="pt-10 bg-base-content">
     <div className="max-w-screen-xl mx-auto px-4 md:px-8">
       <div className="justify-between items-center gap-12 md:flex">
@@ -22,7 +22,16 @@
         </div>
       </div>
       <div className="flex-1 mt-16 space-y-6 justify-between sm:flex md:space-y-0">
-        <template x-for="(item, idx) in footerNavs" key="idx" />
+       { /*-use a map loop*/ }
+          <ul className="space-y-4 text-base-300/70">
+            <h4 className="text-base-300/90 font-semibold sm:pb-2">item.label</h4>
+           { /*-use a map loop*/ }
+              <li>
+                <a href="el.href" className="duration-150 hover:text-base-content">el.name</a>
+              </li>
+            
+          </ul>
+        
       </div>
       <div className="mt-10 py-10 border-t border-base-content items-center justify-between sm:flex">
         <p className="text-base-300/70">

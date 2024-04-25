@@ -1,4 +1,4 @@
-<div x-data="{\n    lessons: {\n        rustLessons: [\n            { name: 'Introduction to Rust', href: 'javascript:void(0)' },\n            { name: 'Installing and Setting up Rust', href: 'javascript:void(0)' },\n            { name: 'Basic Syntax and Data Types', href: 'javascript:void(0)' },\n            { name: 'Control Flow Statements', href: 'javascript:void(0)' },\n            { name: 'Functions and Modules', href: 'javascript:void(0)' },\n            { name: 'Ownership and Borrowing', href: 'javascript:void(0)' },\n            { name: 'Structs and Enums', href: 'javascript:void(0)' },\n            { name: 'Traits and Generics', href: 'javascript:void(0)' }\n        ],\n        cargoLessons: [\n            { name: 'Introduction to Cargo', href: 'javascript:void(0)' },\n            { name: 'Installing and Configuring Cargo', href: 'javascript:void(0)' },\n            { name: 'Basic Cargo Commands', href: 'javascript:void(0)' },\n            { name: 'Working with Dependencies', href: 'javascript:void(0)' },\n            { name: 'Rust Workspaces with Cargo', href: 'javascript:void(0)' },\n            { name: 'Ownership and Borrowing', href: 'javascript:void(0)' },\n            { name: 'Structs and Enums', href: 'javascript:void(0)' },\n            { name: 'Traits and Generics', href: 'javascript:void(0)' }\n        ]\n    }\n}">
+<><div>
     <nav className="fixed z-40 top-0 left-0 w-full h-full border-r bg-base-100 space-y-8 overflow-auto sm:w-80">
         <div className="sticky top-0 space-y-8 bg-base-100">
             <div className="h-20 flex items-center px-4 border-b md:px-8">
@@ -20,18 +20,25 @@
                 <h3 className="pb-3 px-4 font-medium text-base-content md:px-8">Rust Basics</h3>
                 <div className="text-base-content px-4 md:px-8">
                     <ul>
-                        <template x-for="(item, index) in lessons.rustLessons" key="index" />
-                    </ul>
-                </div>
-            </div>
-            <div>
+                       { /*-use a map loop*/ }
+                            <li>
+                                <a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">item.name</a></li><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">
+                        
+                    </a></ul><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">
+                </a></div><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">
+            </a></div><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">
+            </a><div><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">
                 <h3 className="pb-3 px-4 font-medium text-base-content md:px-8">Cargo Basics</h3>
-                <div className="text-base-content px-4 md:px-8">
-                    <ul>
-                        <template x-for="(item, index) in lessons.cargoLessons" key="index" />
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-</div>
+                </a><div className="text-base-content px-4 md:px-8"><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">
+                    </a><ul><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">
+                       { /*-use a map loop*/ }
+                            </a><li><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">
+                                </a><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">item.name</a></li><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">
+                        
+                    </a></ul><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">
+                </a></div><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">
+            </a></div><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">
+        </a></div><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">
+    </a></nav><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">
+</a></div><a href="item.href" className="block w-full py-2 px-4 border-l hover:border-primary hover:text-base-content duration-150 text-base-content">
+</a></>

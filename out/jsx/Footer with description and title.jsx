@@ -1,4 +1,4 @@
-<div x-data="{ footerNavs: [\n    { href: 'javascript:void()', name: 'Terms' },\n    { href: 'javascript:void()', name: 'License' },\n    { href: 'javascript:void()', name: 'Privacy' },\n    { href: 'javascript:void()', name: 'About us' }\n]}">
+<div>
     <footer className="pt-10">
         <div className="max-w-screen-xl mx-auto px-4 text-base-content md:px-8">
             <div className="space-y-6 sm:max-w-md sm:mx-auto sm:text-center">
@@ -19,7 +19,11 @@
             <div className="mt-10 py-10 border-t items-center justify-between sm:flex">
                 <p>&copy; 2022 Float UI Inc. All rights reserved.</p>
                 <ul className="flex flex-wrap items-center gap-4 mt-6 sm:text-sm sm:mt-0">
-                    <template x-for="(item, idx) in footerNavs" key="idx" />
+                   { /*-use a map loop*/ }
+                        <li className="text-base-content hover:text-base-content duration-150">
+                            <a x-bind:href="item.href">item.name</a>
+                        </li>
+                    
                 </ul>
             </div>
         </div>

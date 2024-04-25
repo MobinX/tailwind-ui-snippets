@@ -1,4 +1,4 @@
-<div x-data="{ members: [\n    {\n        avatar: 'https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg',\n        name: 'John lorin',\n        email: 'john@example.com'\n    }, {\n        avatar: 'https://randomuser.me/api/portraits/men/86.jpg',\n        name: 'Chris bondi',\n        email: 'chridbondi@example.com'\n    }, {\n        avatar: 'https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ',\n        name: 'yasmine',\n        email: 'yasmine@example.com'\n    }, {\n        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=a72ca28288878f8404a795f39642a46f',\n        name: 'Joseph',\n        email: 'joseph@example.com'\n    },\n]}" className="max-w-2xl mx-auto px-4">
+<div className="max-w-2xl mx-auto px-4">
     <div className="items-start justify-between sm:flex">
         <div>
             <h4 className="text-base-content text-xl font-semibold">Team members</h4>
@@ -12,6 +12,17 @@
         </a>
     </div>
     <ul className="mt-12 divide-y">
-        <template x-for="(item, idx) in members" key="idx" />
+       { /*-use a map loop*/ }
+            <li className="py-5 flex items-start justify-between">
+                <div className="flex gap-3">
+                    <imgsrc="item.avatar" className="flex-none w-12 h-12 rounded-full">
+                    <div>
+                        <span className="block text-sm text-base-content font-semibold">item.name</span>
+                        <span className="block text-sm text-base-content">item.email</span>
+                    </div>
+                </imgsrc="item.avatar"></div>
+                <a href="javascript:void(0)" className="text-base-content text-sm border rounded-lg px-3 py-2 duration-150 bg-base-100 hover:bg-base-300">Manage</a>
+            </li>
+        
     </ul>
 </div>

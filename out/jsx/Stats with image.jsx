@@ -1,4 +1,4 @@
-<section x-data="{ stats: [\n        { data: '35K', title: 'Customers' },\n        { data: '10K+', title: 'Downloads' },\n        { data: '40+', title: 'Countries' },\n        { data: '30M+', title: 'Total revenue' }\n    ] }" className="py-14">
+<section className="py-14">
     <div className="max-w-screen-xl mx-auto px-4 text-base-content gap-x-12 items-start justify-between lg:flex md:px-8">
         <div className="sm:hidden lg:block lg:max-w-xl">
             <img src="https://images.unsplash.com/photo-1622675363311-3e1904dc1885?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="rounded-lg" alt="" />
@@ -14,7 +14,12 @@
             </div>
             <div className="flex-none mt-6 md:mt-0 lg:mt-6">
                 <ul className="inline-grid gap-y-8 gap-x-14 grid-cols-2">
-                    <template x-for="(item, idx) in stats" key="idx" />
+                   { /*-use a map loop*/ }
+                        <li>
+                            <h4 className="text-4xl text-primary font-semibold">item.data</h4>
+                            <p className="mt-3 font-medium">item.title</p>
+                        </li>
+                    
                 </ul>
             </div>
         </div>

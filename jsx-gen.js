@@ -1,7 +1,7 @@
 var fs = require('fs');
 const path = require("path")
 const { htmlToJsx } = require("html-to-jsx-transform");
-let srcDir = path.join(process.cwd(), `out/daisyx`);
+let srcDir = path.join(process.cwd(), `out/final_html`);
 let outpath = path.join(process.cwd(), `out/jsx`); 
 
 const cheerio = require('cheerio');

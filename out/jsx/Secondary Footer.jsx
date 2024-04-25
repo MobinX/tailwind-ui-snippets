@@ -1,4 +1,4 @@
-<div x-data="{\n      footerNavs: [\n        {\n          href: \"javascript:void()\",\n          name: \"About\",\n        },\n        {\n          href: \"javascript:void()\",\n          name: \"Blog\",\n        },\n        {\n          href: \"javascript:void()\",\n          name: \"Team\",\n        },\n        {\n          href: \"javascript:void()\",\n          name: \"Careers\",\n        },\n        {\n          href: \"javascript:void()\",\n          name: \"Support\",\n        },\n      ],\n    }">
+<div>
   <footer className="text-base-content bg-base-100 px-4 py-5 max-w-screen-xl mx-auto md:px-8">
     <div className="gap-6 justify-between md:flex">
       <div className="flex-1">
@@ -21,7 +21,16 @@
         </form>
       </div>
       <div className="flex-1 mt-10 space-y-6 items-center justify-between sm:flex md:space-y-0 md:mt-0">
-        <template x-for="(item, idx) in footerNavs" key="idx" />
+       { /*-use a map loop*/ }
+          <ul className="space-y-4">
+            <h4 className="text-base-content font-medium">item.label</h4>
+           { /*-use a map loop*/ }
+              <li>
+                <a href="el.href" className="hover:underline hover:text-primary">el.name</a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
     <div className="mt-8 py-6 border-t items-center justify-between sm:flex">

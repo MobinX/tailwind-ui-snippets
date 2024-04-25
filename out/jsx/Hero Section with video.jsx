@@ -1,4 +1,4 @@
-<div x-data="{\n  isVideoPoppedUp: false,\n  closeVideo() {\n    $refs.video.pause();\n    this.isVideoPoppedUp = false;\n  },\n  openVideo() {\n    this.isVideoPoppedUp = true;\n    $refs.video.play();\n  }\n  }">
+<div>
   <section>
     <div className="max-w-screen-xl mx-auto px-4 py-28 gap-12 text-base-content md:px-8 xl:flex">
       <div className="space-y-5 max-w-2xl mx-auto text-center xl:text-left">

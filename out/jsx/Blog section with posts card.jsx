@@ -1,4 +1,4 @@
-<section x-data="{ posts: [\n    {\n        title: 'What is SaaS? Software as a Service Explained',\n        desc: 'Going into this journey, I had a standard therapy regimen, based on looking at the research literature. After I saw the movie, I started to ask other people.',\n        img: 'https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',\n        date: 'Jan 4 2022',\n        href: 'javascript:void(0)'\n    },\n    {\n        title: 'A Quick Guide to WordPress Hosting',\n        desc: 'According to him, \xE2\u20AC\u0153I\\'m still surprised that this has happened. But we are surprised because we are so surprised.\xE2\u20AC\x9DMore revelations.',\n        img: 'https://images.unsplash.com/photo-1620287341056-49a2f1ab2fdc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',\n        date: 'Jan 4 2022',\n        href: 'javascript:void(0)'\n    },\n    {\n        title: '7 Promising VS Code Extensions Introduced in 2022',\n        desc: 'I hope I remembered all the stuff that they needed to know. They\\'re like, \\'okay,\\' and write it in their little reading notebooks.',\n        img: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',\n        date: 'Jan 4 2022',\n        href: 'javascript:void(0)'\n    },\n    {\n        title: 'How to Use Root C++ Interpreter Shell to Write C++ Programs',\n        desc: 'The powerful gravity waves resulting from the impact of the planets\\' moons \xE2\u20AC\u201D four in total \xE2\u20AC\u201D were finally resolved in 2015 when gravitational.',\n        img: 'https://images.unsplash.com/photo-1617529497471-9218633199c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',\n        date: 'Jan 4 2022',\n        href: 'javascript:void(0)'\n    }\n] }" className="py-32">
+<section className="py-32">
     <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="space-y-5 sm:text-center sm:max-w-md sm:mx-auto">
             <h1 className="text-base-content text-3xl font-extrabold sm:text-4xl">Latest blog posts</h1>
@@ -15,7 +15,18 @@
             </form>
         </div>
         <ul className="grid gap-x-8 gap-y-10 mt-16 sm:grid-cols-2 lg:grid-cols-3">
-            <template x-for="(item, index) in posts" key="index" />
-        </ul>
-    </div>
-</section>
+           { /*-use a map loop*/ }
+                <li className="w-full mx-auto group sm:max-w-sm">
+                    <a href="item.href">
+                        <imgsrc="item.img" loading="lazy" alt="item.title" className="w-full rounded-lg">
+                        <div className="mt-3 space-y-2">
+                            <span className="block text-primary text-sm">item.date</span>
+                            <h3 className="text-lg text-base-content duration-150 group-hover:text-primary font-semibold">item.title</h3>
+                            <p className="text-base-content text-sm duration-150 group-hover:text-base-content">item.desc</p>
+                        </div>
+                    
+                </imgsrc="item.img"></a></li><a href="item.href">
+            
+        </a></ul><a href="item.href">
+    </a></div><a href="item.href">
+</a></section>

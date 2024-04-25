@@ -1,4 +1,4 @@
-<div x-data="{\n    tableItems: [\n        { name: \"Liam James\", email: \"liamjames@example.com\", position: \"Software engineer\", salary: \"$100K\" },\n        { name: \"Olivia Emma\", email: \"oliviaemma@example.com\", position: \"Product designer\", salary: \"$90K\" },\n        { name: \"William Benjamin\", email: \"william.benjamin@example.com\", position: \"Front-end developer\", salary: \"$80K\" },\n        { name: \"Henry Theodore\", email: \"henrytheodore@example.com\", position: \"Laravel engineer\", salary: \"$120K\" },\n        { name: \"Amelia Elijah\", email: \"amelia.elijah@example.com\", position: \"Open source manager\", salary: \"$75K\" }\n    ],\n    areAllChecked: false,\n    checkboxItems: {},\n    handleCheckboxItems() {\n        this.areAllChecked = !this.areAllChecked;\n        this.tableItems.forEach((_, idx) => {\n            this.checkboxItems[`checkbox${idx}`] = this.areAllChecked;\n        });\n    },\n    handleCheckboxChange(e, idx) {\n        this.areAllChecked = false;\n        this.checkboxItems[`checkbox${idx}`] = e.target.checked;\n        if (Object.values(this.checkboxItems).every(val => val === true)) this.areAllChecked = true;\n    },\n    init() {\n        this.tableItems.forEach((_, idx) => {\n            this.checkboxItems[`checkbox${idx}`] = false;\n        });\n    }\n}" className="max-w-screen-xl mx-auto px-4 md:px-8">
+<div className="max-w-screen-xl mx-auto px-4 md:px-8">
     <div className="items-start justify-between md:flex">
         <div className="max-w-lg">
             <h3 className="text-base-content text-xl font-bold sm:text-2xl">
@@ -32,7 +32,24 @@
                 </tr>
             </thead>
             <tbody className="text-base-content divide-y">
-                <template x-for="(item, idx) in tableItems" key="idx" />
+               { /*-use a map loop*/ }
+                    <tr className="odd:bg-base-200 even:bg-base-100">
+                        <td className="px-6 py-4 base-100space-nowrap flex items-center gap-x-4">
+                            <div>
+                                <input type="checkbox" id="'checkbox-' + idx" name="'checkbox-' + idx" className="checkbox-item peer hidden" checked="checkboxItems[`checkbox${idx}`]" onClick={event => {}} />
+                                <labelfor="'checkbox-' +="" idx"="" className="relative flex w-5 h-5 bg-base-100 peer-checked:bg-primary rounded-md border ring-offset-2 ring-primary duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-base-100 after:rotate-45">
+                            </labelfor="'checkbox-'></div>
+                            <span>item.name</span>
+                        </td>
+                        <td className="px-6 py-4 base-100space-nowrap">item.email</td>
+                        <td className="px-6 py-4 base-100space-nowrap">item.position</td>
+                        <td className="px-6 py-4 base-100space-nowrap">item.salary</td>
+                        <td className="text-right px-6 base-100space-nowrap">
+                            <a href="javascript:void(0)" className="py-2 px-3 font-medium text-primary hover:text-primary/90 duration-150 hover:bg-base-200 rounded-lg">Edit</a>
+                            <button href="javascript:void(0)" className="py-2 leading-none px-3 font-medium text-error hover:text-error duration-150 hover:bg-base-200 rounded-lg">Delete</button>
+                        </td>
+                    </tr>
+                
             </tbody>
         </table>
     </div>
