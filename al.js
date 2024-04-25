@@ -50,5 +50,21 @@ files.map(async (filename) => {
 })
 
 fs.writeFileSync(outpath,JSON.stringify(out))
+let srcDir2 = path.join(process.cwd(), `out/html`);
+
+const files2 = fs.readdirSync(srcDir2);
+
+files2.map(async (filename) => {
+
+    const filePath = path.join(srcDir2, filename);
+    let f2 = filename
+    linkArry.forEach(itm => {
+        if(f2.startsWith(itm)) f2 = f2.slice(itm.length+1);
+    })
 
 
+    const longname = (f2.split("-"))[0]
+    const filePath2 = path.join(srcDir2, longname+".html");
+
+    fs.renameSync(filePath,filePath2);
+})
