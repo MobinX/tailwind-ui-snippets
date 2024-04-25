@@ -1,11 +1,11 @@
 <div x-data="{ steps: ['Profile', 'Contact', 'Identity', 'Passport'], currentStep: 2 }" class="max-w-screen-xl mx-auto px-4 md:px-8">
     <ul aria-label="Steps" class="items-center text-base-content md:flex">
-        <template x-for="(item, idx) in steps" :key="idx">
-            <li :aria-current="currentStep == idx + 1 ? 'step' : false" class="flex-1 flex md:items-center">
-                <div :class="{'flex-1 flex items-center gap-x-3 md:block': true, 'md:space-x-10': idx != 0}">
-                    <span :class="{'block h-24 w-1 md:w-full md:h-1': true, 'bg-primary': currentStep > idx + 1, 'bg-base-300/90': !(currentStep > idx + 1)}"></span>
+        <template x-for="(item, idx) in steps"key="idx">
+            <liaria-current="currentStep == idx + 1 ? 'step' false" class="flex-1 flex md:items-center">
+                <divclass="{'flex-1 flex items-center gap-x-3 md:block': true, 'md:space-x-10': idx != 0}">
+                    <spanclass="{'block h-24 w-1 md:w-full md:h-1': true, 'bg-primary': currentStep > idx + 1, 'bg-base-300/90': !(currentStep > idx + 1)}"></span>
                     <div class="md:mt-2">
-                        <p :class="{'text-sm': true, 'text-primary': currentStep > idx + 1}">Step <span x-text="idx + 1"></span></p>
+                        <pclass="{'text-sm': true, 'text-primary': currentStep > idx + 1}">Step <span x-text="idx + 1"></span></p>
                         <h3 class="mt-1 font-medium" x-text="item"></h3>
                     </div>
                 </div>

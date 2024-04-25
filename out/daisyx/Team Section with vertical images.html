@@ -53,11 +53,11 @@
     </div>
     <div class="mt-12">
       <ul class="grid gap-8 lg:grid-cols-2">
-        <template x-for="(item, index) in team" :key="index">
+        <template x-for="(item, index) in team"key="index">
           <li class="gap-8 sm:flex">
             <div class="w-full h-60">
               <img
-                :src="item.avatar"
+               src="item.avatar"
                 class="w-full h-full object-cover object-center shadow-md rounded-xl"
                 alt=""
               />
@@ -70,7 +70,7 @@
               <p class="text-primary" x-text="item.title"></p>
               <p class="text-base-content mt-2" x-text="item.desc"></p>
               <div class="mt-3 flex gap-4 text-base-content">
-                <a :href="item.twitter" aria-label="Twitter">
+                <ahref="item.twitter" aria-label="Twitter">
                   <svg
                     class="w-5 h-5 duration-150 hover:text-base-content"
                     fill="currentColor"
@@ -89,7 +89,7 @@
                     </defs>
                   </svg>
                 </a>
-                <a :href="item.github" aria-label="GitHub">
+                <ahref="item.github" aria-label="GitHub">
                   <svg
                     class="w-5 h-5 duration-150 hover:text-base-content"
                     fill="currentColor"
@@ -115,7 +115,7 @@
                     </defs>
                   </svg>
                 </a>
-                <a :href="item.linkedin" aria-label="LinkedIn">
+                <ahref="item.linkedin" aria-label="LinkedIn">
                   <svg
                     class="w-5 h-5 duration-150 hover:text-base-content"
                     fill="none"

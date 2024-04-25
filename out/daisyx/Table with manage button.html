@@ -58,12 +58,12 @@
                 </tr>
             </thead>
             <tbody class="text-base-content divide-y">
-                <template x-for="(item, idx) in tableItems" :key="idx">
+                <template x-for="(item, idx) in tableItems"key="idx">
                     <tr>
                         <td class="pr-6 py-4 base-100space-nowrap" x-text="item.name"></td>
                         <td class="pr-6 py-4 base-100space-nowrap" x-text="item.date"></td>
                         <td class="pr-6 py-4 base-100space-nowrap">
-                            <span :class="`px-3 py-2 rounded-full font-semibold text-xs@{item.status === 'Active' ? 'text-primary bg-primary/40' : 'text-primary bg-primary/35'}`" x-text="item.status"></span>
+                            <spanclass="`px-3 py-2 rounded-full font-semibold text-xs@{item.status === 'Active' ? 'text-primary bg-primary/40' 'text-primary bg-primary/35'}`" x-text="item.status"></span>
                         </td>
                         <td class="pr-6 py-4 base-100space-nowrap" x-text="item.plan"></td>
                         <td class="pr-6 py-4 base-100space-nowrap" x-text="item.price"></td>

@@ -11,7 +11,7 @@
                         alt="Float UI logo"
                     />
                 </a>
-                <button class="text-base-content outline-none md:hidden" @click="state = !state">
+                <button class="text-base-content outline-none md:hidden" onclick="">
                     <template x-if="state">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -24,7 +24,7 @@
                     </template>
                 </button>
             </div>
-            <ul :class="{'hidden': !state, 'flex-1': true, 'justify-between': true, 'mt-12': true, 'md:flex': true, 'md:mt-0': true}">
+            <ul class="{'hidden': !state, 'flex-1': true, 'justify-between': true, 'mt-12': true, 'md:flex': true, 'md:mt-0': true}">
                 <li class="order-2 pb-5 md:pb-0">
                     <a href="javascript:void(0)" class="py-3 px-6 rounded-md shadow-md text-base-100 text-center bg-primary/90 focus:shadow-none block md:inline">
                         Sign In

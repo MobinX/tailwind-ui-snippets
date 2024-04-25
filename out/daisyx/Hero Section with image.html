@@ -13,7 +13,7 @@
   <div class="relative">
     <header>
       <div
-        :class="{'mx-2 pb-5': state, 'hidden': !state}"
+       class="{'mx-2 pb-5': state, 'hidden': !state}"
         class="md:hidden"
       >
         <div class="flex items-center justify-between py-5 md:block">
@@ -27,7 +27,7 @@
           </a>
           <div class="md:hidden">
             <button
-              @click="state = !state"
+              onclick=""
               class="menu-btn text-base-content hover:text-base-content"
             >
               <!-- Use x-show for conditional rendering in Alpine -->
@@ -66,7 +66,7 @@
         </div>
       </div>
       <nav
-        :class="{'absolute top-0 inset-x-0 bg-base-100 shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent': state}"
+       class="{'absolute top-0 inset-x-0 bg-base-100 shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent': state}"
         class="pb-5 md:text-sm"
       >
         <div
@@ -83,7 +83,7 @@
             </a>
             <div class="md:hidden">
               <button
-                @click="state = !state"
+                onclick=""
                 class="menu-btn text-base-content hover:text-base-content"
               >
                 <template x-if="state">
@@ -120,7 +120,7 @@
             </div>
           </div>
           <div
-            :class="{'block': state, 'hidden': !state}"
+           class="{'block': state, 'hidden': !state}"
             class="flex-1 items-center mt-8 md:mt-0 md:flex"
           >
             <ul
@@ -133,11 +133,11 @@
                               { title: 'Customers', path: 'javascript:void(0)' },
                               { title: 'Pricing', path: 'javascript:void(0)' }
                           ]"
-                :key="item.title"
+               key="item.title"
               >
                 <li class="text-base-content hover:text-base-content">
                   <a
-                    :href="item.path"
+                   href="item.path"
                     class="block"
                     x-text="item.title"
                   ></a>

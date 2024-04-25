@@ -10,10 +10,10 @@
             </label>
         </li>
         <!-- Radio groups -->
-        <template x-for="(item, idx) in radios" :key="idx">
+        <template x-for="(item, idx) in radios"key="idx">
             <li class="flex items-center gap-x-2.5">
-                <input type="radio" name="role" x-model="selectedRadio" :id="idx" :value="item" class="form-radio border-base-content text-primary focus:ring-primary duration-150" />
-                <label :for="idx" class="text-sm text-base-content font-medium" x-text="item">
+                <input type="radio" name="role" x-model="selectedRadio"id="idx"value="item" class="form-radio border-base-content text-primary focus:ring-primary duration-150" />
+                <labelfor="idx" class="text-sm text-base-content font-medium" x-text="item">
                 </label>
             </li>
         </template>

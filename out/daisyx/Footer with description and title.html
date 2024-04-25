@@ -24,7 +24,7 @@
             <div class="mt-10 py-10 border-t items-center justify-between sm:flex">
                 <p>© 2022 Float UI Inc. All rights reserved.</p>
                 <ul class="flex flex-wrap items-center gap-4 mt-6 sm:text-sm sm:mt-0">
-                    <template x-for="(item, idx) in footerNavs" :key="idx">
+                    <template x-for="(item, idx) in footerNavs"key="idx">
                         <li class="text-base-content hover:text-base-content duration-150">
                             <a x-bind:href="item.href" x-text="item.name"></a>
                         </li>

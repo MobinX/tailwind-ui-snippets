@@ -20,7 +20,7 @@
           We’d love to hear from you! Please fill out the form bellow.
         </p>
       </div>
-      <form @submit.prevent class="space-y-5 mt-12 lg:pb-12">
+      <form onsubmit="" class="space-y-5 mt-12 lg:pb-12">
         <div>
           <label class="font-medium"> Full name </label>
           <input
@@ -62,22 +62,22 @@
         <div>
           <label class="font-medium"> Services </label>
           <ul class="grid gap-y-2 gap-x-6 flex-wrap grid-cols-2 mt-3">
-            <template x-for="(item, idx) in servicesItems" :key="idx">
+            <template x-for="(item, idx) in servicesItems"key="idx">
               <li class="flex gap-x-3 text-sm">
                 <div>
                   <input
-                    :id="'service-' + idx"
+                   id="'service-' + idx"
                     type="checkbox"
                     class="checkbox-item peer hidden"
                   />
                   <label
-                    :for="'service-' + idx"
+                   for="'service-' + idx"
                     class="relative flex w-5 h-5 bg-base-100 peer-checked:bg-primary rounded-md border ring-offset-2 ring-primary duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-base-100 after:rotate-45"
                   >
                   </label>
                 </div>
                 <label
-                  :for="'service-' + idx"
+                 for="'service-' + idx"
                   class="cursor-pointer"
                   x-text="item"
                 ></label>

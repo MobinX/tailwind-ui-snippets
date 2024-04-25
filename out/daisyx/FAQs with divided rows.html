@@ -33,7 +33,7 @@
         </div>
         <div class='flex-1 mt-12 md:mt-0'>
             <ul class='space-y-4 divide-y'>
-                <template x-for="(item, idx) in faqsList" :key="idx">
+                <template x-for="(item, idx) in faqsList"key="idx">
                     <li class="py-5">
                         <summary class="flex items-center justify-between font-semibold text-base-content" x-text="item.q"></summary>
                         <p class='mt-3 text-base-content leading-relaxed' x-html="item.a"></p>

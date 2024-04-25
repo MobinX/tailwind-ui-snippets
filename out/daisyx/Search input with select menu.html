@@ -41,7 +41,7 @@
   class="relative max-w-xs px-4 text-base"
 >
   <div
-    @click.away="state = false"
+    onclick=""
     class="label-button flex items-center gap-1 px-2 border rounded-lg shadow-sm"
   >
     <svg
@@ -63,12 +63,12 @@
       placeholder="Type to search"
       class="w-full px-2 py-2 text-base-content bg-transparent rounded-md outline-none"
       x-model="searchFieldVal"
-      @input="handleSearch"
-      @focus="state = true"
+      oninput=""
+      onfocus=""
     />
     <template x-if="searchFieldVal">
       <button
-        @click="searchFieldVal = ''; selectedItem = { item: null, idx: null }; state = false;"
+        onclick=""
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@
       </button>
     </template>
     <template x-if="!searchFieldVal">
-      <button @click="state = !state">
+      <button onclick="">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
@@ -111,12 +111,12 @@
         >
           Not results available
         </li>
-        <template x-for="(el, idx) in menuItems" :key="idx">
+        <template x-for="(el, idx) in menuItems"key="idx">
           <li
-            @click="selectedItem = { item: el, idx }; searchFieldVal = el.name; state = false;"
-            :aria-selected="selectedItem.idx == idx ? true : false"
-            :class="`${selectedItem.idx == idx ? 'text-primary bg-primary/80' : ''} menu-el-js flex items-center justify-between gap-2 px-3 py-2 cursor-default duration-150 text-base-content hover:text-primary hover:bg-primary/80`"
-            x-on:click="state = false"
+            onclick=""
+           aria-selected="selectedItem.idx == idx ? true false"
+           class="`${selectedItem.idx == idx ? 'text-primary bg-primary/80' ''} menu-el-js flex items-center justify-between gap-2 px-3 py-2 cursor-default duration-150 text-base-content hover:text-primary hover:bg-primary/80`"
+            onclick=""
           >
             <span x-text="el.name"></span>
             <template x-if="selectedItem.idx == idx">

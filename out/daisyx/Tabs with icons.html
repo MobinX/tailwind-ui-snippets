@@ -37,10 +37,10 @@
       class="w-full border-b flex items-center gap-x-3 overflow-x-auto text-sm"
       aria-label="Manage your account"
     >
-      <template x-for="(item, index) in tabItems" :key="index">
+      <template x-for="(item, index) in tabItems"key="index">
         <button
-          @click="selectedTab = item.name"
-          :class="{'border-primary text-primary': selectedTab === item.name, 'border-base-100 text-base-content': selectedTab !== item.name}"
+          onclick=""
+         class="{'border-primary text-primary': selectedTab === item.name, 'border-base-100 text-base-content': selectedTab !== item.name}"
           class="group outline-none py-1.5 border-b-2"
         >
           <div
@@ -54,7 +54,7 @@
       </template>
     </div>
 
-    <template x-for="(item, index) in tabItems" :key="index">
+    <template x-for="(item, index) in tabItems"key="index">
       <div x-show="selectedTab === item.name" class="py-6">
         <p class="text-xs leading-normal">
           This is <b x-text="item.name"></b> Tab

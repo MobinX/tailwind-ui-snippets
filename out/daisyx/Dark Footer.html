@@ -18,7 +18,7 @@
         </div>
         <div class="flex-1 mt-6 md:mt-0">
           <form
-            @submit.prevent="e => e.preventDefault()"
+            onsubmit=""
             class="flex items-center gap-x-3 md:justify-end"
           >
             <div class="relative">
@@ -54,16 +54,16 @@
       <div
         class="flex-1 mt-16 space-y-6 justify-between sm:flex md:space-y-0"
       >
-        <template x-for="(item, idx) in footerNavs" :key="idx">
+        <template x-for="(item, idx) in footerNavs"key="idx">
           <ul class="space-y-4 text-base-300/70">
             <h4
               class="text-base-300/90 font-semibold sm:pb-2"
               x-text="item.label"
             ></h4>
-            <template x-for="(el, idx) in item.items" :key="idx">
+            <template x-for="(el, idx) in item.items"key="idx">
               <li>
                 <a
-                  :href="el.href"
+                 href="el.href"
                   class="duration-150 hover:text-base-content"
                   x-text="el.name"
                 ></a>

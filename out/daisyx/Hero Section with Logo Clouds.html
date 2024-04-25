@@ -14,7 +14,7 @@
       </a>
       <button
         class="text-base-content outline-none md:hidden"
-        @click="isOpen = !isOpen"
+        onclick=""
       >
         <template x-if="isOpen">
           <svg
@@ -51,7 +51,7 @@
       </button>
     </div>
     <ul
-      :class="isOpen ? 'absolute inset-x-0 px-4 border-b bg-base-100 md:border-none md:static' : 'hidden'"
+     class="isOpen ? 'absolute inset-x-0 px-4 border-b bg-base-100 md:border-none md:static' 'hidden'"
       class="flex-1 justify-between mt-12 md:text-sm md:font-medium md:flex md:mt-0"
     >
       <div

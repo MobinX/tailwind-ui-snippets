@@ -6,12 +6,12 @@
     >
       <template
         x-for="(tabItem, index) in ['Overview', 'Integration', 'Billing', 'Transactions', 'Plans']"
-        :key="index"
+       key="index"
       >
         <button
-          :class="{'border-primary text-primary': selectedTab === tabItem, 'border-base-100 text-base-content': selectedTab !== tabItem}"
+         class="{'border-primary text-primary': selectedTab === tabItem, 'border-base-100 text-base-content': selectedTab !== tabItem}"
           class="group outline-none px-1.5 border-l-2"
-          @click="selectedTab = tabItem"
+          onclick=""
         >
           <div
             class="py-1.5 px-3 rounded-lg duration-150 group-hover:text-primary group-hover:bg-base-300 font-medium"
@@ -39,7 +39,7 @@
       >
         <template
           x-for="(tabItem, index) in ['Overview', 'Integration', 'Billing', 'Transactions', 'Plans']"
-          :key="index"
+         key="index"
         >
           <option x-text="tabItem"></option>
         </template>
@@ -47,7 +47,7 @@
     </div>
     <template
       x-for="(tabItem, index) in ['Overview', 'Integration', 'Billing', 'Transactions', 'Plans']"
-      :key="index"
+     key="index"
     >
       <div x-show="selectedTab === tabItem" class="py-6">
         <p class="text-xs leading-normal">

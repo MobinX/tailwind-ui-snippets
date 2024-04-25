@@ -63,9 +63,9 @@
         </div>
       </div>
       <div class="mt-16 justify-center sm:flex">
-        <template x-for="(item, index) in plans" :key="index">
+        <template x-for="(item, index) in plans"key="index">
           <div
-            :class="{'relative flex-1 flex items-stretch flex-col mt-6 border-2 sm:mt-0 sm:rounded-xl sm:max-w-md': true, 'bg-base-content border-cyan-400 border-x-0 sm:border-x-2': item.isMostPop, 'border-transparent': !item.isMostPop}"
+           class="{'relative flex-1 flex items-stretch flex-col mt-6 border-2 sm:mt-0 sm:rounded-xl sm:max-w-md': true, 'bg-base-content border-cyan-400 border-x-0 sm:border-x-2': item.isMostPop, 'border-transparent': !item.isMostPop}"
           >
             <div class="p-4 py-8 space-y-4 border-b border-base-content md:p-8">
               <span class="text-base-300/90 font-medium" x-text="item.name">
@@ -84,13 +84,13 @@
             <ul class="p-4 py-8 space-y-3 md:p-8">
               <template
                 x-for="(feature, fIndex) in item.features"
-                :key="fIndex"
+               key="fIndex"
               >
                 <li class="flex items-center gap-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5"
-                    :class="{'text-cyan-600': item.isMostPop}"
+                   class="{'text-cyan-600': item.isMostPop}"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >

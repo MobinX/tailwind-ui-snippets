@@ -41,8 +41,8 @@
             </div>
             <div class="mt-12">
                 <ul class="grid gap-x-12 divide-y [&>.feature-1]:pl-0 sm:grid-cols-2 sm:gap-y-8 sm:divide-y-0 lg:divide-x lg:grid-cols-3 lg:gap-x-0">
-                    <template x-for="(item, idx) in features" :key="idx">
-                        <li :class="`feature-${idx + 1} space-y-3 py-8 lg:px-12 sm:py-0`">
+                    <template x-for="(item, idx) in features"key="idx">
+                        <liclass="`feature-${idx + 1} space-y-3 py-8 lg:px-12 sm:py-0`">
                             <div class="w-12 h-12 border text-primary rounded-full flex items-center justify-center" x-html="item.icon"></div>
                             <h4 class="text-lg text-base-content font-semibold" x-text="item.title"></h4>
                             <p x-text="item.desc"></p>

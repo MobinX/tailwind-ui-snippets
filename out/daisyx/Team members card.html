@@ -30,10 +30,10 @@
         </a>
     </div>
     <ul class="mt-12 divide-y">
-        <template x-for="(item, idx) in members" :key="idx">
+        <template x-for="(item, idx) in members"key="idx">
             <li class="py-5 flex items-start justify-between">
                 <div class="flex gap-3">
-                    <img :src="item.avatar" class="flex-none w-12 h-12 rounded-full" />
+                    <imgsrc="item.avatar" class="flex-none w-12 h-12 rounded-full" />
                     <div>
                         <span class="block text-sm text-base-content font-semibold" x-text="item.name"></span>
                         <span class="block text-sm text-base-content" x-text="item.email"></span>

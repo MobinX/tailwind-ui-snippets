@@ -1,0 +1,17 @@
+<div className="max-w-screen-xl mx-auto px-4 md:px-8">
+    <div className="items-start justify-between py-4 border-b md:flex">
+        <div>
+            <h3 className="text-base-content text-2xl font-bold">
+                Analytics
+            </h3>
+        </div>
+        <div className="items-center gap-x-3 mt-6 md:mt-0 sm:flex">
+            <a href="javascript:void(0)" className="block px-4 py-2 text-center text-base-100 duration-150 font-medium bg-primary rounded-lg hover:bg-primary/90 active:bg-primary md:text-sm">
+                Browse reports
+            </a>
+            <a href="javascript:void(0)" className="block px-4 py-2 mt-3 text-center text-base-content duration-150 font-medium rounded-lg border hover:bg-base-200 active:bg-base-300 sm:mt-0 md:text-sm">
+                Engagement
+            </a>
+        </div>
+    </div>
+</div>

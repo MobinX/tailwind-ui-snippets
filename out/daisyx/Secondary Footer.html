@@ -12,7 +12,7 @@
             since the 1500s.
           </p>
         </div>
-        <form x-on:submit.prevent="handleSubmit">
+        <form onsubmit="">
           <label class="block pt-4 pb-2"> Stay up to date </label>
           <div class="max-w-sm flex items-center border rounded-md p-1">
             <input
@@ -31,13 +31,13 @@
       <div
         class="flex-1 mt-10 space-y-6 items-center justify-between sm:flex md:space-y-0 md:mt-0"
       >
-        <template x-for="(item, idx) in footerNavs" :key="idx">
+        <template x-for="(item, idx) in footerNavs"key="idx">
           <ul class="space-y-4">
             <h4 class="text-base-content font-medium" x-text="item.label"></h4>
-            <template x-for="(el, idx2) in item.items" :key="idx2">
+            <template x-for="(el, idx2) in item.items"key="idx2">
               <li>
                 <a
-                  :href="el.href"
+                 href="el.href"
                   class="hover:underline hover:text-primary"
                   x-text="el.name"
                 ></a>

@@ -11,7 +11,7 @@
           />
         </a>
         <button class="text-base-content outline-none sm:hidden"
-                @click="open = !open"
+                onclick=""
         >
           <template x-if="open">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -25,7 +25,7 @@
           </template>
         </button>
       </div>
-      <ul :class="{'hidden': !open, 'block': open}" class="bg-base-100 shadow-md rounded-md p-4 flex-1 mt-12 absolute z-20 top-8 right-4 w-64 border sm:shadow-none sm:block sm:border-0 sm:mt-0 sm:static sm:w-auto">
+      <ul class="{'hidden': !open, 'block': open}" class="bg-base-100 shadow-md rounded-md p-4 flex-1 mt-12 absolute z-20 top-8 right-4 w-64 border sm:shadow-none sm:block sm:border-0 sm:mt-0 sm:static sm:w-auto">
         <div class="order-1 justify-end items-center space-y-5 sm:flex sm:space-x-6 sm:space-y-0">
           <li class="text-base-content hover:text-primary"><a href="javascript:void(0)">Customers</a></li>
           <li class="text-base-content hover:text-primary"><a href="javascript:void(0)">Careers</a></li>

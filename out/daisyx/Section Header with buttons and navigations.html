@@ -34,12 +34,12 @@
   </div>
   <div class="mt-6 md:mt-4">
     <ul class="w-full border-b flex items-center gap-x-3 overflow-x-auto">
-      <template x-for="(item, idx) in navigation" :key="idx">
+      <template x-for="(item, idx) in navigation"key="idx">
         <li
-          :class="{'py-2 border-b-2': true, 'border-primary text-primary': idx == 0, 'border-base-100 text-base-content': idx != 0}"
+         class="{'py-2 border-b-2': true, 'border-primary text-primary': idx == 0, 'border-base-100 text-base-content': idx != 0}"
         >
           <a
-            :href="item.href"
+           href="item.href"
             class="py-2.5 px-4 rounded-lg duration-150 text-sm hover:text-primary hover:bg-base-300 active:bg-base-300/90 font-medium"
             x-text="item.name"
           >

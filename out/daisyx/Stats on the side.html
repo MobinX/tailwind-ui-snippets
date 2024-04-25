@@ -15,7 +15,7 @@
         </div>
         <div class="mt-12 lg:mt-0">
             <ul class="flex flex-col items-start gap-x-12 justify-center divide-y sm:divide-y-0 sm:flex-row lg:grid lg:grid-cols-2">
-                <template x-for="(item, index) in stats" :key="index">
+                <template x-for="(item, index) in stats"key="index">
                     <li class="text-center w-full px-4 py-6 sm:w-auto lg:py-4">
                         <h4 class="text-4xl text-primary font-semibold" x-text="item.data"></h4>
                         <p class="mt-3 font-medium" x-text="item.title"></p>

@@ -14,7 +14,7 @@
           <div class="md:hidden">
             <button
               class="menu-btn text-base-content hover:text-base-300/70"
-              x-on:click="open = !open"
+              onclick=""
             >
               <template x-if="open">
                 <svg
@@ -51,7 +51,7 @@
         </div>
       </div>
       <nav
-        x-bind:class="{ 'pb-5 md:text-sm absolute z-20 top-0 inset-x-0 bg-base-content rounded-xl mx-2 mt-2 md:mx-0 md:mt-0 md:relative md:bg-transparent': open, '' : !open }"
+        x-bind:class="{ 'pb-5 md:text-sm absolute z-20 top-0 inset-x-0 bg-base-content rounded-xl mx-2 mt-2 md:mx-0 md:mt-0 md:relative md:bg-transparent': open, '' !open }"
       >
         <div
           class="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8"
@@ -68,7 +68,7 @@
             <div class="md:hidden">
               <button
                 class="menu-btn text-base-content hover:text-base-300/70"
-                x-on:click="open = !open"
+                onclick=""
               >
                 <template x-if="open">
                   <svg
@@ -104,7 +104,7 @@
             </div>
           </div>
           <div
-            x-bind:class="{ 'block' : open, 'hidden' : !open }"
+            x-bind:class="{ 'block' open, 'hidden' !open }"
             class="flex-1 items-center mt-8 md:mt-0 md:flex"
           >
             <ul
@@ -160,7 +160,7 @@
             doloremque laudantium, totam rem aperiam, eaque ipsa quae.
           </p>
           <form
-            x-on:submit.prevent
+            onsubmit=""
             class="justify-center items-center gap-x-3 sm:flex"
           >
             <input

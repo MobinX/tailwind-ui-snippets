@@ -1,11 +1,11 @@
 <div x-data="{ open: false }">
-    <button @click="open = true" class="w-32 py-2 ml-2 shadow-sm rounded-md bg-primary text-base-100 mt-4 flex items-center justify-center">
+    <button onclick="" class="w-32 py-2 ml-2 shadow-sm rounded-md bg-primary text-base-100 mt-4 flex items-center justify-center">
         Click me
     </button>
 
     <template x-if="open">
         <div class="fixed inset-0 w-full h-full">
-            <div class="fixed inset-0 w-full h-full bg-black opacity-40" @click="open = false"></div>
+            <div class="fixed inset-0 w-full h-full bg-black opacity-40" onclick=""></div>
 
             <div class="fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] px-4 w-full max-w-lg">
                 <div class="bg-base-100 rounded-md shadow-lg px-4 py-6 sm:flex">
@@ -21,10 +21,10 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc eget lorem dolor sed viverra ipsum nunc. venenatis.
                         </p>
                         <div class="items-center gap-2 mt-3 text-sm sm:flex">
-                            <button @click="open = false" class="w-full mt-2 p-2.5 flex-1 text-base-100 bg-error rounded-md ring-offset-2 ring-error focus:ring-2">
+                            <button onclick="" class="w-full mt-2 p-2.5 flex-1 text-base-100 bg-error rounded-md ring-offset-2 ring-error focus:ring-2">
                                 Delete
                             </button>
-                            <button @click="open = false" aria-label="Close" class="w-full mt-2 p-2.5 flex-1 text-base-content rounded-md border ring-offset-2 ring-primary focus:ring-2">
+                            <button onclick="" aria-label="Close" class="w-full mt-2 p-2.5 flex-1 text-base-content rounded-md border ring-offset-2 ring-primary focus:ring-2">
                                 Cancel
                             </button>
                         </div>

@@ -1,6 +1,6 @@
 <div x-data="{ open: false }" class="fixed inset-0 z-10 overflow-y-auto">
   <button
-    @click="open = true"
+    onclick=""
     class="w-32 py-2 ml-2 shadow-sm rounded-md bg-primary text-base-100 mt-4 flex items-center justify-center"
   >
     Click me
@@ -10,7 +10,7 @@
     x-show="open"
     class="fixed inset-0 w-full h-full bg-black bg-opacity-40"
   >
-    <div @click="open = false" class="fixed inset-0 w-full h-full"></div>
+    <div onclick="" class="fixed inset-0 w-full h-full"></div>
 
     <div
       class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg mx-auto px-4"
@@ -18,7 +18,7 @@
       <div class="bg-base-100 rounded-md shadow-lg px-4 py-6">
         <div class="flex items-center justify-end">
           <button
-            @click="open = false"
+            onclick=""
             class="p-2 text-base-content rounded-md hover:bg-base-300"
           >
             <svg

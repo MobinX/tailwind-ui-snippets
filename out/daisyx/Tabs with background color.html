@@ -6,11 +6,11 @@
       class="hidden bg-base-300 py-1.5 px-2.5 rounded-lg gap-x-3 overflow-x-auto text-sm sm:flex"
       aria-label="Manage your account"
     >
-      <template x-for="(item, index) in tabItems" :key="index">
+      <template x-for="(item, index) in tabItems"key="index">
         <button
-          :class="{'bg-base-100 text-primary shadow-sm': selectedTab === item, 'text-base-content hover:text-primary hover:bg-base-100 active:bg-base-100/50': selectedTab !== item}"
+         class="{'bg-base-100 text-primary shadow-sm': selectedTab === item, 'text-base-content hover:text-primary hover:bg-base-100 active:bg-base-100/50': selectedTab !== item}"
           class="py-1.5 px-3 rounded-lg duration-150 font-medium"
-          @click="selectedTab = item"
+          onclick=""
           x-text="item"
         ></button>
       </template>
@@ -32,12 +32,12 @@
         x-model="selectedTab"
         class="py-2 px-3 w-full bg-transparent appearance-none outline-none border rounded-lg shadow-sm focus:border-primary text-sm"
       >
-        <template x-for="(item, index) in tabItems" :key="index">
-          <option :value="item" x-text="item"></option>
+        <template x-for="(item, index) in tabItems"key="index">
+          <optionvalue="item" x-text="item"></option>
         </template>
       </select>
     </div>
-    <template x-for="(item, index) in tabItems" :key="index">
+    <template x-for="(item, index) in tabItems"key="index">
       <div x-show="selectedTab === item" class="py-6">
         <p class="text-xs leading-normal">
           <span>This is </span><b x-text="item"></b><span> Tab</span>

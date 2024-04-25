@@ -1,0 +1,23 @@
+<div x-data="{\n  navigation: [\n      { href: 'javascript:void(0)', name: 'Overview' },\n      { href: 'javascript:void(0)', name: 'Integration' },\n      { href: 'javascript:void(0)', name: 'Billing' },\n      { href: 'javascript:void(0)', name: 'Transactions' },\n      { href: 'javascript:void(0)', name: 'plans' }\n  ]\n}" className="max-w-screen-xl mx-auto px-4 pt-4 md:px-8">
+  <div className="items-start justify-between md:flex">
+    <div>
+      <h3 className="text-base-content text-2xl font-bold">Payments</h3>
+    </div>
+    <div className="items-center gap-x-3 mt-6 md:mt-0 sm:flex">
+      <a href="javascript:void(0)" className="flex items-center justify-center gap-x-2 px-4 py-2 text-center text-base-content duration-150 font-medium rounded-lg border hover:bg-base-200 active:bg-base-300 md:text-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-base-content">
+          <path fillrule="evenodd" d="M2.628 1.601C5.028 1.206 7.49 1 10 1s4.973.206 7.372.601a.75.75 0 01.628.74v2.288a2.25 2.25 0 01-.659 1.59l-4.682 4.683a2.25 2.25 0 00-.659 1.59v3.037c0 .684-.31 1.33-.844 1.757l-1.937 1.55A.75.75 0 018 18.25v-5.757a2.25 2.25 0 00-.659-1.591L2.659 6.22A2.25 2.25 0 012 4.629V2.34a.75.75 0 01.628-.74z" cliprule="evenodd" />
+        </svg>
+        Filter
+      </a>
+      <a href="javascript:void(0)" className="block px-4 py-2 mt-3 text-center text-base-100 duration-150 font-medium bg-primary rounded-lg hover:bg-primary/90 active:bg-primary sm:mt-0 md:text-sm">
+        Create payment
+      </a>
+    </div>
+  </div>
+  <div className="mt-6 md:mt-4">
+    <ul className="w-full border-b flex items-center gap-x-3 overflow-x-auto">
+      <template x-for="(item, idx) in navigation" key="idx" />
+    </ul>
+  </div>
+</div>

@@ -22,7 +22,7 @@
                         <div>
                             <input type="checkbox" id="checkbox-all-items" class="checkbox-item peer hidden"
                                    x-model="areAllChecked"
-                                   @click="handleCheckboxItems">
+                                   onclick="">
                             <label for="checkbox-all-items" class="relative flex w-5 h-5 bg-base-100 peer-checked:bg-primary rounded-md border ring-offset-2 ring-primary duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-base-100 after:rotate-45"></label>
                         </div>
                         Username
@@ -34,14 +34,14 @@
                 </tr>
             </thead>
             <tbody class="text-base-content divide-y">
-                <template x-for="(item, idx) in tableItems" :key="idx">
+                <template x-for="(item, idx) in tableItems"key="idx">
                     <tr class="odd:bg-base-200 even:bg-base-100">
                         <td class="px-6 py-4 base-100space-nowrap flex items-center gap-x-4">
                             <div>
-                                <input type="checkbox" :id="'checkbox-' + idx" :name="'checkbox-' + idx" class="checkbox-item peer hidden"
-                                       :checked="checkboxItems[`checkbox${idx}`]"
-                                       @click="handleCheckboxChange($event, idx)">
-                                <label :for="'checkbox-' + idx" class="relative flex w-5 h-5 bg-base-100 peer-checked:bg-primary rounded-md border ring-offset-2 ring-primary duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-base-100 after:rotate-45"></label>
+                                <input type="checkbox"id="'checkbox-' + idx"name="'checkbox-' + idx" class="checkbox-item peer hidden"
+                                      checked="checkboxItems[`checkbox${idx}`]"
+                                       onclick="">
+                                <labelfor="'checkbox-' + idx" class="relative flex w-5 h-5 bg-base-100 peer-checked:bg-primary rounded-md border ring-offset-2 ring-primary duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-base-100 after:rotate-45"></label>
                             </div>
                             <span x-text="item.name"></span>
                         </td>

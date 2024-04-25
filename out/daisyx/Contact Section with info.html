@@ -48,7 +48,7 @@
             <ul class="mt-6 flex flex-wrap gap-x-10 gap-y-6 items-center">
               <template
                 x-for="(item, index) in contactMethods"
-                :key="index"
+               key="index"
               >
                 <li class="flex items-center gap-x-3">
                   <div
@@ -62,7 +62,7 @@
           </div>
         </div>
         <div class="flex-1 mt-12 sm:max-w-lg lg:max-w-md">
-          <form @submit.prevent class="space-y-5">
+          <form onsubmit="" class="space-y-5">
             <div>
               <label class="font-medium"> Full name </label>
               <input

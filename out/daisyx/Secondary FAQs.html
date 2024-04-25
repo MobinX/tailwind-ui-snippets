@@ -20,10 +20,10 @@
       </p>
     </div>
     <div class="mt-14 max-w-2xl mx-auto">
-      <template x-for="(item, index) in faqs" :key="index">
+      <template x-for="(item, index) in faqs"key="index">
         <div
           class="space-y-3 mt-5 overflow-hidden border-b"
-          @click="selectedFaq = selectedFaq === index ? null : index"
+          onclick=""
         >
           <h4
             class="cursor-pointer pb-5 flex items-center justify-between text-lg text-base-content font-medium"
@@ -63,9 +63,9 @@
           <div
             x-ref="answerElRef"
             class="transition-[max-height,opacity] overflow-hidden duration-500 ease-in-out"
-            :style="{
-            maxHeight: selectedFaq === index ? '1000px' : '0px',
-            opacity: selectedFaq === index ? 1 : 0,
+           style="{
+            maxHeight: selectedFaq === index ? '1000px' '0px',
+            opacity: selectedFaq === index ? 1 0,
           }"
           >
             <div>

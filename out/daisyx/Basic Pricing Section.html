@@ -60,7 +60,7 @@
       <div
         class="mt-16 space-y-6 justify-center gap-6 sm:grid sm:grid-cols-2 sm:space-y-0 lg:grid-cols-3"
       >
-        <template x-for="(plan, index) in plans" :key="index">
+        <template x-for="(plan, index) in plans"key="index">
           <div
             class="relative flex-1 flex items-stretch flex-col p-8 rounded-xl border-2"
           >
@@ -75,7 +75,7 @@
             <ul class="py-8 space-y-3">
               <template
                 x-for="(feature, fIndex) in plan.features"
-                :key="fIndex"
+               key="fIndex"
               >
                 <li class="flex items-center gap-5">
                   <svg

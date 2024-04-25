@@ -18,9 +18,9 @@
       <div class="sticky top-0 py-6 border-b bg-base-100">
         <div class="max-w-screen-xl mx-auto">
           <ul class="ml-auto flex gap-x-6 px-4 md:px-8 lg:max-w-3xl">
-            <template x-for="plan in plans" :key="plan.name">
+            <template x-for="plan in plans"key="plan.name">
               <li
-                :class="{'space-y-4 w-full': true, 'hidden lg:block': selectedPlan !== plan.name}"
+               class="{'space-y-4 w-full': true, 'hidden lg:block': selectedPlan !== plan.name}"
               >
                 <div class="flex items-center justify-between">
                   <span
@@ -48,7 +48,7 @@
                       x-model="selectedPlan"
                     >
                       <option disabled>Switch plan</option>
-                      <template x-for="option in plans" :key="option.name">
+                      <template x-for="option in plans"key="option.name">
                         <option
                           x-bind:value="option.name"
                           x-text="option.name"
@@ -72,7 +72,7 @@
       <div
         class="max-w-screen-xl mx-auto mt-10 space-y-4 px-4 overflow-auto md:overflow-visible md:px-8"
       >
-        <template x-for="table in tables" :key="table.label">
+        <template x-for="table in tables"key="table.label">
           <table class="w-full table-auto text-sm text-left">
             <thead class="text-base-content font-medium border-b">
               <tr>
@@ -91,7 +91,7 @@
               </tr>
             </thead>
             <tbody class="text-base-content divide-y">
-              <template x-for="(item, idx) in table.items" :key="idx">
+              <template x-for="(item, idx) in table.items"key="idx">
                 <tr>
                   <td
                     class="px-6 py-4 base-100space-nowrap"

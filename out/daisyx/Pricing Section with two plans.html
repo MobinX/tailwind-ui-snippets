@@ -49,8 +49,8 @@
         </div>
       </div>
       <div class='mt-16 justify-center sm:flex'>
-        <template x-for="plan in plans" :key="plan.name">
-          <div class="relative flex-1 flex items-stretch flex-col mt-6 sm:mt-0 sm:rounded-xl sm:max-w-md" :class="{ 'bg-base-100 shadow-lg sm:border': plan.isMostPop }">
+        <template x-for="plan in plans"key="plan.name">
+          <div class="relative flex-1 flex items-stretch flex-col mt-6 sm:mt-0 sm:rounded-xl sm:max-w-md"class="{ 'bg-base-100 shadow-lg sm:border': plan.isMostPop }">
             <div class="p-4 py-8 space-y-4 border-b md:p-8">
               <span class='text-primary font-medium' x-text="plan.name"></span>
               <div class='text-base-content text-3xl font-semibold'>
@@ -64,7 +64,7 @@
               <li class="pb-2 text-base-content font-medium">
                 Features
               </li>
-              <template x-for="feature in plan.features" :key="feature">
+              <template x-for="feature in plan.features"key="feature">
                 <li class='flex items-center gap-5'>
                   <svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5 text-primary' viewBox='0 0 20 20' fill='currentColor'>
                     <path fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'></path>

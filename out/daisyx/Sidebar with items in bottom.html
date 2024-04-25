@@ -77,10 +77,10 @@ navsFooter: [
       </div>
       <div class="flex-1 flex flex-col h-full overflow-auto">
         <ul class="px-4 text-sm font-medium flex-1">
-          <template x-for="(item, idx) in navigation" :key="idx">
+          <template x-for="(item, idx) in navigation"key="idx">
             <li>
               <a
-                :href="item.href"
+               href="item.href"
                 class="flex items-center gap-x-2 text-base-content p-2 rounded-lg hover:bg-base-200 active:bg-base-300 duration-150"
               >
                 <div class="text-base-content" x-html="item.icon"></div>
@@ -91,10 +91,10 @@ navsFooter: [
         </ul>
         <div>
           <ul class="px-4 pb-4 text-sm font-medium">
-            <template x-for="(item, idx) in navsFooter" :key="idx">
+            <template x-for="(item, idx) in navsFooter"key="idx">
               <li>
                 <a
-                  :href="item.href"
+                 href="item.href"
                   class="flex items-center gap-x-2 text-base-content p-2 rounded-lg hover:bg-base-200 active:bg-base-300 duration-150"
                 >
                   <div class="text-base-content" x-html="item.icon"></div>
