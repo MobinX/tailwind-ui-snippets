@@ -22,6 +22,12 @@ function stringToArrayOfLines(inputString) {
     // Split the input string into an array of lines based on line breaks
     return inputString.split(/\r?\n/);
 }
+
+function replaceSpacesWithHyphens(str) {
+    // Use the replace method with a regular expression to replace spaces with hyphens
+    return str.replace(/ /g, '-');
+}
+
 const linkArry = ["banners", "cta-sections", "team-sections", "contact-sections", "footers", "logo-grid", "404-pages", "heroes", "faqs", "feature-sections", "pricing-sections", "testimonials", "stats", "newsletters", "inputs", "tables", "paginations", "cards", "alerts", "section-headers", "steps", "buttons", "tabs", "navbars", "select-menus", "modals", "avatars", "authentication", "sidebars", "radio-groups", "context-menus"]
 
 let longnaems = []
@@ -35,7 +41,7 @@ files.map(async (filename) => {
     })
 
 
-    const longname = (f2.split("-"))[0]
+    const longname = ((f2.split("-"))[0]).replace(/.html/g,"")
     const longnameWithDash = longname.replace(" ","-")
     const raw_html = fs.readFileSync(filePath, "utf-8")
     const html = stringToArrayOfLines(replaceQuotes(raw_html))
@@ -43,28 +49,10 @@ files.map(async (filename) => {
     if(longnaems.indexOf(longname) > 0 ) console.error("*"  + longname);
     longnaems.push(longname)
     out[longname] = {
-        "prefix": [longname],
+        "prefix": [replaceSpacesWithHyphens(longname)],
       "body": html,
       "description": longname
     }
 })
 
 fs.writeFileSync(outpath,JSON.stringify(out))
-let srcDir2 = path.join(process.cwd(), `out/html`);
-
-const files2 = fs.readdirSync(srcDir2);
-
-files2.map(async (filename) => {
-
-    const filePath = path.join(srcDir2, filename);
-    let f2 = filename
-    linkArry.forEach(itm => {
-        if(f2.startsWith(itm)) f2 = f2.slice(itm.length+1);
-    })
-
-
-    const longname = (f2.split("-"))[0]
-    const filePath2 = path.join(srcDir2, longname+".html");
-
-    fs.renameSync(filePath,filePath2);
-})

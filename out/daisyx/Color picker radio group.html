@@ -11,7 +11,7 @@
             <li class="flex-none">
                 <label :for="color.bg" class="block relative w-8 h-8">
                     <input :id="color.bg" type="radio" name="color" class="sr-only peer" :checked="index === selectedColor" @change="selectedColor = index" />
-                    <span :class="`inline-flex justify-center items-center w-full h-full rounded-full cursor-pointer duration-150 ${color.bg} ${color.ring}`"></span>
+                    <span :class="`inline-flex justify-center items-center w-full h-full rounded-full cursor-pointer duration-150@{color.bg}@{color.ring}`"></span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-base-100 absolute inset-0 m-auto z-0 pointer-events-none hidden peer-checked:block duration-150">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>

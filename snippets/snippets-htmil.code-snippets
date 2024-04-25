@@ -1,7 +1,0 @@
-{
-    "Forx-Loop": {
-      "prefix": ["Forx", "for-const"],
-      "body": ["forx ('const ${2:element} of ${1:array}) {", "\t$0", "}"],
-      "description": "A for loop."
-    }
-  }
