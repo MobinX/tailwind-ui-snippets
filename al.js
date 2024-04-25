@@ -22,21 +22,33 @@ function stringToArrayOfLines(inputString) {
     // Split the input string into an array of lines based on line breaks
     return inputString.split(/\r?\n/);
 }
+const linkArry = ["banners", "cta-sections", "team-sections", "contact-sections", "footers", "logo-grid", "404-pages", "heroes", "faqs", "feature-sections", "pricing-sections", "testimonials", "stats", "newsletters", "inputs", "tables", "paginations", "cards", "alerts", "section-headers", "steps", "buttons", "tabs", "navbars", "select-menus", "modals", "avatars", "authentication", "sidebars", "radio-groups", "context-menus"]
 
-
+let longnaems = []
 let out = {}
 
 files.map(async (filename) => {
     const filePath = path.join(srcDir, filename);
-    const longname = (filename.split("-"))[1]
+    let f2 = filename
+    linkArry.forEach(itm => {
+        if(f2.startsWith(itm)) f2 = filename.slice(itm.length+1);
+    })
+
+
+    const longname = (f2.split("-"))[0]
     const longnameWithDash = longname.replace(" ","-")
     const raw_html = fs.readFileSync(filePath, "utf-8")
     const html = stringToArrayOfLines(replaceQuotes(raw_html))
+    console.log(longname)
+    if(longnaems.indexOf(longname) > 0 ) console.error("*"  + longname);
+    longnaems.push(longname)
     out[longname] = {
         "prefix": [longname],
       "body": html,
       "description": longname
     }
 })
-console.log(out)
+
 fs.writeFileSync(outpath,JSON.stringify(out))
+
+
