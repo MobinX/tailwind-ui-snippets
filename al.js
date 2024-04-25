@@ -1,113 +1,42 @@
-import {compile} from "alpinejs-ssr"
-const html = `<div
-x-data="{
-posts: [
-    {
-        title: 'What is SaaS? Software as a Service Explained',
-        desc: 'Going into this journey, I had a standard therapy regimen, based on looking at the research literature. After I saw the movie, I started to ask other people what they did for their anxiety, and some',
-        date: 'Thursday, December 9th 2021',
-        href: 'javascript:void(0)'
-    },
-    {
-        title: 'A Quick Guide to WordPress Hosting',
-        desc: 'According to him, Ã¢â‚¬Å“I\'m still surprised that this has happened. But we are surprised because we are so surprised.Ã¢â‚¬ÂMore revelations about Whittington will be featured in the film',
-        date: 'Thursday, December 9th 2021',
-        href: 'javascript:void(0)'
-    },
-    {
-        title: '7 Promising VS Code Extensions Introduced in 2022',
-        desc: 'I hope I remembered all the stuff that they needed to know. They\'re like, \'okay,\' and write it in their little reading notebooks. I realized today that I have all this stuff that',
-        date: 'Thursday, December 9th 2021',
-        href: 'javascript:void(0)'
-    },
-    {
-        title: 'How to Use Root C++ Interpreter Shell to Write C++ Programs',
-        desc: 'The powerful gravity waves resulting from the impact of the planets\' moons Ã¢â‚¬â€ four in total Ã¢â‚¬â€ were finally resolved in 2015 when gravitational microlensing was used to observe the',
-        date: 'Thursday, December 9th 2021',
-        href: 'javascript:void(0)'
-    }
-]
-}"
->
-<section class="mt-12 mx-auto px-4 max-w-screen-xl md:px-8">
-  <div class="max-w-lg">
-    <h1 class="text-3xl text-base-content font-semibold">Blog</h1>
-    <p class="mt-3 text-base-content">
-      Blogs that are loved by the community. Updated every hour. The
-      powerful gravity waves resulting from the impact of the planets,
-      were finally resolved in 2015
-    </p>
-  </div>
-  <div
-    class="mt-12 grid gap-4 divide-y md:grid-cols-2 md:divide-y-0 lg:grid-cols-3"
-  >
-    <template x-for="(post, index) in posts" :key="index">
-      <article class="mt-5 pt-8 md:pt-0">
-        <a :href="post.href">
-          <span
-            class="block text-base-content text-sm"
-            x-text="post.date"
-          ></span>
-          <div class="mt-2">
-            <h3
-              class="text-xl text-base-content font-semibold hover:underline"
-              x-text="post.title"
-            ></h3>
-            <p
-              class="text-base-content mt-1 leading-relaxed"
-              x-text="post.desc"
-            ></p>
-          </div>
-          <button
-            class="mt-2 outline-none flex items-center text-[14px] text-primary decoration-primary hover:underline"
-          >
-            READ MORE
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-3 w-3 ml-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </button>
-        </a>
-      </article>
-    </template>
-  </div>
-</section>
-</div>`
+var fs = require('fs');
+const path = require("path")
+let srcDir = path.join(process.cwd(), `out/daisyx`);
+let outpath = path.join(process.cwd(), `snippets/snippets-html.json`);
 
-compile(html, [
-        {
-            title: 'What is SaaS? Software as a Service Explained',
-            desc: 'Going into this journey, I had a standard therapy regimen, based on looking at the research literature. After I saw the movie, I started to ask other people what they did for their anxiety, and some',
-            date: 'Thursday, December 9th 2021',
-            href: 'javascript:void(0)'
-        },
-        {
-            title: 'A Quick Guide to WordPress Hosting',
-            desc: 'According to him, Ã¢â‚¬Å“I\'m still surprised that this has happened. But we are surprised because we are so surprised.Ã¢â‚¬ÂMore revelations about Whittington will be featured in the film',
-            date: 'Thursday, December 9th 2021',
-            href: 'javascript:void(0)'
-        },
-        {
-            title: '7 Promising VS Code Extensions Introduced in 2022',
-            desc: 'I hope I remembered all the stuff that they needed to know. They\'re like, \'okay,\' and write it in their little reading notebooks. I realized today that I have all this stuff that',
-            date: 'Thursday, December 9th 2021',
-            href: 'javascript:void(0)'
-        },
-        {
-            title: 'How to Use Root C++ Interpreter Shell to Write C++ Programs',
-            desc: 'The powerful gravity waves resulting from the impact of the planets\' moons Ã¢â‚¬â€ four in total Ã¢â‚¬â€ were finally resolved in 2015 when gravitational microlensing was used to observe the',
-            date: 'Thursday, December 9th 2021',
-            href: 'javascript:void(0)'
-        }
-    ]
-    );
+const files = fs.readdirSync(srcDir);
+function replaceQuotes(inputString) {
+    // Replace single quotes with backticks
+    var step1 = inputString.replace(/'/g, '`');
+    
+    // Replace double quotes with single quotes
+    var step2 = step1.replace(/"/g, "'");
+    
+    return step2;
+}
+
+function formatHtmlToOneLine(htmlString) {
+    // Remove line breaks and extra white spaces
+    return htmlString.replace(/\s+/g, ' ').trim();
+}
+function stringToArrayOfLines(inputString) {
+    // Split the input string into an array of lines based on line breaks
+    return inputString.split(/\r?\n/);
+}
+
+
+let out = {}
+
+files.map(async (filename) => {
+    const filePath = path.join(srcDir, filename);
+    const longname = (filename.split("-"))[1]
+    const longnameWithDash = longname.replace(" ","-")
+    const raw_html = fs.readFileSync(filePath, "utf-8")
+    const html = stringToArrayOfLines(replaceQuotes(raw_html))
+    out[longname] = {
+        "prefix": [longname],
+      "body": html,
+      "description": longname
+    }
+})
+console.log(out)
+fs.writeFileSync(outpath,JSON.stringify(out))

@@ -28,5 +28,4 @@ linkArry.forEach((slug) => {
       }
       
    
-  })
-})
+  }
