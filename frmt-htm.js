@@ -74,8 +74,10 @@ files.map(async (filename) => {
     
     //testing
     console.log("longname", longname)
-    let html = processXAttributes(raw_html)
-    fs.writeFileSync(filePath, html)
+    let step1 = processXAttributes(raw_html)
+    let s2 = step1.replace(/<html><head><\/head><body>/, '');
+    let final_code = f1.replace(/<\/body><\/html>/, '');
+    fs.writeFileSync(filePath, final_code)
 
    
 
