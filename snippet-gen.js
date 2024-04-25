@@ -28,13 +28,18 @@ function replaceSpacesWithHyphens(str) {
     return str.replace(/ /g, '-');
 }
 
+const linkArry = ["banners", "cta-sections", "team-sections", "contact-sections", "footers", "logo-grid", "404-pages", "heroes", "faqs", "feature-sections", "pricing-sections", "testimonials", "stats", "newsletters", "inputs", "tables", "paginations", "cards", "alerts", "section-headers", "steps", "buttons", "tabs", "navbars", "select-menus", "modals", "avatars", "authentication", "sidebars", "radio-groups", "context-menus"]
+
 let longnaems = []
 let out = {}
+let data = []
 
 files.map(async (filename) => {
     const filePath = path.join(srcDir, filename);
     let f2 = filename
-    
+    linkArry.forEach(itm => {
+        if (f2.startsWith(itm)) f2 = filename.slice(itm.length + 1);
+    })
 
 
     const longname = ((f2.split("-"))[0]).replace(/.html/g, "")
@@ -50,8 +55,18 @@ files.map(async (filename) => {
     }
 
     //testing
+    console.log("longname", longname)
+    let $ = cheerio.load(raw_html)
+    let datas = $("[x-data]").attr("x-data")
+    if(datas) {
+        let ob = eval(`(${datas})`)
+        data.push(ob)
+        
+    }
     
 
 })
 
 fs.writeFileSync(outpath, JSON.stringify(out))
+console.log(data)
+fs.writeFileSync(path.join(process.cwd(), `out/data.json`), JSON.stringify(data))

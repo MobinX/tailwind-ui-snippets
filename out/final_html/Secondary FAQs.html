@@ -1,0 +1,36 @@
+<html><head></head><body><div>
+  <section class="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8">
+    <div class="space-y-3 text-center">
+      <h1 class="text-3xl text-base-content font-semibold">
+        Frequently Asked Questions
+      </h1>
+      <p class="text-base-content max-w-lg mx-auto text-lg">
+        Answered all frequently asked questions, Still confused? feel free
+        to contact us.
+      </p>
+    </div>
+    <div class="mt-14 max-w-2xl mx-auto">
+     <!---use a map loop-->
+        <div class="space-y-3 mt-5 overflow-hidden border-b" onclick="">
+          <h4 class="cursor-pointer pb-5 flex items-center justify-between text-lg text-base-content font-medium">
+            <span>item.q</span>
+            <svg x-show="selectedFaq === index" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-base-content ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+            </svg>
+            <svg x-show="selectedFaq !== index" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-base-content ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokelinecap="round" strokelinejoin="round" strokewidth="2" d="M12 4v16m8-8H4"></path>
+            </svg>
+          </h4>
+          <div x-ref="answerElRef" class="transition-[max-height,opacity] overflow-hidden duration-500 ease-in-out" style="{
+            maxHeight: selectedFaq === index ? '1000px' '0px',
+            opacity: selectedFaq === index ? 1 0,
+          }">
+            <div>
+              <p class="text-base-content pb-4">item.a</p>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </section>
+</div></body></html>

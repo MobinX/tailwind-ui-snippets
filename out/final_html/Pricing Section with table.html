@@ -1,0 +1,79 @@
+<html><head></head><body><div>
+  <section class="py-14 text-base-content">
+    <div class="relative max-w-xl mx-auto space-y-3 px-4 sm:text-center md:px-0">
+      <h3 class="text-primary font-semibold">Pricing</h3>
+      <p class="text-base-content text-3xl font-semibold sm:text-4xl">
+        Compare our plans and find yours
+      </p>
+      <div class="max-w-xl">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          efficitur consequat nunc.
+        </p>
+      </div>
+    </div>
+    <div class="mt-16">
+      <div class="sticky top-0 py-6 border-b bg-base-100">
+        <div class="max-w-screen-xl mx-auto">
+          <ul class="ml-auto flex gap-x-6 px-4 md:px-8 lg:max-w-3xl">
+           <!---use a map loop-->
+              <li class="{`space-y-4 w-full`: true, `hidden lg:block`: selectedPlan !== plan.name}">
+                <div class="flex items-center justify-between">
+                  <span class="text-base-content font-medium">plan.name</span>
+                  <div class="relative text-base-content hover:text-base-content lg:hidden">
+                    <!-- Dropdown for small devices -->
+                    <svg class="w-5 h-5 absolute right-0 inset-y-0 my-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillrule="evenodd" d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z" cliprule="evenodd"></path>
+                    </svg>
+                    <select class="bg-transparent appearance-none outline-none px-8 cursor-pointer" x-model="selectedPlan">
+                      <option disabled="">Switch plan</option>
+                     <!---use a map loop-->
+                        <option x-bind:value="option.name">option.name</option>
+                      
+                    </select>
+                  </div>
+                </div>
+                <div class="text-base-content text-3xl font-semibold">
+                  <span>`$${plan.price}`</span>
+                  <span class="text-xl text-base-content font-normal">/mo</span>
+                </div>
+                <p class="text-sm">plan.desc</p>
+                <button class="w-full  btn btn-primary duration-150 text-sm">                 Get Started
+                </button>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="max-w-screen-xl mx-auto mt-10 space-y-4 px-4 overflow-auto md:overflow-visible md:px-8">
+       <!---use a map loop-->
+          <table class="w-full table-auto text-sm text-left">
+            <thead class="text-base-content font-medium border-b">
+              <tr>
+                <th class="z-20 top-12 py-6 lg:sticky">
+                  <div class="flex items-center gap-x-3">
+                    <div class="w-12 h-12 text-primary rounded-full border flex items-center justify-center">table.label_icon</div>
+                    <h4 class="text-base-content text-xl font-medium">table.label</h4>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="text-base-content divide-y">
+             <!---use a map loop-->
+                <tr>
+                  <td class="px-6 py-4 base-100space-nowrap">item.name</td>
+                  <td class="text-center w-[250px] px-6 py-4 base-100space-nowrap hidden lg:table-cell">item.basic</td>
+                  <td class="text-center w-[250px] px-6 py-4 base-100space-nowrap hidden lg:table-cell">item.business</td>
+                  <td class="text-center w-[250px] px-6 py-4 base-100space-nowrap hidden lg:table-cell">item.enterprise</td>
+                  <td class="text-center w-[250px] px-6 py-4 base-100space-nowrap lg:hidden">item[selectedPlan.toLowerCase()]</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+      </div>
+    </div>
+  </section>
+</div>
+
+</body></html>

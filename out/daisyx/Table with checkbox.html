@@ -1,4 +1,30 @@
-<div x-data="dataHandler()" class="max-w-screen-xl mx-auto px-4 md:px-8">
+<div x-data='{
+    tableItems: [
+        { name: "Liam James", email: "liamjames@example.com", position: "Software engineer", salary: "$100K" },
+        { name: "Olivia Emma", email: "oliviaemma@example.com", position: "Product designer", salary: "$90K" },
+        { name: "William Benjamin", email: "william.benjamin@example.com", position: "Front-end developer", salary: "$80K" },
+        { name: "Henry Theodore", email: "henrytheodore@example.com", position: "Laravel engineer", salary: "$120K" },
+        { name: "Amelia Elijah", email: "amelia.elijah@example.com", position: "Open source manager", salary: "$75K" }
+    ],
+    areAllChecked: false,
+    checkboxItems: {},
+    handleCheckboxItems() {
+        this.areAllChecked = !this.areAllChecked;
+        this.tableItems.forEach((_, idx) => {
+            this.checkboxItems[`checkbox${idx}`] = this.areAllChecked;
+        });
+    },
+    handleCheckboxChange(e, idx) {
+        this.areAllChecked = false;
+        this.checkboxItems[`checkbox${idx}`] = e.target.checked;
+        if (Object.values(this.checkboxItems).every(val => val === true)) this.areAllChecked = true;
+    },
+    init() {
+        this.tableItems.forEach((_, idx) => {
+            this.checkboxItems[`checkbox${idx}`] = false;
+        });
+    }
+}' class="max-w-screen-xl mx-auto px-4 md:px-8">
     <div class="items-start justify-between md:flex">
         <div class="max-w-lg">
             <h3 class="text-base-content text-xl font-bold sm:text-2xl">
@@ -58,35 +84,3 @@
         </table>
     </div>
 </div>
-
-<script>
-    function dataHandler() {
-        return {
-            tableItems: [
-                { name: "Liam James", email: "liamjames@example.com", position: "Software engineer", salary: "$100K" },
-                { name: "Olivia Emma", email: "oliviaemma@example.com", position: "Product designer", salary: "$90K" },
-                { name: "William Benjamin", email: "william.benjamin@example.com", position: "Front-end developer", salary: "$80K" },
-                { name: "Henry Theodore", email: "henrytheodore@example.com", position: "Laravel engineer", salary: "$120K" },
-                { name: "Amelia Elijah", email: "amelia.elijah@example.com", position: "Open source manager", salary: "$75K" }
-            ],
-            areAllChecked: false,
-            checkboxItems: {},
-            handleCheckboxItems() {
-                this.areAllChecked = !this.areAllChecked;
-                this.tableItems.forEach((_, idx) => {
-                    this.checkboxItems[`checkbox${idx}`] = this.areAllChecked;
-                });
-            },
-            handleCheckboxChange(e, idx) {
-                this.areAllChecked = false;
-                this.checkboxItems[`checkbox${idx}`] = e.target.checked;
-                if (Object.values(this.checkboxItems).every(val => val === true)) this.areAllChecked = true;
-            },
-            init() {
-                this.tableItems.forEach((_, idx) => {
-                    this.checkboxItems[`checkbox${idx}`] = false;
-                });
-            }
-        };
-    }
-</script>

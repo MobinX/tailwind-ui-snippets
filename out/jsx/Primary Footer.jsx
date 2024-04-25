@@ -1,4 +1,4 @@
-<><div x-data="footerComponent()">
+<><div x-data="{\n      footerNavs: [\n        {\n          href: \"javascript:void()\",\n          name: \"About\",\n        },\n        {\n          href: \"javascript:void()\",\n          name: \"Blog\",\n        },\n        {\n          href: \"javascript:void()\",\n          name: \"Team\",\n        },\n        {\n          href: \"javascript:void()\",\n          name: \"Careers\",\n        },\n        {\n          href: \"javascript:void()\",\n          name: \"Support\",\n        },\n      ],\n    }">
   <footer className="text-base-content bg-base-100 px-4 py-5 max-w-screen-xl mx-auto md:px-8">
     <div className="max-w-lg sm:mx-auto sm:text-center">
       <img src="https://www.floatui.com/logo.svg" className="w-32 sm:mx-auto" />
@@ -59,32 +59,4 @@
   .svg-icon rect {
     fill: currentColor;
   }
-`}</style>
-<script>{`
-  function footerComponent() {
-    return {
-      footerNavs: [
-        {
-          href: "javascript:void()",
-          name: "About",
-        },
-        {
-          href: "javascript:void()",
-          name: "Blog",
-        },
-        {
-          href: "javascript:void()",
-          name: "Team",
-        },
-        {
-          href: "javascript:void()",
-          name: "Careers",
-        },
-        {
-          href: "javascript:void()",
-          name: "Support",
-        },
-      ],
-    };
-  }
-`}</script></>
+`}</style></>

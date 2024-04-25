@@ -1,4 +1,4 @@
-<div x-data="footerComponent()">
+<div x-data="{\n      footerNavs: [\n        {\n          href: \"javascript:void()\",\n          name: \"About\",\n        },\n        {\n          href: \"javascript:void()\",\n          name: \"Blog\",\n        },\n        {\n          href: \"javascript:void()\",\n          name: \"Team\",\n        },\n        {\n          href: \"javascript:void()\",\n          name: \"Careers\",\n        },\n        {\n          href: \"javascript:void()\",\n          name: \"Support\",\n        },\n      ],\n    }">
   <footer className="text-base-content bg-base-100 px-4 py-5 max-w-screen-xl mx-auto md:px-8">
     <div className="gap-6 justify-between md:flex">
       <div className="flex-1">
@@ -74,75 +74,5 @@
     }
   `}</style>
 
-  <script>{`
-    function footerComponent() {
-      return {
-        footerNavs: [
-          {
-            label: "Company",
-            items: [
-              {
-                href: "javascript:void()",
-                name: "Partners",
-              },
-              {
-                href: "javascript:void()",
-                name: "Blog",
-              },
-              {
-                href: "javascript:void()",
-                name: "Team",
-              },
-              {
-                href: "javascript:void()",
-                name: "Careers",
-              },
-            ],
-          },
-          {
-            label: "Resources",
-            items: [
-              {
-                href: "javascript:void()",
-                name: "contact",
-              },
-              {
-                href: "javascript:void()",
-                name: "Support",
-              },
-              {
-                href: "javascript:void()",
-                name: "Docs",
-              },
-              {
-                href: "javascript:void()",
-                name: "Pricing",
-              },
-            ],
-          },
-          {
-            label: "About",
-            items: [
-              {
-                href: "javascript:void()",
-                name: "Terms",
-              },
-              {
-                href: "javascript:void()",
-                name: "License",
-              },
-              {
-                href: "javascript:void()",
-                name: "Privacy",
-              },
-              {
-                href: "javascript:void()",
-                name: "About US",
-              },
-            ],
-          },
-        ],
-      };
-    }
-  `}</script>
+
 </div>

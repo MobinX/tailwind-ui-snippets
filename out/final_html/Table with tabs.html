@@ -1,0 +1,39 @@
+<html><head></head><body><div>
+    <div class="max-w-screen-xl mx-auto px-4 md:px-8">
+        <div class="max-w-lg">
+            <h3 class="text-base-content text-xl font-bold sm:text-2xl">Reports</h3>
+            <p class="text-base-content mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="text-sm mt-12 overflow-x-auto">
+            <ul role="tablist" class="w-full border-b flex items-center gap-x-3 overflow-x-auto">
+               <!---use a map loop-->
+                    <liclass="`py-2 border-b-2@{selecteditem="=" idx="" ?="" 'border-primary="" text-primary'="" 'border-base-100="" text-base-content'}`"="">
+                        <button role="tab" aria-selected="selectedItem == idx ? 'true' 'false'" aria-controls="'tabpanel-' + (idx + 1)" class="py-2.5 px-4 rounded-lg duration-150 hover:text-primary hover:bg-base-200 active:bg-base-300 font-medium" onclick="">
+                            <span>item.label</span>
+                        </button>
+                    
+                </liclass="`py-2>
+            </ul>
+            <table class="w-full table-auto text-left">
+                <thead class="text-base-content font-medium border-b">
+                    <tr>
+                        <th class="w-9/12 py-4 pr-6">tableItems[selectedItem].title</th>
+                        <th class="py-4 pr-6">Clicks</th>
+                        <th class="py-4 pr-6">Impression</th>
+                    </tr>
+                </thead>
+                <tbody class="text-base-content divide-y">
+                   <!---use a map loop-->
+                        <tr>
+                            <td class="pr-6 py-4 base-100space-nowrap">item.prop</td>
+                            <td class="pr-6 py-4 base-100space-nowrap text-primary">item.clicks</td>
+                            <td class="pr-6 py-4 base-100space-nowrap">
+                                <spanclass="`py-2 px-3="" rounded-full="" font-semibold="" text-xs@{labelcolors[item.impression]}`"="">item.impression</spanclass="`py-2></td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body></html>

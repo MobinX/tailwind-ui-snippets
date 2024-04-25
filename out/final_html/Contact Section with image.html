@@ -1,0 +1,62 @@
+<html><head></head><body><main class="flex overflow-hidden">
+  <div class="flex-1 hidden lg:block">
+    <img src="https://images.unsplash.com/photo-1697135807547-5fa9fd22d9ec?auto=format&amp;fit=crop&amp;q=80&amp;w=3387&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-screen object-cover">
+  </div>
+  <div class="py-12 flex-1 lg:flex lg:justify-center lg:h-screen lg:overflow-auto">
+    <div class="max-w-lg flex-1 mx-auto px-4 text-base-content">
+      <div>
+        <h3 class="text-base-content text-3xl font-semibold sm:text-4xl">
+          Get in touch
+        </h3>
+        <p class="mt-3">
+          We’d love to hear from you! Please fill out the form bellow.
+        </p>
+      </div>
+      <form onsubmit="" class="space-y-5 mt-12 lg:pb-12">
+        <div>
+          <label class="font-medium"> Full name </label>
+          <input type="text" required="" class="w-full mt-2 px-3 py-2 text-base-content bg-transparent outline-none border focus:border-base-content shadow-sm rounded-lg">
+        </div>
+        <div>
+          <label class="font-medium"> Email </label>
+          <input type="email" required="" class="w-full mt-2 px-3 py-2 text-base-content bg-transparent outline-none border focus:border-base-content shadow-sm rounded-lg">
+        </div>
+        <div>
+          <label class="font-medium"> Phone number </label>
+          <div class="relative mt-2">
+            <div class="absolute inset-y-0 left-3 my-auto h-6 flex items-center border-r pr-2">
+              <select class="text-sm bg-transparent outline-none rounded-lg h-full">
+                <option>US</option>
+                <option>ES</option>
+                <option>MR</option>
+              </select>
+            </div>
+            <input type="number" placeholder="+1 (555) 000-000" required="" class="w-full pl-[4.5rem] pr-3 py-2 appearance-none bg-transparent outline-none border focus:border-base-content shadow-sm rounded-lg">
+          </div>
+        </div>
+        <div>
+          <label class="font-medium"> Services </label>
+          <ul class="grid gap-y-2 gap-x-6 flex-wrap grid-cols-2 mt-3">
+           <!---use a map loop-->
+              <li class="flex gap-x-3 text-sm">
+                <div>
+                  <input id="'service-' + idx" type="checkbox" class="checkbox-item peer hidden">
+                  <label for="'service-' + idx" class="relative flex w-5 h-5 bg-base-100 peer-checked:bg-primary rounded-md border ring-offset-2 ring-primary duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-base-100 after:rotate-45">
+                  </label>
+                </div>
+                <label for="'service-' + idx" class="cursor-pointer">item</label>
+              </li>
+            
+          </ul>
+        </div>
+        <div>
+          <label class="font-medium"> Message </label>
+          <textarea required="" class="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-base-content shadow-sm rounded-lg"></textarea>
+        </div>
+        <button class="w-full px-4 py-2 text-base-100 font-medium bg-base-content hover:bg-base-content active:bg-base-content rounded-lg duration-150">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</main></body></html>
