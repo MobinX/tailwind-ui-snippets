@@ -25,20 +25,20 @@
     },
 ] }">
     <div class="space-y-3 text-center">
-        <h1 class="text-3xl text-gray-800 font-semibold">
+        <h1 class="text-3xl text-base-content font-semibold">
             Frequently Asked Questions
         </h1>
-        <p class="text-gray-600 max-w-lg mx-auto text-lg">
+        <p class="text-base-content max-w-lg mx-auto text-lg">
             Answered all frequently asked questions, Still confused? feel free to contact us.
         </p>
     </div>
     <div class="mt-14 gap-4 sm:grid sm:grid-cols-2 lg:grid-cols-3">
         <template x-for="(item, idx) in faqsList" :key="idx">
             <div class="space-y-3 mt-5">
-                <h4 class="text-xl text-gray-700 font-medium" x-text="item.q">
+                <h4 class="text-xl text-base-content font-medium" x-text="item.q">
                     <!-- Question -->
                 </h4>
-                <p class="text-gray-500" x-text="item.a">
+                <p class="text-base-content" x-text="item.a">
                     <!-- Answer -->
                 </p>
             </div>

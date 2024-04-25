@@ -1,4 +1,4 @@
-<section class="relative py-28 bg-gray-900" x-data="{
+<section class="relative py-28 bg-base-content" x-data="{
     features: [
         {
             icon: 'M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z',
@@ -17,9 +17,9 @@
         },
     ]
 }">
-    <div class="relative z-10 max-w-screen-xl mx-auto px-4 text-gray-300 justify-between gap-24 lg:flex md:px-8">
+    <div class="relative z-10 max-w-screen-xl mx-auto px-4 text-base-300/70 justify-between gap-24 lg:flex md:px-8">
         <div class="max-w-xl">
-            <h3 class="text-white text-3xl font-semibold sm:text-4xl">
+            <h3 class="text-base-100 text-3xl font-semibold sm:text-4xl">
                 Do more with less complexity
             </h3>
             <p class="mt-3">
@@ -30,13 +30,13 @@
             <ul class="grid gap-8 sm:grid-cols-2">
                 <template x-for="(item, idx) in features" :key="idx">
                     <li class="flex gap-x-4">
-                        <div class="flex-none w-12 h-12 bg-gray-700 text-cyan-400 rounded-lg flex items-center justify-center">
+                        <div class="flex-none w-12 h-12 bg-base-content text-cyan-400 rounded-lg flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" :d="item.icon" />
                             </svg>
                         </div>
                         <div>
-                            <h4 class="text-lg text-gray-100 font-semibold" x-text="item.title">
+                            <h4 class="text-lg text-base-300 font-semibold" x-text="item.title">
                             </h4>
                             <p class="mt-3" x-text="item.desc">
                             </p>

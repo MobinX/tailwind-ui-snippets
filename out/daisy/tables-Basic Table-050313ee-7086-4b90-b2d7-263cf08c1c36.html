@@ -36,17 +36,17 @@
   class="max-w-screen-xl mx-auto px-4 md:px-8"
 >
   <div class="max-w-lg">
-    <h3 class="text-gray-800 text-xl font-bold sm:text-2xl">
+    <h3 class="text-base-content text-xl font-bold sm:text-2xl">
       Team members
     </h3>
-    <p class="text-gray-600 mt-2">
+    <p class="text-base-content mt-2">
       Lorem Ipsum is simply dummy text of the printing and typesetting
       industry.
     </p>
   </div>
   <div class="mt-12 shadow-sm border rounded-lg overflow-x-auto">
     <table class="w-full table-auto text-sm text-left">
-      <thead class="bg-gray-50 text-gray-600 font-medium border-b">
+      <thead class="bg-base-200 text-base-content font-medium border-b">
         <tr>
           <th class="py-3 px-6">Username</th>
           <th class="py-3 px-6">Email</th>
@@ -54,20 +54,20 @@
           <th class="py-3 px-6">Salary</th>
         </tr>
       </thead>
-      <tbody class="text-gray-600 divide-y">
+      <tbody class="text-base-content divide-y">
         <template x-for="(item, idx) in tableItems" :key="idx">
           <tr>
-            <td class="px-6 py-4 whitespace-nowrap" x-text="item.name"></td>
+            <td class="px-6 py-4 base-100space-nowrap" x-text="item.name"></td>
             <td
-              class="px-6 py-4 whitespace-nowrap"
+              class="px-6 py-4 base-100space-nowrap"
               x-text="item.email"
             ></td>
             <td
-              class="px-6 py-4 whitespace-nowrap"
+              class="px-6 py-4 base-100space-nowrap"
               x-text="item.position"
             ></td>
             <td
-              class="px-6 py-4 whitespace-nowrap"
+              class="px-6 py-4 base-100space-nowrap"
               x-text="item.salary"
             ></td>
           </tr>

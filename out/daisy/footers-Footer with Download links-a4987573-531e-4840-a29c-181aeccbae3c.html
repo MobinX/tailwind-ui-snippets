@@ -21,7 +21,7 @@
 }"
 >
   <footer class="pt-10">
-    <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+    <div class="max-w-screen-xl mx-auto px-4 text-base-content md:px-8">
       <div class="justify-between sm:flex">
         <div class="space-y-6">
           <img src="https://www.floatui.com/logo.svg" class="w-32" />
@@ -33,14 +33,14 @@
             class="flex flex-wrap items-center gap-4 text-sm sm:text-base"
           >
             <template x-for="(item, idx) in footerNavs" :key="idx">
-              <li class="text-gray-800 hover:text-gray-500 duration-150">
+              <li class="text-base-content hover:text-base-content duration-150">
                 <a :href="item.href" x-text="item.name"></a>
               </li>
             </template>
           </ul>
         </div>
         <div class="mt-6">
-          <p class="text-gray-700 font-semibold">Get the app</p>
+          <p class="text-base-content font-semibold">Get the app</p>
           <div class="flex items-center gap-3 mt-3 sm:block">
             <a href="javascript:void()">
               <svg class="w-32" fill="none" viewBox="0 0 338 100">

@@ -9,18 +9,18 @@
         :key="index"
       >
         <button
-          :class="{'border-indigo-600 text-indigo-600': selectedTab === tabItem, 'border-white text-gray-500': selectedTab !== tabItem}"
+          :class="{'border-primary text-primary': selectedTab === tabItem, 'border-base-100 text-base-content': selectedTab !== tabItem}"
           class="group outline-none px-1.5 border-l-2"
           @click="selectedTab = tabItem"
         >
           <div
-            class="py-1.5 px-3 rounded-lg duration-150 group-hover:text-indigo-600 group-hover:bg-gray-100 font-medium"
+            class="py-1.5 px-3 rounded-lg duration-150 group-hover:text-primary group-hover:bg-base-300 font-medium"
             x-text="tabItem"
           ></div>
         </button>
       </template>
     </div>
-    <div class="relative text-gray-500 sm:hidden">
+    <div class="relative text-base-content sm:hidden">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
@@ -35,7 +35,7 @@
       </svg>
       <select
         x-model="selectedTab"
-        class="py-2 px-3 w-full bg-transparent appearance-none outline-none border rounded-lg shadow-sm focus:border-indigo-600 text-sm"
+        class="py-2 px-3 w-full bg-transparent appearance-none outline-none border rounded-lg shadow-sm focus:border-primary text-sm"
       >
         <template
           x-for="(tabItem, index) in ['Overview', 'Integration', 'Billing', 'Transactions', 'Plans']"

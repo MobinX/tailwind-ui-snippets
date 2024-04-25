@@ -28,7 +28,7 @@
           <div class="md:hidden">
             <button
               @click="state = !state"
-              class="menu-btn text-gray-500 hover:text-gray-800"
+              class="menu-btn text-base-content hover:text-base-content"
             >
               <!-- Use x-show for conditional rendering in Alpine -->
               <template x-if="state">
@@ -66,7 +66,7 @@
         </div>
       </div>
       <nav
-        :class="{'absolute top-0 inset-x-0 bg-white shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent': state}"
+        :class="{'absolute top-0 inset-x-0 bg-base-100 shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent': state}"
         class="pb-5 md:text-sm"
       >
         <div
@@ -84,7 +84,7 @@
             <div class="md:hidden">
               <button
                 @click="state = !state"
-                class="menu-btn text-gray-500 hover:text-gray-800"
+                class="menu-btn text-base-content hover:text-base-content"
               >
                 <template x-if="state">
                   <svg
@@ -135,7 +135,7 @@
                           ]"
                 :key="item.title"
               >
-                <li class="text-gray-700 hover:text-gray-900">
+                <li class="text-base-content hover:text-base-content">
                   <a
                     :href="item.path"
                     class="block"
@@ -149,7 +149,7 @@
             >
               <a
                 href="javascript:void(0)"
-                class="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
+                class="flex items-center justify-center gap-x-1 py-2 px-4 text-base-100 font-medium bg-base-content hover:bg-base-content active:bg-base-content rounded-full md:inline-flex"
               >
                 Sign in
                 <svg
@@ -173,15 +173,15 @@
     <!-- Section -->
     <section>
       <div
-        class="max-w-screen-xl mx-auto px-4 py-28 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex"
+        class="max-w-screen-xl mx-auto px-4 py-28 gap-12 text-base-content overflow-hidden md:px-8 md:flex"
       >
         <div class="flex-none space-y-5 max-w-xl">
           <a
             href="javascript:void(0)"
-            class="inline-flex gap-x-6 items-center rounded-full p-1 pr-6 border text-sm font-medium duration-150 hover:bg-white"
+            class="inline-flex gap-x-6 items-center rounded-full p-1 pr-6 border text-sm font-medium duration-150 hover:bg-base-100"
           >
             <span
-              class="inline-block rounded-full px-3 py-1 bg-indigo-600 text-white"
+              class="inline-block rounded-full px-3 py-1 bg-primary text-base-100"
             >
               News
             </span>
@@ -201,7 +201,7 @@
               </svg>
             </p>
           </a>
-          <h1 class="text-4xl text-gray-800 font-extrabold sm:text-5xl">
+          <h1 class="text-4xl text-base-content font-extrabold sm:text-5xl">
             Build your SaaS exactly how you want
           </h1>
           <p>
@@ -211,7 +211,7 @@
           <div class="flex items-center gap-x-3 sm:text-sm">
             <a
               href="javascript:void(0)"
-              class="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
+              class="flex items-center justify-center gap-x-1 py-2 px-4 text-base-100 font-medium bg-base-content duration-150 hover:bg-base-content active:bg-base-content rounded-full md:inline-flex"
             >
               Get started
               <svg
@@ -229,7 +229,7 @@
             </a>
             <a
               href="javascript:void(0)"
-              class="flex items-center justify-center gap-x-1 py-2 px-4 text-gray-700 hover:text-gray-900 font-medium duration-150 md:inline-flex"
+              class="flex items-center justify-center gap-x-1 py-2 px-4 text-base-content hover:text-base-content font-medium duration-150 md:inline-flex"
             >
               Contact sales
               <svg

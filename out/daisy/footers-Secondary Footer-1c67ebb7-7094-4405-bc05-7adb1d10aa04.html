@@ -1,6 +1,6 @@
 <div x-data="footerComponent()">
   <footer
-    class="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8"
+    class="text-base-content bg-base-100 px-4 py-5 max-w-screen-xl mx-auto md:px-8"
   >
     <div class="gap-6 justify-between md:flex">
       <div class="flex-1">
@@ -21,7 +21,7 @@
               class="w-full p-2.5 outline-none"
             />
             <button
-              class="p-2.5 rounded-md text-white bg-indigo-600 outline-none shadow-md focus:shadow-none sm:px-5"
+              class="p-2.5 rounded-md text-base-100 bg-primary outline-none shadow-md focus:shadow-none sm:px-5"
             >
               Subscribe
             </button>
@@ -33,12 +33,12 @@
       >
         <template x-for="(item, idx) in footerNavs" :key="idx">
           <ul class="space-y-4">
-            <h4 class="text-gray-800 font-medium" x-text="item.label"></h4>
+            <h4 class="text-base-content font-medium" x-text="item.label"></h4>
             <template x-for="(el, idx2) in item.items" :key="idx2">
               <li>
                 <a
                   :href="el.href"
-                  class="hover:underline hover:text-indigo-600"
+                  class="hover:underline hover:text-primary"
                   x-text="el.name"
                 ></a>
               </li>
@@ -58,7 +58,7 @@
           >
             <a href="javascript:void()">
               <svg
-                class="svg-icon w-6 h-6 text-blue-400"
+                class="svg-icon w-6 h-6 text-primary/80"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -74,7 +74,7 @@
           >
             <a href="javascript:void()">
               <svg
-                class="svg-icon w-6 h-6 text-blue-700"
+                class="svg-icon w-6 h-6 text-primary"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -90,7 +90,7 @@
           >
             <a href="javascript:void()">
               <svg
-                class="svg-icon w-6 h-6 text-blue-500"
+                class="svg-icon w-6 h-6 text-primary"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -106,7 +106,7 @@
           >
             <a href="javascript:void()">
               <svg
-                class="svg-icon w-6 h-6 text-red-600"
+                class="svg-icon w-6 h-6 text-error"
                 viewBox="0 0 20 20"
               >
                 <path

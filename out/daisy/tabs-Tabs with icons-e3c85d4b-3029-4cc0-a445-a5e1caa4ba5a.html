@@ -40,11 +40,11 @@
       <template x-for="(item, index) in tabItems" :key="index">
         <button
           @click="selectedTab = item.name"
-          :class="{'border-indigo-600 text-indigo-600': selectedTab === item.name, 'border-white text-gray-500': selectedTab !== item.name}"
+          :class="{'border-primary text-primary': selectedTab === item.name, 'border-base-100 text-base-content': selectedTab !== item.name}"
           class="group outline-none py-1.5 border-b-2"
         >
           <div
-            class="flex items-center gap-x-2 py-1.5 px-3 rounded-lg duration-150 group-hover:text-indigo-600 group-hover:bg-gray-50 group-active:bg-gray-100 font-medium"
+            class="flex items-center gap-x-2 py-1.5 px-3 rounded-lg duration-150 group-hover:text-primary group-hover:bg-base-200 group-active:bg-base-300 font-medium"
           >
             <!-- Replace with actual SVG -->
             <div x-html="item.icon"></div>

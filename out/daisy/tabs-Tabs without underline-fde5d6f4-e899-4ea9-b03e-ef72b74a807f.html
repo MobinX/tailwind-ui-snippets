@@ -9,13 +9,13 @@
       <template x-for="(item, index) in tabItems" :key="index">
         <button
           @click="selectedTab = item"
-          :class="{'bg-gray-100 text-gray-700 shadow-sm': selectedTab === item, 'text-gray-500 hover:text-gray-700 hover:bg-gray-100 active:bg-gray-100': selectedTab !== item}"
-          class="outline-gray-800 py-1.5 px-3 rounded-lg duration-150 font-medium"
+          :class="{'bg-base-300 text-base-content shadow-sm': selectedTab === item, 'text-base-content hover:text-base-content hover:bg-base-300 active:bg-base-300': selectedTab !== item}"
+          class="outline-base-content py-1.5 px-3 rounded-lg duration-150 font-medium"
           x-text="item"
         ></button>
       </template>
     </div>
-    <div class="relative text-gray-500 sm:hidden">
+    <div class="relative text-base-content sm:hidden">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
@@ -30,7 +30,7 @@
       </svg>
       <select
         x-model="selectedTab"
-        class="py-2 px-3 w-full bg-transparent appearance-none outline-none border rounded-lg shadow-sm focus:border-gray-800 text-sm"
+        class="py-2 px-3 w-full bg-transparent appearance-none outline-none border rounded-lg shadow-sm focus:border-base-content text-sm"
       >
         <template x-for="(item, index) in tabItems" :key="index">
           <option :value="item" x-text="item"></option>

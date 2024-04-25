@@ -1,6 +1,6 @@
 <div x-data="footerComponent()">
   <footer
-    class="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8"
+    class="text-base-content bg-base-100 px-4 py-5 max-w-screen-xl mx-auto md:px-8"
   >
     <div class="max-w-lg sm:mx-auto sm:text-center">
       <img src="https://www.floatui.com/logo.svg" class="w-32 sm:mx-auto" />
@@ -14,7 +14,7 @@
       class="items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0"
     >
       <template x-for="(item, idx) in footerNavs" :key="idx">
-        <li class="hover:text-gray-800">
+        <li class="hover:text-base-content">
           <a :href="item.href" x-text="item.name"></a>
         </li>
       </template>
@@ -30,7 +30,7 @@
           >
             <a href="javascript:void()">
               <svg
-                class="svg-icon w-6 h-6 text-blue-400"
+                class="svg-icon w-6 h-6 text-primary/80"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -46,7 +46,7 @@
           >
             <a href="javascript:void()">
               <svg
-                class="svg-icon w-6 h-6 text-blue-700"
+                class="svg-icon w-6 h-6 text-primary"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -62,7 +62,7 @@
           >
             <a href="javascript:void()">
               <svg
-                class="svg-icon w-6 h-6 text-blue-500"
+                class="svg-icon w-6 h-6 text-primary"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -78,7 +78,7 @@
           >
             <a href="javascript:void()">
               <svg
-                class="svg-icon w-6 h-6 text-red-600"
+                class="svg-icon w-6 h-6 text-error"
                 viewBox="0 0 20 20"
               >
                 <path

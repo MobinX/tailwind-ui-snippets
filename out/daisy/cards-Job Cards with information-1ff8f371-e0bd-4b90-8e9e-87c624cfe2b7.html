@@ -33,12 +33,12 @@
 >
   <section class="mt-12 max-w-screen-lg mx-auto px-4 md:px-8">
     <div>
-      <h1 class="text-gray-800 text-3xl font-semibold">Explore The Jobs</h1>
+      <h1 class="text-base-content text-3xl font-semibold">Explore The Jobs</h1>
     </div>
 
     <ul class="mt-12 space-y-6">
       <template x-for="(item, idx) in jobs" :key="idx">
-        <li class="p-5 bg-white rounded-md shadow-sm">
+        <li class="p-5 bg-base-100 rounded-md shadow-sm">
           <a :href="item.href">
             <div>
               <div class="justify-between sm:flex">
@@ -47,10 +47,10 @@
                     class="text-xl font-medium text-cyan-600"
                     x-text="item.title"
                   ></h3>
-                  <p class="text-gray-500 mt-2 pr-2" x-text="item.desc"></p>
+                  <p class="text-base-content mt-2 pr-2" x-text="item.desc"></p>
                 </div>
                 <div class="mt-5 space-y-4 text-sm sm:mt-0 sm:space-y-2">
-                  <span class="flex items-center text-gray-500">
+                  <span class="flex items-center text-base-content">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-5 w-5 mr-2"
@@ -65,7 +65,7 @@
                     </svg>
                     <span x-text="item.date"></span>
                   </span>
-                  <span class="flex items-center text-gray-500">
+                  <span class="flex items-center text-base-content">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-5 w-5 mr-2"
@@ -88,7 +88,7 @@
               <div
                 class="mt-4 items-center space-y-4 text-sm sm:flex sm:space-x-4 sm:space-y-0"
               >
-                <span class="flex items-center text-gray-500">
+                <span class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5 mr-2"
@@ -106,7 +106,7 @@
                   </svg>
                   <span x-text="item.type"></span>
                 </span>
-                <span class="flex items-center text-gray-500">
+                <span class="flex items-center text-base-content">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5 mr-2"

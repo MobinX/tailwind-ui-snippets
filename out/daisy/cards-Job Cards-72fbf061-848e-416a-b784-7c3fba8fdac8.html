@@ -30,10 +30,10 @@
 >
   <div class="max-w-screen-lg mx-auto px-4 md:px-8">
     <div class="max-w-md">
-      <h1 class="text-gray-800 text-2xl font-extrabold sm:text-3xl">
+      <h1 class="text-base-content text-2xl font-extrabold sm:text-3xl">
         Open Positions
       </h1>
-      <p class="text-gray-600 mt-2">
+      <p class="text-base-content mt-2">
         We're currently looking talent software engineers, and designers to
         help us in our missions and to grow up.
       </p>
@@ -41,34 +41,34 @@
     <ul class="mt-12 divide-y space-y-3">
       <template x-for="(item, idx) in members" :key="idx">
         <li
-          class="px-4 py-5 duration-150 hover:border-white hover:rounded-xl hover:bg-gray-50"
+          class="px-4 py-5 duration-150 hover:border-base-100 hover:rounded-xl hover:bg-base-200"
         >
           <a :href="item.path" class="space-y-3">
             <div class="flex items-center gap-x-3">
               <div
-                class="bg-white w-14 h-14 border rounded-full flex items-center justify-center"
+                class="bg-base-100 w-14 h-14 border rounded-full flex items-center justify-center"
               >
                 <div x-html="item.company_icon"></div>
               </div>
               <div>
                 <span
-                  class="block text-sm text-indigo-600 font-medium"
+                  class="block text-sm text-primary font-medium"
                   x-text="item.company_name"
                 ></span>
                 <h3
-                  class="text-base text-gray-800 font-semibold mt-1"
+                  class="text-base text-base-content font-semibold mt-1"
                   x-text="item.job_title"
                 ></h3>
               </div>
             </div>
             <p
-              class="text-gray-600 sm:text-sm"
+              class="text-base-content sm:text-sm"
               x-text="item.job_description"
             ></p>
-            <div class="text-sm text-gray-600 flex items-center gap-6">
+            <div class="text-sm text-base-content flex items-center gap-6">
               <span class="flex items-center gap-2">
                 <svg
-                  class="w-5 h-5 text-gray-500"
+                  class="w-5 h-5 text-base-content"
                   viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +88,7 @@
               </span>
               <span class="flex items-center gap-2">
                 <svg
-                  class="w-5 h-5 text-gray-500"
+                  class="w-5 h-5 text-base-content"
                   viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"

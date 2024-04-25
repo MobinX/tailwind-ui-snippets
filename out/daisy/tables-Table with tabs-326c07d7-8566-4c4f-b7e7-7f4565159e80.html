@@ -5,37 +5,37 @@
         { label: 'Devices', title: 'Top devices', items: [ { prop: 'Android', clicks: '360', impression: 'Normal' }, { prop: 'Linux', clicks: '190', impression: 'Good' }, { prop: 'Macbook', clicks: '129', impression: 'Good' }, { prop: 'Windows', clicks: '50', impression: 'Bad' } ] },
     ],
     selectedItem: 0,
-    labelColors: { 'Good': 'text-green-600 bg-green-50', 'Normal': 'text-blue-600 bg-blue-50', 'Great': 'text-pink-600 bg-pink-50', 'Bad': 'text-red-600 bg-red-50' }
+    labelColors: { 'Good': 'text-primary bg-primary/40', 'Normal': 'text-primary bg-primary/35', 'Great': 'text-pink-600 bg-pink-50', 'Bad': 'text-error bg-red-50' }
 }">
     <div class="max-w-screen-xl mx-auto px-4 md:px-8">
         <div class="max-w-lg">
-            <h3 class="text-gray-800 text-xl font-bold sm:text-2xl">Reports</h3>
-            <p class="text-gray-600 mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <h3 class="text-base-content text-xl font-bold sm:text-2xl">Reports</h3>
+            <p class="text-base-content mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
         <div class="text-sm mt-12 overflow-x-auto">
             <ul role="tablist" class="w-full border-b flex items-center gap-x-3 overflow-x-auto">
                 <template x-for="(item, idx) in tableItems" :key="idx">
-                    <li :class="`py-2 border-b-2 ${selectedItem == idx ? 'border-indigo-600 text-indigo-600' : 'border-white text-gray-500'}`">
-                        <button role="tab" :aria-selected="selectedItem == idx ? 'true' : 'false'" :aria-controls="'tabpanel-' + (idx + 1)" class="py-2.5 px-4 rounded-lg duration-150 hover:text-indigo-600 hover:bg-gray-50 active:bg-gray-100 font-medium" @click="selectedItem = idx">
+                    <li :class="`py-2 border-b-2 ${selectedItem == idx ? 'border-primary text-primary' : 'border-base-100 text-base-content'}`">
+                        <button role="tab" :aria-selected="selectedItem == idx ? 'true' : 'false'" :aria-controls="'tabpanel-' + (idx + 1)" class="py-2.5 px-4 rounded-lg duration-150 hover:text-primary hover:bg-base-200 active:bg-base-300 font-medium" @click="selectedItem = idx">
                             <span x-text="item.label"></span>
                         </button>
                     </li>
                 </template>
             </ul>
             <table class="w-full table-auto text-left">
-                <thead class="text-gray-600 font-medium border-b">
+                <thead class="text-base-content font-medium border-b">
                     <tr>
                         <th class="w-9/12 py-4 pr-6" x-text="tableItems[selectedItem].title"></th>
                         <th class="py-4 pr-6">Clicks</th>
                         <th class="py-4 pr-6">Impression</th>
                     </tr>
                 </thead>
-                <tbody class="text-gray-600 divide-y">
+                <tbody class="text-base-content divide-y">
                     <template x-for="(item, idx) in tableItems[selectedItem].items" :key="idx">
                         <tr>
-                            <td class="pr-6 py-4 whitespace-nowrap" x-text="item.prop"></td>
-                            <td class="pr-6 py-4 whitespace-nowrap text-indigo-600" x-text="item.clicks"></td>
-                            <td class="pr-6 py-4 whitespace-nowrap">
+                            <td class="pr-6 py-4 base-100space-nowrap" x-text="item.prop"></td>
+                            <td class="pr-6 py-4 base-100space-nowrap text-primary" x-text="item.clicks"></td>
+                            <td class="pr-6 py-4 base-100space-nowrap">
                                 <span :class="`py-2 px-3 rounded-full font-semibold text-xs ${labelColors[item.impression]}`" x-text="item.impression"></span>
                             </td>
                         </tr>

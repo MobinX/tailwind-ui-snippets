@@ -1,10 +1,10 @@
 <div x-data="pricingComponent()">
-  <section class="py-14 text-gray-600">
+  <section class="py-14 text-base-content">
     <div
       class="relative max-w-xl mx-auto space-y-3 px-4 sm:text-center md:px-0"
     >
-      <h3 class="text-indigo-600 font-semibold">Pricing</h3>
-      <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">
+      <h3 class="text-primary font-semibold">Pricing</h3>
+      <p class="text-base-content text-3xl font-semibold sm:text-4xl">
         Compare our plans and find yours
       </p>
       <div class="max-w-xl">
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="mt-16">
-      <div class="sticky top-0 py-6 border-b bg-white">
+      <div class="sticky top-0 py-6 border-b bg-base-100">
         <div class="max-w-screen-xl mx-auto">
           <ul class="ml-auto flex gap-x-6 px-4 md:px-8 lg:max-w-3xl">
             <template x-for="plan in plans" :key="plan.name">
@@ -24,11 +24,11 @@
               >
                 <div class="flex items-center justify-between">
                   <span
-                    class="text-gray-700 font-medium"
+                    class="text-base-content font-medium"
                     x-text="plan.name"
                   ></span>
                   <div
-                    class="relative text-gray-500 hover:text-gray-800 lg:hidden"
+                    class="relative text-base-content hover:text-base-content lg:hidden"
                   >
                     <!-- Dropdown for small devices -->
                     <svg
@@ -57,13 +57,13 @@
                     </select>
                   </div>
                 </div>
-                <div class="text-gray-800 text-3xl font-semibold">
+                <div class="text-base-content text-3xl font-semibold">
                   <span x-text="`$${plan.price}`"></span>
-                  <span class="text-xl text-gray-600 font-normal">/mo</span>
+                  <span class="text-xl text-base-content font-normal">/mo</span>
                 </div>
                 <p class="text-sm" x-text="plan.desc"></p>
                 <button
-                  class="px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150 text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700"
+                  class="px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150 text-base-100 bg-primary hover:bg-primary/90 active:bg-primary"
                 >
                   Get Started
                 </button>
@@ -77,43 +77,43 @@
       >
         <template x-for="table in tables" :key="table.label">
           <table class="w-full table-auto text-sm text-left">
-            <thead class="text-gray-600 font-medium border-b">
+            <thead class="text-base-content font-medium border-b">
               <tr>
                 <th class="z-20 top-12 py-6 lg:sticky">
                   <div class="flex items-center gap-x-3">
                     <div
-                      class="w-12 h-12 text-indigo-600 rounded-full border flex items-center justify-center"
+                      class="w-12 h-12 text-primary rounded-full border flex items-center justify-center"
                       x-html="table.label_icon"
                     ></div>
                     <h4
-                      class="text-gray-800 text-xl font-medium"
+                      class="text-base-content text-xl font-medium"
                       x-text="table.label"
                     ></h4>
                   </div>
                 </th>
               </tr>
             </thead>
-            <tbody class="text-gray-600 divide-y">
+            <tbody class="text-base-content divide-y">
               <template x-for="(item, idx) in table.items" :key="idx">
                 <tr>
                   <td
-                    class="px-6 py-4 whitespace-nowrap"
+                    class="px-6 py-4 base-100space-nowrap"
                     x-text="item.name"
                   ></td>
                   <td
-                    class="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell"
+                    class="text-center w-[250px] px-6 py-4 base-100space-nowrap hidden lg:table-cell"
                     x-html="item.basic"
                   ></td>
                   <td
-                    class="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell"
+                    class="text-center w-[250px] px-6 py-4 base-100space-nowrap hidden lg:table-cell"
                     x-html="item.business"
                   ></td>
                   <td
-                    class="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell"
+                    class="text-center w-[250px] px-6 py-4 base-100space-nowrap hidden lg:table-cell"
                     x-html="item.enterprise"
                   ></td>
                   <td
-                    class="text-center w-[250px] px-6 py-4 whitespace-nowrap lg:hidden"
+                    class="text-center w-[250px] px-6 py-4 base-100space-nowrap lg:hidden"
                     x-html="item[selectedPlan.toLowerCase()]"
                   ></td>
                 </tr>
@@ -129,7 +129,7 @@
 <script>
   function pricingComponent() {
     return {
-      checkIcon: "<div class='text-indigo-600 text-xl'>+</div>",
+      checkIcon: "<div class='text-primary text-xl'>+</div>",
       "<div class='text-xl'>-</div>": "<div class='text-xl'>-</div>",
       plans: [
         {
@@ -156,21 +156,21 @@
           items: [
             {
               name: "Aliquam finibus",
-              basic: "<div class='text-indigo-600 text-xl'>+</div>",
-              business: "<div class='text-indigo-600 text-xl'>+</div>",
-              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+              basic: "<div class='text-primary text-xl'>+</div>",
+              business: "<div class='text-primary text-xl'>+</div>",
+              enterprise: "<div class='text-primary text-xl'>+</div>",
             },
             {
               name: "Vestibulum tristique",
               basic: "<div class='text-xl'>-</div>",
-              business: "<div class='text-indigo-600 text-xl'>+</div>",
-              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+              business: "<div class='text-primary text-xl'>+</div>",
+              enterprise: "<div class='text-primary text-xl'>+</div>",
             },
             {
               name: "Aliquam finibus",
               basic: "<div class='text-xl'>-</div>",
               business: "<div class='text-xl'>-</div>",
-              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+              enterprise: "<div class='text-primary text-xl'>+</div>",
             },
             {
               name: "Praesent aliquet",
@@ -187,21 +187,21 @@
           items: [
             {
               name: "Aliquam finibus",
-              basic: "<div class='text-indigo-600 text-xl'>+</div>",
-              business: "<div class='text-indigo-600 text-xl'>+</div>",
-              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+              basic: "<div class='text-primary text-xl'>+</div>",
+              business: "<div class='text-primary text-xl'>+</div>",
+              enterprise: "<div class='text-primary text-xl'>+</div>",
             },
             {
               name: "Vestibulum tristique",
               basic: "<div class='text-xl'>-</div>",
-              business: "<div class='text-indigo-600 text-xl'>+</div>",
-              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+              business: "<div class='text-primary text-xl'>+</div>",
+              enterprise: "<div class='text-primary text-xl'>+</div>",
             },
             {
               name: "Aliquam finibus",
               basic: "<div class='text-xl'>-</div>",
               business: "<div class='text-xl'>-</div>",
-              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+              enterprise: "<div class='text-primary text-xl'>+</div>",
             },
             {
               name: "Lorinto dinor",
@@ -213,7 +213,7 @@
               name: "Praesent aliquet",
               basic: "Limited",
               business: "Limited",
-              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+              enterprise: "<div class='text-primary text-xl'>+</div>",
             },
             {
               name: "Praesent aliquet",
@@ -230,21 +230,21 @@
           items: [
             {
               name: "Aliquam finibus",
-              basic: "<div class='text-indigo-600 text-xl'>+</div>",
-              business: "<div class='text-indigo-600 text-xl'>+</div>",
-              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+              basic: "<div class='text-primary text-xl'>+</div>",
+              business: "<div class='text-primary text-xl'>+</div>",
+              enterprise: "<div class='text-primary text-xl'>+</div>",
             },
             {
               name: "Vestibulum tristique",
               basic: "<div class='text-xl'>-</div>",
-              business: "<div class='text-indigo-600 text-xl'>+</div>",
-              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+              business: "<div class='text-primary text-xl'>+</div>",
+              enterprise: "<div class='text-primary text-xl'>+</div>",
             },
             {
               name: "Aliquam finibus",
               basic: "<div class='text-xl'>-</div>",
               business: "<div class='text-xl'>-</div>",
-              enterprise: "<div class='text-indigo-600 text-xl'>+</div>",
+              enterprise: "<div class='text-primary text-xl'>+</div>",
             },
             {
               name: "Praesent aliquet",

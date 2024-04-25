@@ -63,7 +63,7 @@ navsFooter: [
 }"
 >
   <nav
-    class="fixed top-0 left-0 w-full h-full border-r bg-white space-y-8 sm:w-80"
+    class="fixed top-0 left-0 w-full h-full border-r bg-base-100 space-y-8 sm:w-80"
   >
     <div class="flex flex-col h-full">
       <div class="h-20 flex items-center px-8">
@@ -81,9 +81,9 @@ navsFooter: [
             <li>
               <a
                 :href="item.href"
-                class="flex items-center gap-x-2 text-gray-600 p-2 rounded-lg hover:bg-gray-50 active:bg-gray-100 duration-150"
+                class="flex items-center gap-x-2 text-base-content p-2 rounded-lg hover:bg-base-200 active:bg-base-300 duration-150"
               >
-                <div class="text-gray-500" x-html="item.icon"></div>
+                <div class="text-base-content" x-html="item.icon"></div>
                 <span x-text="item.name"></span>
               </a>
             </li>
@@ -95,9 +95,9 @@ navsFooter: [
               <li>
                 <a
                   :href="item.href"
-                  class="flex items-center gap-x-2 text-gray-600 p-2 rounded-lg hover:bg-gray-50 active:bg-gray-100 duration-150"
+                  class="flex items-center gap-x-2 text-base-content p-2 rounded-lg hover:bg-base-200 active:bg-base-300 duration-150"
                 >
-                  <div class="text-gray-500" x-html="item.icon"></div>
+                  <div class="text-base-content" x-html="item.icon"></div>
                   <span x-text="item.name"></span>
                 </a>
               </li>
@@ -110,12 +110,12 @@ navsFooter: [
                 class="w-12 h-12 rounded-full"
               />
               <div>
-                <span class="block text-gray-700 text-sm font-semibold"
+                <span class="block text-base-content text-sm font-semibold"
                   >Alivika tony</span
                 >
                 <a
                   href="javascript:void(0)"
-                  class="block mt-px text-gray-600 hover:text-indigo-600 text-xs"
+                  class="block mt-px text-base-content hover:text-primary text-xs"
                 >
                   View profile
                 </a>

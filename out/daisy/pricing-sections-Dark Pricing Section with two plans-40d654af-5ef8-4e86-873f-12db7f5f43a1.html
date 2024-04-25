@@ -34,7 +34,7 @@
     ]
   }"
 >
-  <div class="relative py-14 bg-gray-900">
+  <div class="relative py-14 bg-base-content">
     <div
       class="absolute inset-0 blur-[118px] max-w-lg h-[800px] mx-auto sm:max-w-3xl sm:h-[400px]"
       style="
@@ -48,11 +48,11 @@
       "
     ></div>
     <div
-      class="relative max-w-screen-xl mx-auto text-gray-300 sm:px-4 md:px-8"
+      class="relative max-w-screen-xl mx-auto text-base-300/70 sm:px-4 md:px-8"
     >
       <div class="max-w-xl mx-auto space-y-3 px-4 sm:text-center sm:px-0">
         <h3 class="text-cyan-400 font-semibold">Pricing</h3>
-        <p class="text-white text-3xl font-semibold sm:text-4xl">
+        <p class="text-base-100 text-3xl font-semibold sm:text-4xl">
           Pay as you grow
         </p>
         <div class="max-w-xl">
@@ -65,18 +65,18 @@
       <div class="mt-16 justify-center sm:flex">
         <template x-for="(item, index) in plans" :key="index">
           <div
-            :class="{'relative flex-1 flex items-stretch flex-col mt-6 border-2 sm:mt-0 sm:rounded-xl sm:max-w-md': true, 'bg-gray-900 border-cyan-400 border-x-0 sm:border-x-2': item.isMostPop, 'border-transparent': !item.isMostPop}"
+            :class="{'relative flex-1 flex items-stretch flex-col mt-6 border-2 sm:mt-0 sm:rounded-xl sm:max-w-md': true, 'bg-base-content border-cyan-400 border-x-0 sm:border-x-2': item.isMostPop, 'border-transparent': !item.isMostPop}"
           >
-            <div class="p-4 py-8 space-y-4 border-b border-gray-700 md:p-8">
-              <span class="text-gray-200 font-medium" x-text="item.name">
+            <div class="p-4 py-8 space-y-4 border-b border-base-content md:p-8">
+              <span class="text-base-300/90 font-medium" x-text="item.name">
               </span>
               <div class="text-cyan-400 text-3xl font-semibold">
                 <span x-text="`$${item.price}`"></span>
                 <span class="text-xl font-normal">/mo</span>
               </div>
-              <p class="text-gray-400" x-text="item.desc"></p>
+              <p class="text-base-content" x-text="item.desc"></p>
               <button
-                class="px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150 text-white bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700"
+                class="px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150 text-base-100 bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700"
               >
                 Get Started
               </button>

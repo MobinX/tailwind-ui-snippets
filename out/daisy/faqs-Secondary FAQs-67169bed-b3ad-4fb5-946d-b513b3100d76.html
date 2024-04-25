@@ -11,10 +11,10 @@
     class="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8"
   >
     <div class="space-y-3 text-center">
-      <h1 class="text-3xl text-gray-800 font-semibold">
+      <h1 class="text-3xl text-base-content font-semibold">
         Frequently Asked Questions
       </h1>
-      <p class="text-gray-600 max-w-lg mx-auto text-lg">
+      <p class="text-base-content max-w-lg mx-auto text-lg">
         Answered all frequently asked questions, Still confused? feel free
         to contact us.
       </p>
@@ -26,13 +26,13 @@
           @click="selectedFaq = selectedFaq === index ? null : index"
         >
           <h4
-            class="cursor-pointer pb-5 flex items-center justify-between text-lg text-gray-700 font-medium"
+            class="cursor-pointer pb-5 flex items-center justify-between text-lg text-base-content font-medium"
           >
             <span x-text="item.q"></span>
             <svg
               x-show="selectedFaq === index"
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-gray-500 ml-2"
+              class="h-5 w-5 text-base-content ml-2"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -47,7 +47,7 @@
             <svg
               x-show="selectedFaq !== index"
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-gray-500 ml-2"
+              class="h-5 w-5 text-base-content ml-2"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -69,7 +69,7 @@
           }"
           >
             <div>
-              <p class="text-gray-500 pb-4" x-text="item.a"></p>
+              <p class="text-base-content pb-4" x-text="item.a"></p>
             </div>
           </div>
         </div>

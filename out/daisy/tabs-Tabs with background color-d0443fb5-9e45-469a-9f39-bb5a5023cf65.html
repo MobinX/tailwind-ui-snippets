@@ -3,19 +3,19 @@
 >
   <div class="max-w-screen-xl mt-2 mx-auto px-4 md:px-8">
     <div
-      class="hidden bg-gray-100 py-1.5 px-2.5 rounded-lg gap-x-3 overflow-x-auto text-sm sm:flex"
+      class="hidden bg-base-300 py-1.5 px-2.5 rounded-lg gap-x-3 overflow-x-auto text-sm sm:flex"
       aria-label="Manage your account"
     >
       <template x-for="(item, index) in tabItems" :key="index">
         <button
-          :class="{'bg-white text-indigo-600 shadow-sm': selectedTab === item, 'text-gray-500 hover:text-indigo-600 hover:bg-white active:bg-white/50': selectedTab !== item}"
+          :class="{'bg-base-100 text-primary shadow-sm': selectedTab === item, 'text-base-content hover:text-primary hover:bg-base-100 active:bg-base-100/50': selectedTab !== item}"
           class="py-1.5 px-3 rounded-lg duration-150 font-medium"
           @click="selectedTab = item"
           x-text="item"
         ></button>
       </template>
     </div>
-    <div class="relative text-gray-500 sm:hidden">
+    <div class="relative text-base-content sm:hidden">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
@@ -30,7 +30,7 @@
       </svg>
       <select
         x-model="selectedTab"
-        class="py-2 px-3 w-full bg-transparent appearance-none outline-none border rounded-lg shadow-sm focus:border-indigo-600 text-sm"
+        class="py-2 px-3 w-full bg-transparent appearance-none outline-none border rounded-lg shadow-sm focus:border-primary text-sm"
       >
         <template x-for="(item, index) in tabItems" :key="index">
           <option :value="item" x-text="item"></option>

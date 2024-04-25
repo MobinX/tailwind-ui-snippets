@@ -39,9 +39,9 @@
 ] }"
 >
   <div class="py-14">
-    <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+    <div class="max-w-screen-xl mx-auto px-4 text-base-content md:px-8">
       <div class="max-w-xl space-y-3">
-        <h3 class="text-gray-800 text-3xl font-semibold sm:text-4xl">
+        <h3 class="text-base-content text-3xl font-semibold sm:text-4xl">
           Simple solutions for complex issues
         </h3>
         <p>
@@ -54,18 +54,18 @@
           <template x-for="item in features" :key="item.title">
             <li class="flex gap-x-4">
               <div
-                class="flex-none w-12 h-12 bg-indigo-600 text-white rounded-lg flex items-center justify-center"
+                class="flex-none w-12 h-12 bg-primary text-base-100 rounded-lg flex items-center justify-center"
                 x-html="item.icon"
               ></div>
               <div class="space-y-3">
                 <h4
-                  class="text-lg text-gray-800 font-semibold"
+                  class="text-lg text-base-content font-semibold"
                   x-text="item.title"
                 ></h4>
                 <p x-text="item.desc"></p>
                 <a
                   :href="item.href"
-                  class="text-sm text-indigo-600 duration-150 hover:text-indigo-400 font-medium inline-flex items-center gap-x-1"
+                  class="text-sm text-primary duration-150 hover:text-primary/85 font-medium inline-flex items-center gap-x-1"
                 >
                   Learn more
                   <svg

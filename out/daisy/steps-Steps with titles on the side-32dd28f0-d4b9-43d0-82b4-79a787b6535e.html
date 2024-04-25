@@ -1,22 +1,22 @@
 <div x-data="{ steps: ['Profile', 'Contact', 'Identity', 'Passport'], currentStep: 2 }" class="max-w-2xl mx-auto px-4 md:px-0">
-    <ul aria-label="Steps" class="items-center text-gray-600 font-medium md:flex">
+    <ul aria-label="Steps" class="items-center text-base-content font-medium md:flex">
         <template x-for="(item, idx) in steps" :key="idx">
             <li :aria-current="currentStep === idx + 1 ? 'step' : false" class="flex-1 last:flex-none flex gap-x-2 md:items-center">
                 <div class="flex items-center flex-col gap-x-2">
-                    <div :class="{'w-8 h-8 rounded-full border-2 flex-none flex items-center justify-center': true, 'bg-indigo-600 border-indigo-600': currentStep > idx + 1, 'border-indigo-600': currentStep === idx + 1}">
-                        <span x-show="currentStep === idx + 1" class="text-indigo-600" x-text="idx + 1"></span>
+                    <div :class="{'w-8 h-8 rounded-full border-2 flex-none flex items-center justify-center': true, 'bg-primary border-primary': currentStep > idx + 1, 'border-primary': currentStep === idx + 1}">
+                        <span x-show="currentStep === idx + 1" class="text-primary" x-text="idx + 1"></span>
                         <template x-if="currentStep > idx + 1">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-base-100">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                             </svg>
                         </template>
                     </div>
-                    <hr :class="{'h-12 border md:hidden': true, 'hidden': idx + 1 === steps.length, 'border-indigo-600': currentStep > idx + 1}" />
+                    <hr :class="{'h-12 border md:hidden': true, 'hidden': idx + 1 === steps.length, 'border-primary': currentStep > idx + 1}" />
                 </div>
                 <div class="h-8 flex items-center md:h-auto">
-                    <h3 :class="{'text-sm': true, 'text-indigo-600': currentStep === idx + 1}" x-text="item"></h3>
+                    <h3 :class="{'text-sm': true, 'text-primary': currentStep === idx + 1}" x-text="item"></h3>
                 </div>
-                <hr :class="{'hidden mr-2 w-full border md:block': true, 'hidden': idx + 1 === steps.length, 'border-indigo-600': currentStep > idx + 1}" />
+                <hr :class="{'hidden mr-2 w-full border md:block': true, 'hidden': idx + 1 === steps.length, 'border-primary': currentStep > idx + 1}" />
             </li>
         </template>
     </ul>

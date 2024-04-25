@@ -64,7 +64,7 @@
   ]
 }"
 >
-  <nav class="fixed top-0 left-0 w-20 h-full border-r bg-white space-y-8">
+  <nav class="fixed top-0 left-0 w-20 h-full border-r bg-base-100 space-y-8">
     <div class="flex flex-col h-full">
       <div class="h-20 flex items-center justify-center px-8">
         <a href="javascript:void(0)" class="flex-none">
@@ -81,12 +81,12 @@
             <li>
               <a
                 :href="item.href"
-                class="relative flex items-center justify-center gap-x-2 text-gray-600 p-2 rounded-lg hover:bg-gray-50 active:bg-gray-100 duration-150 group"
+                class="relative flex items-center justify-center gap-x-2 text-base-content p-2 rounded-lg hover:bg-base-200 active:bg-base-300 duration-150 group"
               >
-                <div x-html="item.icon" class="text-gray-500"></div>
+                <div x-html="item.icon" class="text-base-content"></div>
                 <span
                   x-text="item.name"
-                  class="absolute left-14 p-1 px-1.5 rounded-md whitespace-nowrap text-xs text-white bg-gray-800 hidden group-hover:inline-block group-focus:hidden duration-150"
+                  class="absolute left-14 p-1 px-1.5 rounded-md base-100space-nowrap text-xs text-base-100 bg-base-content hidden group-hover:inline-block group-focus:hidden duration-150"
                 ></span>
               </a>
             </li>
@@ -98,12 +98,12 @@
               <li>
                 <a
                   :href="item.href"
-                  class="relative flex items-center justify-center gap-x-2 text-gray-600 p-2 rounded-lg hover:bg-gray-50 active:bg-gray-100 duration-150 group"
+                  class="relative flex items-center justify-center gap-x-2 text-base-content p-2 rounded-lg hover:bg-base-200 active:bg-base-300 duration-150 group"
                 >
-                  <div x-html="item.icon" class="text-gray-500"></div>
+                  <div x-html="item.icon" class="text-base-content"></div>
                   <span
                     x-text="item.name"
-                    class="absolute left-14 p-1 px-1.5 rounded-md whitespace-nowrap text-xs text-white bg-gray-800 hidden group-hover:inline-block group-focus:hidden duration-150"
+                    class="absolute left-14 p-1 px-1.5 rounded-md base-100space-nowrap text-xs text-base-100 bg-base-content hidden group-hover:inline-block group-focus:hidden duration-150"
                   ></span>
                 </a>
               </li>
@@ -115,7 +115,7 @@
           >
             <button
               @click="isProfileActive = !isProfileActive"
-              class="w-12 h-12 flex items-center gap-x-4 cursor-pointer rounded-full ring-offset-2 ring-gray-800 focus:ring-2 duration-150"
+              class="w-12 h-12 flex items-center gap-x-4 cursor-pointer rounded-full ring-offset-2 ring-base-content focus:ring-2 duration-150"
             >
               <img
                 src="https://randomuser.me/api/portraits/women/79.jpg"
@@ -124,20 +124,20 @@
             </button>
             <template x-if="isProfileActive">
               <div
-                class="absolute bottom-4 left-20 w-64 rounded-lg bg-white shadow-md border text-sm text-gray-600"
+                class="absolute bottom-4 left-20 w-64 rounded-lg bg-base-100 shadow-md border text-sm text-base-content"
               >
                 <div class="p-2">
-                  <span class="block text-gray-500/80 p-2"
+                  <span class="block text-base-content/80 p-2"
                     >vienna@gmail.com</span
                   >
                   <a
                     href="javascript:void(0)"
-                    class="block w-full p-2 text-left rounded-md hover:bg-gray-50 active:bg-gray-100 duration-150"
+                    class="block w-full p-2 text-left rounded-md hover:bg-base-200 active:bg-base-300 duration-150"
                   >
                     Status
                   </a>
                   <div
-                    class="relative rounded-md hover:bg-gray-50 active:bg-gray-100 duration-150"
+                    class="relative rounded-md hover:bg-base-200 active:bg-base-300 duration-150"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +160,7 @@
                     </select>
                   </div>
                   <button
-                    class="block w-full p-2 text-left rounded-md hover:bg-gray-50 active:bg-gray-100 duration-150"
+                    class="block w-full p-2 text-left rounded-md hover:bg-base-200 active:bg-base-300 duration-150"
                   >
                     Logout
                   </button>

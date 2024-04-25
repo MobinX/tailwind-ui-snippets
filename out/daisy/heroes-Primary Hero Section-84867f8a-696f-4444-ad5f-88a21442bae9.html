@@ -11,7 +11,7 @@
                         alt="Float UI logo"
                     />
                 </a>
-                <button class="text-gray-500 outline-none md:hidden" @click="state = !state">
+                <button class="text-base-content outline-none md:hidden" @click="state = !state">
                     <template x-if="state">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -26,21 +26,21 @@
             </div>
             <ul :class="{'hidden': !state, 'flex-1': true, 'justify-between': true, 'mt-12': true, 'md:flex': true, 'md:mt-0': true}">
                 <li class="order-2 pb-5 md:pb-0">
-                    <a href="javascript:void(0)" class="py-3 px-6 rounded-md shadow-md text-white text-center bg-indigo-500 focus:shadow-none block md:inline">
+                    <a href="javascript:void(0)" class="py-3 px-6 rounded-md shadow-md text-base-100 text-center bg-primary/90 focus:shadow-none block md:inline">
                         Sign In
                     </a>
                 </li>
                 <div class="order-1 flex-1 justify-center items-center space-y-5 md:flex md:space-x-6 md:space-y-0">
-                    <li class="text-gray-500 hover:text-indigo-600">
+                    <li class="text-base-content hover:text-primary">
                         <a href="javascript:void(0)">Customers</a>
                     </li>
-                    <li class="text-gray-500 hover:text-indigo-600">
+                    <li class="text-base-content hover:text-primary">
                         <a href="javascript:void(0)">Careers</a>
                     </li>
-                    <li class="text-gray-500 hover:text-indigo-600">
+                    <li class="text-base-content hover:text-primary">
                         <a href="javascript:void(0)">Guides</a>
                     </li>
-                    <li class="text-gray-500 hover:text-indigo-600">
+                    <li class="text-base-content hover:text-primary">
                         <a href="javascript:void(0)">Partners</a>
                     </li>
                 </div>
@@ -49,19 +49,19 @@
     </header>
     <section class="mt-24 mx-auto max-w-screen-xl pb-4 px-4 sm:px-8">
         <div class="text-center space-y-4">
-            <h1 class="text-gray-800 font-bold text-4xl md:text-5xl">
+            <h1 class="text-base-content font-bold text-4xl md:text-5xl">
                 Optimize your website for
-                 <span class="text-indigo-600"> Search engine</span>
+                 <span class="text-primary"> Search engine</span>
             </h1>
-            <p class="text-gray-500 max-w-xl mx-auto leading-relaxed">
+            <p class="text-base-content max-w-xl mx-auto leading-relaxed">
                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum
             </p>
         </div>
         <div class="mt-12 justify-center items-center space-y-3 sm:space-x-6 sm:space-y-0 sm:flex">
-            <a href="javascript:void(0)" class="px-10 py-3.5 w-full bg-indigo-600 text-white text-center rounded-md shadow-md block sm:w-auto">
+            <a href="javascript:void(0)" class="px-10 py-3.5 w-full bg-primary text-base-100 text-center rounded-md shadow-md block sm:w-auto">
                 Get started
             </a>
-            <a href="javascript:void(0)" class="px-10 py-3.5 w-full text-gray-500 text-center border rounded-md duration-300 hover:text-indigo-600 hover:shadow block sm:w-auto">
+            <a href="javascript:void(0)" class="px-10 py-3.5 w-full text-base-content text-center border rounded-md duration-300 hover:text-primary hover:shadow block sm:w-auto">
                 Try it out
             </a>
         </div>
