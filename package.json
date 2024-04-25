@@ -3,6 +3,7 @@
   "displayName": "tailwind_ui_snippets",
   "description": "",
   "version": "0.0.1",
+  "type": "module",
   "engines": {
     "vscode": "^1.88.0"
   },
@@ -18,6 +19,7 @@
     ]
   },
   "dependencies": {
+    "alpinejs-ssr": "^1.0.1",
     "cheerio": "^1.0.0-rc.12",
     "gray-matter": "^4.0.3"
   }
