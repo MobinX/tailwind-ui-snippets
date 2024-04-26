@@ -1,0 +1,22 @@
+name: Upload Snippets on Push
+
+on:
+  push:
+    branches:
+    - master
+  release:
+    types:
+    - created
+jobs:
+    run_script:
+        runs-on: ubuntu-latest
+          
+        steps:
+        - name: Checkout repository
+          uses: actions/checkout@v2
+              
+        - name: Run Node.js script
+          run: node .github/workflows/upload.js
+        env:
+            GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      
