@@ -15,3 +15,4 @@ files.map(async (filename) => {
     let outPath = path.join(outpath, filename.replace(/.html/g, ".jsx"))
     fs.writeFileSync(outPath, jsx)
 })
+

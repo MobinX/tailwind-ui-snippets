@@ -14,6 +14,22 @@
       {
         "language": "html",
         "path": "./snippets/snippets-html.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets-jsx.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets-jsx.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets-jsx.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets-jsx.json"
       }
     ]
   },

@@ -1,9 +1,13 @@
 var fs = require('fs');
 const path = require("path")
-let srcDir = path.join(process.cwd(), `out/daisyx`);
+let srcDir = path.join(process.cwd(), `out/final_html`);
 let outpath = path.join(process.cwd(), `snippets/snippets-html.json`);
+let srcDirJsx = path.join(process.cwd(), `out/jsx`);
+let outpathJsx = path.join(process.cwd(), `snippets/snippets-jsx.json`);
 const cheerio = require('cheerio');
 const files = fs.readdirSync(srcDir);
+const filesJsx = fs.readdirSync(srcDirJsx);
+
 function replaceQuotes(inputString) {
     // Replace single quotes with backticks
     var step1 = inputString.replace(/'/g, '`');
@@ -32,6 +36,8 @@ const linkArry = ["banners", "cta-sections", "team-sections", "contact-sections"
 
 let longnaems = []
 let out = {}
+let outJsx = {}
+
 let data = []
 
 files.map(async (filename) => {
@@ -54,19 +60,58 @@ files.map(async (filename) => {
         "description": longname
     }
 
-    //testing
-    console.log("longname", longname)
-    let $ = cheerio.load(raw_html)
-    let datas = $("[x-data]").attr("x-data")
-    if(datas) {
-        let ob = eval(`(${datas})`)
-        data.push(ob)
+    // only for daisyx
+    // console.log("longname", longname)
+    // let $ = cheerio.load(raw_html)
+    // let datas = $("[x-data]").attr("x-data")
+    // if(datas) {
+    //     let ob = eval(`(${datas})`)
+    //     data.push(ob)
         
+    // }
+    
+
+})
+
+
+
+//jsx 
+
+filesJsx.map(async (filename) => {
+    const filePath = path.join(srcDirJsx, filename);
+    let f2 = filename
+    linkArry.forEach(itm => {
+        if (f2.startsWith(itm)) f2 = filename.slice(itm.length + 1);
+    })
+
+
+    const longname = ((f2.split("-"))[0]).replace(/.jsx/g, "")
+    const raw_jsx = fs.readFileSync(filePath, "utf-8")
+    const jsx = stringToArrayOfLines(replaceQuotes(raw_jsx))
+    // console.log(longname)
+    // if (longnaems.indexOf(longname) > 0) console.error("*" + longname);
+    // // longnaems.push(longname)
+    outJsx[longname] = {
+        "prefix": [replaceSpacesWithHyphens(longname)],
+        "body": jsx,
+        "description": longname
     }
+
+    // only for daisyx
+    // console.log("longname", longname)
+    // let $ = cheerio.load(raw_html)
+    // let datas = $("[x-data]").attr("x-data")
+    // if(datas) {
+    //     let ob = eval(`(${datas})`)
+    //     data.push(ob)
+        
+    // }
     
 
 })
 
 fs.writeFileSync(outpath, JSON.stringify(out))
-console.log(data)
-fs.writeFileSync(path.join(process.cwd(), `out/data.json`), JSON.stringify(data))
+fs.writeFileSync(outpathJsx, JSON.stringify(outJsx))
+
+
+// fs.writeFileSync(path.join(process.cwd(), `out/data.json`), JSON.stringify(data))
