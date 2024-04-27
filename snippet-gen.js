@@ -98,6 +98,10 @@ filesJsx.map(async (filename) => {
     
 
 })
+//check snippets directory exists,if not create it
+if (!fs.existsSync(path.join(process.cwd(), `snippets`))) {
+    fs.mkdirSync(path.join(process.cwd(), `snippets`));
+}
 
 fs.writeFileSync(outpath, JSON.stringify(out))
 fs.writeFileSync(outpathJsx, JSON.stringify(outJsx))
