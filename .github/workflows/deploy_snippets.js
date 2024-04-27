@@ -189,7 +189,7 @@ const branch = 'master';
 const accessToken = process.env.GH_TOKEN
 let content1 = fs.readFileSync(path.join(process.cwd(), `snippets/snippets-jsx.json`), "utf-8");
 let content2 = fs.readFileSync(path.join(process.cwd(), `snippets/snippets-html.json`), "utf-8");
-
+console.log(content1)
 
 fetchJSON("https://raw.github.com/MobinX/floatui-daisyui-snippets-vscode/master/package.json")
     .then(data3 => {
@@ -199,11 +199,11 @@ fetchJSON("https://raw.github.com/MobinX/floatui-daisyui-snippets-vscode/master/
         const files = [
             {
                 path: 'snippets/snippets-jsx.json',
-                content: JSON.stringify(content1)
+                content: content1
             },
             {
                 path: 'snippets/snippets-html.json',
-                content: JSON.stringify(content2),
+                content: content2,
             },
             {
                 path: 'package.json',
