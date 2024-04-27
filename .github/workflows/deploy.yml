@@ -22,6 +22,12 @@ jobs:
       with:
         node-version: 20.x
 
+    - name: Install dependencies
+      run: npm install
+
+    - name: Generate JSX
+      run: node jsx-gen.js
+
     - name: Generate Snippets
       run: node snippet-gen.js
       

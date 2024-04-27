@@ -4,7 +4,7 @@ let srcDir = path.join(process.cwd(), `out/final_html`);
 let outpath = path.join(process.cwd(), `snippets/snippets-html.json`);
 let srcDirJsx = path.join(process.cwd(), `out/jsx`);
 let outpathJsx = path.join(process.cwd(), `snippets/snippets-jsx.json`);
-const cheerio = require('cheerio');
+// const cheerio = require('cheerio');
 const files = fs.readdirSync(srcDir);
 const filesJsx = fs.readdirSync(srcDirJsx);
 
