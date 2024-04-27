@@ -1,0 +1,1 @@
+<label htmlFor="my_modal_7" className="btn" data-svelte-h="svelte-8p1kam">open modal</label>

@@ -1,0 +1,1 @@
+<button className="btn" data-svelte-h="svelte-110q4ch">Button</button>

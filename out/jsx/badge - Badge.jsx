@@ -1,0 +1,1 @@
+<span className="badge" data-svelte-h="svelte-aqibv3">Badge</span>

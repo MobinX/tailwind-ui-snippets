@@ -4,8 +4,11 @@ let srcDir = path.join(process.cwd(), `out/final_html`);
 let outpath = path.join(process.cwd(), `snippets/snippets-html.json`);
 let srcDirJsx = path.join(process.cwd(), `out/jsx`);
 let outpathJsx = path.join(process.cwd(), `snippets/snippets-jsx.json`);
+let srcDirDaisy = path.join(process.cwd(), `out/final_daisy`);
+let outpathDaisy = path.join(process.cwd(), `snippets/snippets-daisy.json`);
 // const cheerio = require('cheerio');
 const files = fs.readdirSync(srcDir);
+const filesDaisy = fs.readdirSync(srcDirDaisy);
 const filesJsx = fs.readdirSync(srcDirJsx);
 
 function replaceQuotes(inputString) {
@@ -37,6 +40,7 @@ const linkArry = ["banners", "cta-sections", "team-sections", "contact-sections"
 let longnaems = []
 let out = {}
 let outJsx = {}
+
 
 let data = []
 
@@ -74,6 +78,27 @@ files.map(async (filename) => {
 
 })
 
+console.log("Generating Daisy snippets....")
+filesDaisy.map(async (filename) => {
+    const filePath = path.join(srcDirDaisy, filename);
+    let f2 = filename
+    linkArry.forEach(itm => {
+        if (f2.startsWith(itm)) f2 = filename.slice(itm.length + 1);
+    })
+
+    const longname = ((f2.split("-"))[0]).replace(/.html/g, "")
+    const raw_html = fs.readFileSync(filePath, "utf-8")
+    const html = stringToArrayOfLines(replaceQuotes(raw_html))
+    // console.log(longname)
+    if (longnaems.indexOf(longname) > 0) console.error("*" + longname);
+    longnaems.push(longname)
+    out[longname] = {
+        "prefix": [replaceSpacesWithHyphens(longname)],
+        "body": html,
+        "description": longname
+    }
+
+})
 
 
 //jsx 
