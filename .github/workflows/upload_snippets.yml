@@ -2,6 +2,7 @@ name: Upload Snippets on Push
 
 on:
   workflow_dispatch:
+    
   # push:
   #   branches:
   #   - master

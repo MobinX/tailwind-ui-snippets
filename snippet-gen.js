@@ -86,7 +86,7 @@ filesDaisy.map(async (filename) => {
         if (f2.startsWith(itm)) f2 = filename.slice(itm.length + 1);
     })
 
-    const longname = ((f2.split("-"))[0]).replace(/.html/g, "")
+    const longname = f2.replace(/.html/g, "")
     const raw_html = fs.readFileSync(filePath, "utf-8")
     const html = stringToArrayOfLines(replaceQuotes(raw_html))
     // console.log(longname)
