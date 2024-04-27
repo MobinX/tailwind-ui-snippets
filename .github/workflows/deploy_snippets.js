@@ -162,7 +162,7 @@ async function editAndCommitFiles(owner, repo, branch, accessToken, files, commi
         throw new Error(`Failed to update reference: ${updateRefResponse.statusText}`);
     }
 
-    console.log('Files edited and committed successfully!');
+    console.log('Snippets Deployed and committed successfully!');
 }
 async function fetchJSON(url) {
     try {

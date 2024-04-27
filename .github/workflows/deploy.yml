@@ -24,15 +24,23 @@ jobs:
 
     - name: Install dependencies
       run: npm install
+      
+    - name: Get commit message
+      id: commit_message
+      run: echo "::set-output name=message::$(git log --format=%B -n 1 ${{ github.sha }})"
 
+   
     - name: Generate JSX
+      if: startsWith(steps.commit_message.outputs.message, 'release')
       run: node jsx-gen.js
 
     - name: Generate Snippets
+      if: startsWith(steps.commit_message.outputs.message, 'release')
       run: node snippet-gen.js
       
       
     - name: Deploy  Snippets
+      if: startsWith(steps.commit_message.outputs.message, 'release')
       run: node .github/workflows/deploy_snippets.js
       env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
