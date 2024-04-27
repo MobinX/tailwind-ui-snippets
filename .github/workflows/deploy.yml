@@ -1,0 +1,35 @@
+name: Deploy Snippets on Push
+
+on:
+  push:
+    branches:
+    - master
+  release:
+    types:
+    - created
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Install Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.x
+
+    - name: Generate Snippets
+      run: node snippet-gen.js
+      
+      
+    - name: Deploy  Snippets
+      run: node .github/workflows/deploy_snippets.js
+      env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+    
+    
+

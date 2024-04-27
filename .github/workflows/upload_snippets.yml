@@ -1,12 +1,13 @@
 name: Upload Snippets on Push
 
 on:
-  push:
-    branches:
-    - master
-  release:
-    types:
-    - created
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #   - master
+  # release:
+  #   types:
+  #   - created
 jobs:
     run_script:
         runs-on: ubuntu-latest

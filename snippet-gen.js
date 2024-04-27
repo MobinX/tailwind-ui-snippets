@@ -40,6 +40,7 @@ let outJsx = {}
 
 let data = []
 
+console.log("Generating HTML snippets....")
 files.map(async (filename) => {
     const filePath = path.join(srcDir, filename);
     let f2 = filename
@@ -76,7 +77,7 @@ files.map(async (filename) => {
 
 
 //jsx 
-
+console.log("Generating JSX snippets....")
 filesJsx.map(async (filename) => {
     const filePath = path.join(srcDirJsx, filename);
     let f2 = filename
@@ -88,24 +89,12 @@ filesJsx.map(async (filename) => {
     const longname = ((f2.split("-"))[0]).replace(/.jsx/g, "")
     const raw_jsx = fs.readFileSync(filePath, "utf-8")
     const jsx = stringToArrayOfLines(replaceQuotes(raw_jsx))
-    // console.log(longname)
-    // if (longnaems.indexOf(longname) > 0) console.error("*" + longname);
-    // // longnaems.push(longname)
+
     outJsx[longname] = {
         "prefix": [replaceSpacesWithHyphens(longname)],
         "body": jsx,
         "description": longname
     }
-
-    // only for daisyx
-    // console.log("longname", longname)
-    // let $ = cheerio.load(raw_html)
-    // let datas = $("[x-data]").attr("x-data")
-    // if(datas) {
-    //     let ob = eval(`(${datas})`)
-    //     data.push(ob)
-        
-    // }
     
 
 })
@@ -113,5 +102,6 @@ filesJsx.map(async (filename) => {
 fs.writeFileSync(outpath, JSON.stringify(out))
 fs.writeFileSync(outpathJsx, JSON.stringify(outJsx))
 
+console.log("Snippet Generation -> Done!")
 
 // fs.writeFileSync(path.join(process.cwd(), `out/data.json`), JSON.stringify(data))

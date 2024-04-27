@@ -5,6 +5,7 @@ const branch = 'master';
 const accessToken = process.env.GH_TOKEN
 const workflowName = 'fetch_snippets.yml';
 
+
 async function triggerWorkflow() {
     try {
         const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/actions/workflows/${workflowName}/dispatches`, {
