@@ -20,6 +20,7 @@ async function crawlPage(pageUrl) {
         const $ = cheerio.load(html);
 
         const result = [];
+        
 
         // Iterate over each block with class "component-preview"
         $('.component-preview').each((index, element) => {
