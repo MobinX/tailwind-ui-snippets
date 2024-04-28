@@ -1,4 +1,4 @@
-<div className="shadow stats" data-svelte-h="svelte-meir7o">
+<div className="shadow stats">
   <div className="stat">
     <div className="stat-figure text-primary">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current">

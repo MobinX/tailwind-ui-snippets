@@ -1,4 +1,4 @@
-<div className="text-sm breadcrumbs" data-svelte-h="svelte-19d4qk">
+<div className="text-sm breadcrumbs">
   <ul>
     <li>
       <span className="hover:underline cursor-pointer inline-flex gap-2 items-center">Home</span>

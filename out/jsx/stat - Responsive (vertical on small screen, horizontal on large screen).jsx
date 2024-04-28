@@ -1,4 +1,4 @@
-<div className="shadow stats stats-vertical lg:stats-horizontal" data-svelte-h="svelte-12r1jqt">
+<div className="shadow stats stats-vertical lg:stats-horizontal">
   <div className="stat">
     <div className="stat-title">Downloads</div>
     <div className="stat-value">31K</div>

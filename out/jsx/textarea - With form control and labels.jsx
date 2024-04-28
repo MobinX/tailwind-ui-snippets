@@ -1,4 +1,4 @@
-<label className="form-control" data-svelte-h="svelte-v92pt2"><div className="label">
+<label className="form-control"><div className="label">
     <span className="label-text">Your bio</span>
     <span className="label-text-alt">Alt label</span>
   </div>

@@ -1,7 +1,7 @@
 <select className="select w-full max-w-xs select-bordered">
-  <option disabled={true} selected={true} value="Who shot first?" data-svelte-h="svelte-9heglc">
+  <option disabled={true} selected={true} value="Who shot first?">
     Who shot first?
   </option>
-  <option value="Han Solo" data-svelte-h="svelte-r0tnwa">Han Solo</option>
-  <option value="Greedo" data-svelte-h="svelte-deoxp2">Greedo</option>
+  <option value="Han Solo">Han Solo</option>
+  <option value="Greedo">Greedo</option>
 </select>

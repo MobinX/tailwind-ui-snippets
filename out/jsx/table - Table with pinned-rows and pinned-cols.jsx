@@ -1,4 +1,4 @@
-<div className="overflow-x-auto h-96 w-96" data-svelte-h="svelte-1qodekv">
+<div className="overflow-x-auto h-96 w-96">
   <table className="table table-xs table-pin-rows table-pin-cols">
     <thead>
       <tr>

@@ -1,4 +1,4 @@
-<div className="my-6" data-svelte-h="svelte-1xhq1de">
+<div className="my-6">
   <div className="tooltip" data-tip="hello">
     <button className="btn">Hover me</button>
   </div>

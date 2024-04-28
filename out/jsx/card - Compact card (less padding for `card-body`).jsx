@@ -1,4 +1,4 @@
-<div className="card w-96 bg-base-100 card-compact shadow-xl" data-svelte-h="svelte-ejmz26">
+<div className="card w-96 bg-base-100 card-compact shadow-xl">
   <figure>
     <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
   </figure>

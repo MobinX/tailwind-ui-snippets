@@ -1,4 +1,4 @@
-<div className="flex flex-col w-full" data-svelte-h="svelte-10e9o6h">
+<div className="flex flex-col w-full">
   <div className="divider">Default</div>
   <div className="divider divider-neutral">Neutral</div>
   <div className="divider divider-primary">Primary</div>

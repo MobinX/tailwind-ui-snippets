@@ -1,4 +1,4 @@
-<div className="hero min-h-[30rem] rounded bg-base-200" data-svelte-h="svelte-1vawo1k">
+<div className="hero min-h-[30rem] rounded bg-base-200">
   <div className="flex-col hero-content lg:flex-row-reverse">
     <img src="/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component" />
     <div>

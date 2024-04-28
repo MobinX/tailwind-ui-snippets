@@ -1,4 +1,4 @@
-<div className="mb-28 mt-6 flex gap-1 items-center" data-svelte-h="svelte-3bhbwi">
+<div className="mb-28 mt-6 flex gap-1 items-center">
   A normal text and a helper dropdown
   <div className="dropdown dropdown-end">
     <div tabIndex={0} role="button" className="btn btn-circle btn-ghost btn-xs text-info">

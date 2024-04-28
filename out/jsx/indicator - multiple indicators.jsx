@@ -1,4 +1,4 @@
-<div className="indicator" data-svelte-h="svelte-8ysvgr">
+<div className="indicator">
   <span className="indicator-item indicator-top indicator-start badge badge-secondary">top+start</span>
   <span className="indicator-item indicator-top indicator-center badge badge-secondary">top+center</span>
   <span className="indicator-item indicator-top indicator-end badge badge-secondary">top+end</span>

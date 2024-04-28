@@ -1,4 +1,4 @@
-<div className="max-w-md p-4 space-x-4 carousel carousel-center bg-neutral rounded-box" data-svelte-h="svelte-jpffvk">
+<div className="max-w-md p-4 space-x-4 carousel carousel-center bg-neutral rounded-box">
   <div className="carousel-item">
     <img src="/images/stock/photo-1559703248-dcaaec9fab78.jpg" className="rounded-box" alt="Tailwind CSS component" />
   </div>

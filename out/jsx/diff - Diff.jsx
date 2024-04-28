@@ -1,4 +1,4 @@
-<div className="diff rounded-btn aspect-[16/9]" data-svelte-h="svelte-1n0ynmf">
+<div className="diff rounded-btn aspect-[16/9]">
   <div className="diff-item-1">
     <img alt="daisy" src="/images/stock/photo-1560717789-0ac7c58ac90a.jpg" />
   </div>

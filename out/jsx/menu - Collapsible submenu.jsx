@@ -1,4 +1,4 @@
-<ul className="menu bg-base-200 w-56 rounded-box" data-svelte-h="svelte-10oqg1k">
+<ul className="menu bg-base-200 w-56 rounded-box">
   <li><button>Item 1</button></li>
   <li>
     <details open>

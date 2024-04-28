@@ -1,4 +1,4 @@
-<div className="text-sm breadcrumbs" data-svelte-h="svelte-1vbre94">
+<div className="text-sm breadcrumbs">
   <ul>
     <li>
       <span className="hover:underline cursor-pointer inline-flex gap-2 items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-4 h-4 stroke-current">

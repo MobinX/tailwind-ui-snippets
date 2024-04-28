@@ -1,4 +1,4 @@
-<ul className="menu xl:menu-horizontal lg:min-w-max bg-base-200 rounded-box" data-svelte-h="svelte-r448mu">
+<ul className="menu xl:menu-horizontal lg:min-w-max bg-base-200 rounded-box">
   <li>
     <button>Solutions</button>
     <ul>

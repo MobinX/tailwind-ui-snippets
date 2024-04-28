@@ -1,4 +1,4 @@
-<div className="stack mb-4" data-svelte-h="svelte-1bg2seb">
+<div className="stack mb-4">
   <div className="text-center shadow-md w-36 card bg-base-200">
     <div className="card-body">A</div>
   </div>

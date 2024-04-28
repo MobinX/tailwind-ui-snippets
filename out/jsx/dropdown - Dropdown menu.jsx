@@ -1,4 +1,4 @@
-<div data-svelte-h="svelte-1i571vn">
+<div>
   <div className="text-sm mb-4 text-center">Click outside to close</div>
   <div className="dropdown mb-32">
     <div tabIndex={0} role="button" className="m-1 btn">Click to open</div>

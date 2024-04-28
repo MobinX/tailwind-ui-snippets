@@ -1,4 +1,4 @@
-<div className="border mockup-browser bg-base-300 w-full" data-svelte-h="svelte-1qsmpip">
+<div className="border mockup-browser bg-base-300 w-full">
   <div className="mockup-browser-toolbar">
     <div className="input">https://daisyui.com</div>
   </div>

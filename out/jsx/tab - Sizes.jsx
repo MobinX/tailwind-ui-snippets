@@ -1,4 +1,4 @@
-<div className="flex flex-col items-center gap-6" data-svelte-h="svelte-r0k95j">
+<div className="flex flex-col items-center gap-6">
   <div role="tablist" className="tabs tabs-lifted tabs-xs">
     <button role="tab" className="tab">Tiny</button>
     <button role="tab" className="tab tab-active">Tiny</button>

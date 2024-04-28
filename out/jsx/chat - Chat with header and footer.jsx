@@ -1,4 +1,4 @@
-<div className="w-full" data-svelte-h="svelte-1eihov2">
+<div className="w-full">
   <div className="chat chat-start">
     <div className="chat-header">
       Obi-Wan Kenobi <time className="text-xs opacity-50">2 hours ago</time>

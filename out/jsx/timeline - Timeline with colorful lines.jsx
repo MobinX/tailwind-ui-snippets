@@ -1,4 +1,4 @@
-<ul className="timeline" data-svelte-h="svelte-18w5bv1">
+<ul className="timeline">
   <li>
     <div className="timeline-start timeline-box">First Macintosh computer</div>
     <div className="timeline-middle">

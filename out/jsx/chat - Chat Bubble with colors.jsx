@@ -1,4 +1,4 @@
-<div className="w-full" data-svelte-h="svelte-6tnx1">
+<div className="w-full">
   <div className="chat chat-start">
     <div className="chat-bubble chat-bubble-primary">
       What kind of nonsense is this

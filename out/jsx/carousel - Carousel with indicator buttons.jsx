@@ -1,4 +1,4 @@
-<><div className="w-full carousel" data-svelte-h="svelte-1vrjds9">
+<div className="w-full carousel">
   <div id="item1" className="w-full carousel-item">
     <img src="/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" alt="Tailwind CSS gallery" />
   </div>
@@ -12,9 +12,3 @@
     <img src="/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="w-full" alt="Tailwind CSS gallery" />
   </div>
 </div>
-<div className="flex justify-center w-full py-2 gap-2" data-svelte-h="svelte-941awq">
-  <a href="#item1" className="btn btn-xs">1</a>
-  <a href="#item2" className="btn btn-xs">2</a>
-  <a href="#item3" className="btn btn-xs">3</a>
-  <a href="#item4" className="btn btn-xs">4</a>
-</div></>

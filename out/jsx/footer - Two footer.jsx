@@ -1,4 +1,4 @@
-<div className="w-full" data-svelte-h="svelte-1my37w8">
+<div className="w-full">
   <footer className="p-10 footer bg-base-200 text-base-content">
     <nav>
       <h6 className="footer-title">Services</h6>

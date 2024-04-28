@@ -1,4 +1,4 @@
-<ul className="timeline timeline-vertical" data-svelte-h="svelte-ftlum9">
+<ul className="timeline timeline-vertical">
   <li>
     <div className="timeline-start">1984</div>
     <div className="timeline-middle">

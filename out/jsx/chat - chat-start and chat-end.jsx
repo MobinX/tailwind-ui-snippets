@@ -1,4 +1,4 @@
-<div className="w-full" data-svelte-h="svelte-xa4d6j">
+<div className="w-full">
   <div className="chat chat-start">
     <div className="chat-bubble">
       It&apos;s over Anakin, <br />I have the high ground.

@@ -1,3 +1,3 @@
-<label className="flex cursor-pointer gap-2"><span className="label-text" data-svelte-h="svelte-xrkuzu">Default</span>
+<label className="flex cursor-pointer gap-2"><span className="label-text">Default</span>
   <input type="checkbox" value="synthwave" className="toggle theme-controller" />
-  <span className="label-text" data-svelte-h="svelte-nlwg1k">Synthwave</span></label>
+  <span className="label-text">Synthwave</span></label>

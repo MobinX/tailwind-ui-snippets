@@ -1,4 +1,4 @@
-<div className="w-96 carousel rounded-box" data-svelte-h="svelte-zr566q">
+<div className="w-96 carousel rounded-box">
   <div className="w-1/2 carousel-item">
     <img src="/images/stock/photo-1559703248-dcaaec9fab78.jpg" className="w-full" alt="Tailwind CSS slide plugin" />
   </div>

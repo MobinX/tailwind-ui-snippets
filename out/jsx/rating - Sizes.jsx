@@ -1,4 +1,4 @@
-<div className="flex flex-col gap-2 items-center" data-svelte-h="svelte-18xy34">
+<div className="flex flex-col gap-2 items-center">
   <div className="rating rating-xs">
     <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
     <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" checked={true} />

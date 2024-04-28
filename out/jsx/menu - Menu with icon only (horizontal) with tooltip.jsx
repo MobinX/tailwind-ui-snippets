@@ -1,4 +1,4 @@
-<ul className="menu menu-horizontal bg-base-200 rounded-box mt-6" data-svelte-h="svelte-3668az">
+<ul className="menu menu-horizontal bg-base-200 rounded-box mt-6">
   <li>
     <button className="tooltip" data-tip="Home">
       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

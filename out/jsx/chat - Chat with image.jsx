@@ -1,4 +1,4 @@
-<div className="w-full" data-svelte-h="svelte-sgni99">
+<div className="w-full">
   <div className="chat chat-start">
     <div className="chat-image avatar">
       <div className="w-10 rounded-full">

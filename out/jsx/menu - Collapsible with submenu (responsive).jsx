@@ -1,4 +1,4 @@
-<ul className="menu lg:menu-horizontal bg-base-200 rounded-box lg:mb-64" data-svelte-h="svelte-18kvwx4">
+<ul className="menu lg:menu-horizontal bg-base-200 rounded-box lg:mb-64">
   <li><button>Item 1</button></li>
   <li>
     <details open>

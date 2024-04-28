@@ -1,4 +1,4 @@
-<div className="flex flex-col gap-2 items-center" data-svelte-h="svelte-sfhxle">
+<div className="flex flex-col gap-2 items-center">
   <progress className="progress progress-warning w-56" value="0" max="100" />
   <progress className="progress progress-warning w-56" value="10" max="100" />
   <progress className="progress progress-warning w-56" value="40" max="100" />

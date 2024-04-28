@@ -1,4 +1,4 @@
-<div className="w-64 carousel rounded-box" data-svelte-h="svelte-pgj689">
+<div className="w-64 carousel rounded-box">
   <div className="w-full carousel-item">
     <img src="/images/stock/photo-1559703248-dcaaec9fab78.jpg" className="w-full" alt="Tailwind CSS carousel component" />
   </div>

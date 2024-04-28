@@ -1,4 +1,4 @@
-<ul className="steps" data-svelte-h="svelte-10fwj4f">
+<ul className="steps">
   <li data-content="?" className="step step-neutral">Step 1</li>
   <li data-content="!" className="step step-neutral">Step 2</li>
   <li data-content="\u2713" className="step step-neutral">Step 3</li>

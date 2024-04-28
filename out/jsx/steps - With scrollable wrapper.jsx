@@ -1,4 +1,4 @@
-<div className="overflow-x-auto" data-svelte-h="svelte-z15paa">
+<div className="overflow-x-auto">
   <ul className="steps">
     <li className="step">start</li>
     <li className="step step-secondary">2</li>

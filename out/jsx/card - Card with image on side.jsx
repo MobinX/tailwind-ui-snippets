@@ -1,4 +1,4 @@
-<div className="card card-side bg-base-100 shadow-xl" data-svelte-h="svelte-fbr2cn">
+<div className="card card-side bg-base-100 shadow-xl">
   <figure>
     <img src="/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie" />
   </figure>

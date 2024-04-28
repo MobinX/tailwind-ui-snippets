@@ -1,4 +1,4 @@
-<label className="form-control w-full max-w-xs" data-svelte-h="svelte-1o346sa"><div className="label">
+<label className="form-control w-full max-w-xs"><div className="label">
     <span className="label-text">What is your name?</span>
     <span className="label-text-alt">Top Right label</span>
   </div>

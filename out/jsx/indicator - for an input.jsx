@@ -1,4 +1,4 @@
-<div className="indicator" data-svelte-h="svelte-uan2g8">
+<div className="indicator">
   <span className="indicator-item badge">Required</span>
   <input type="text" placeholder="Your email address" className="input input-bordered" />
 </div>

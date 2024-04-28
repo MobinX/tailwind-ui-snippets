@@ -1,4 +1,4 @@
-<label className="form-control w-full max-w-xs" data-svelte-h="svelte-9tbtd1"><div className="label">
+<label className="form-control w-full max-w-xs"><div className="label">
     <span className="label-text">Pick a file</span>
     <span className="label-text-alt">Alt label</span>
   </div>

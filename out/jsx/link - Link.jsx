@@ -1,1 +1,1 @@
-<button className="link" data-svelte-h="svelte-ozjti3">I&apos;m a simple link</button>
+<button className="link">I&apos;m a simple link</button>

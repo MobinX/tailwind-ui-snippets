@@ -1,4 +1,4 @@
-<div className="hero min-h-[30rem] rounded" style={{ backgroundImage: "url(/images/stock/photo-1507358522600-9f71e620c44e.jpg)" }} data-svelte-h="svelte-1qb4t8e">
+<div className="hero min-h-[30rem] rounded" style={{ backgroundImage: "url(/images/stock/photo-1507358522600-9f71e620c44e.jpg)" }}>
   <div className="hero-overlay rounded bg-opacity-60" />
   <div className="text-center hero-content text-neutral-content">
     <div className="max-w-md">

@@ -1,4 +1,4 @@
-<footer className="p-10 footer bg-base-300 text-base-content rounded" data-svelte-h="svelte-ut8avn">
+<footer className="p-10 footer bg-base-300 text-base-content rounded">
   <nav>
     <h6 className="footer-title">Services</h6>
     <button className="link link-hover">Branding</button>

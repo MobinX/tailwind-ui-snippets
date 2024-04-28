@@ -1,4 +1,4 @@
-<div className="shadow stats stats-vertical" data-svelte-h="svelte-729j38">
+<div className="shadow stats stats-vertical">
   <div className="stat">
     <div className="stat-title">Downloads</div>
     <div className="stat-value">31K</div>

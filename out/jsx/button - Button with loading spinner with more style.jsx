@@ -1,3 +1,3 @@
-<button className="btn btn-square" data-svelte-h="svelte-8awl0b">
+<button className="btn btn-square">
   <span className="loading loading-spinner" />
 </button>

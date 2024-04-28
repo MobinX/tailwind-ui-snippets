@@ -1,4 +1,4 @@
-<div className="drawer h-56 rounded overflow-hidden" data-svelte-h="svelte-qin2o0">
+<div className="drawer h-56 rounded overflow-hidden">
   <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
   <div className="flex flex-col drawer-content">
     <div className="w-full navbar bg-base-300">

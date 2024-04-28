@@ -1,4 +1,4 @@
-<ul className="menu bg-base-200 w-56 rounded-box" data-svelte-h="svelte-14697ds">
+<ul className="menu bg-base-200 w-56 rounded-box">
   <li>
     <button>
       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

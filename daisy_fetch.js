@@ -26,8 +26,15 @@ async function crawlPage(pageUrl) {
             // Extract title text from span with class "component-preview-title"
             const title = $(element).find('.component-preview-title').text().trim();
 
-            // Extract HTML code within the div with class "preview"
-            const code = $(element).find('.preview').children().first().parent().html().trim();
+            // Select the preview element and remove all its children except the first one
+            const previewElement = $(element).find('.preview');
+            previewElement.children().slice(1).remove();
+
+              // Remove data-svelte-h attribute from any child element containing it within the preview element
+              previewElement.find('[data-svelte-h]').removeAttr('data-svelte-h');
+
+            // Extract HTML code within the modified preview element
+            const code = previewElement.html().trim();
 
             // Push title and code to result array
             result.push({ title, code });

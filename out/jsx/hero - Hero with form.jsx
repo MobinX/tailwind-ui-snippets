@@ -1,4 +1,4 @@
-<div className="hero min-h-[30rem] rounded bg-base-200" data-svelte-h="svelte-285pxw">
+<div className="hero min-h-[30rem] rounded bg-base-200">
   <div className="flex-col hero-content lg:flex-row-reverse">
     <div className="text-center lg:text-left">
       <h3 className="text-5xl font-bold">Login now!</h3>

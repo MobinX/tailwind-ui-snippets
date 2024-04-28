@@ -1,4 +1,4 @@
-<div className="flex flex-col gap-4 w-52" data-svelte-h="svelte-1enh6z7">
+<div className="flex flex-col gap-4 w-52">
   <div className="flex gap-4 items-center">
     <div className="skeleton w-16 h-16 rounded-full shrink-0" />
     <div className="flex flex-col gap-4">

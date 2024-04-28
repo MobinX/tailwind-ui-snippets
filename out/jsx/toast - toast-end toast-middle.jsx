@@ -1,4 +1,4 @@
-<div className="w-full h-64 relative" data-svelte-h="svelte-mq064s">
+<div className="w-full h-64 relative">
   <div className="toast toast-end toast-middle absolute">
     <div className="alert alert-info"><span>New mail arrived.</span></div>
     <div className="alert alert-success">

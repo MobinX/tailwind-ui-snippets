@@ -1,4 +1,4 @@
-<ul className="steps steps-vertical lg:steps-horizontal" data-svelte-h="svelte-oj62z3">
+<ul className="steps steps-vertical lg:steps-horizontal">
   <li className="step step-primary">Register</li>
   <li className="step step-primary">Choose plan</li>
   <li className="step">Purchase</li>

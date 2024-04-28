@@ -1,4 +1,4 @@
-<ul className="steps" data-svelte-h="svelte-12gfkng">
+<ul className="steps">
   <li className="step step-info">Fly to moon</li>
   <li className="step step-info">Shrink the moon</li>
   <li className="step step-info">Grab the moon</li>

@@ -1,4 +1,4 @@
-<div role="tablist" className="tabs tabs-lifted" data-svelte-h="svelte-12hc1uv">
+<div role="tablist" className="tabs tabs-lifted">
   <button role="tab" className="tab">Tab 1</button>
   <button role="tab" className="tab tab-active [--tab-bg:yellow] [--tab-border-color:orange] text-primary">
     Tab 2

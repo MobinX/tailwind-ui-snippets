@@ -1,4 +1,4 @@
-<div data-svelte-h="svelte-1f9gnqo">
+<div>
   <div className="grid w-32 h-20 rounded bg-primary text-primary-content place-content-center">
     1
   </div>

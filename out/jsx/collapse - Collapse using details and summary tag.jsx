@@ -1,4 +1,4 @@
-<details className="collapse bg-base-200" data-svelte-h="svelte-ueguxa">
+<details className="collapse bg-base-200">
   <summary className="collapse-title text-xl font-medium">
     Click to open/close
   </summary>

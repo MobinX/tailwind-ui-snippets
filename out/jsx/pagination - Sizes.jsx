@@ -1,4 +1,4 @@
-<div className="flex flex-col gap-2 items-center" data-svelte-h="svelte-ir5bmf">
+<div className="flex flex-col gap-2 items-center">
   <div className="join">
     <button className="join-item btn btn-xs">1</button>
     <button className="join-item btn btn-xs btn-active">2</button>

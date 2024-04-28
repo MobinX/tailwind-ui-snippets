@@ -1,4 +1,4 @@
-<div className="card w-96 bg-base-100 shadow-xl" data-svelte-h="svelte-1jhynqq">
+<div className="card w-96 bg-base-100 shadow-xl">
   <div className="card-body">
     <div className="justify-end card-actions">
       <button className="btn btn-square btn-sm">

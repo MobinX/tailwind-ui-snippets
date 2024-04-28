@@ -1,4 +1,4 @@
-<footer className="grid-rows-2 p-10 footer bg-neutral text-neutral-content rounded" data-svelte-h="svelte-83bbpe">
+<footer className="grid-rows-2 p-10 footer bg-neutral text-neutral-content rounded">
   <nav>
     <h6 className="footer-title">Services</h6>
     <button className="link link-hover">Branding</button>

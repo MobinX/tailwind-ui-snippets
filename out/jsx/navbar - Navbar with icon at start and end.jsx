@@ -1,4 +1,4 @@
-<div className="navbar bg-base-100 shadow-xl rounded-box" data-svelte-h="svelte-o0lxa1">
+<div className="navbar bg-base-100 shadow-xl rounded-box">
   <div className="flex-none">
     <button className="btn btn-square btn-ghost">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current">

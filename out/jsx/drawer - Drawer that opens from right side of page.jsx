@@ -1,4 +1,4 @@
-<div className="drawer drawer-end h-56 rounded overflow-hidden" data-svelte-h="svelte-hw6fzj">
+<div className="drawer drawer-end h-56 rounded overflow-hidden">
   <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
   <div className="flex flex-col items-center justify-center drawer-content">
     <label htmlFor="my-drawer-4" className="btn btn-primary drawer-button">Open drawer</label>

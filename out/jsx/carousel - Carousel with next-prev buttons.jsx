@@ -1,4 +1,4 @@
-<div className="w-full carousel" data-svelte-h="svelte-hlimw5">
+<div className="w-full carousel">
   <div id="slide1" className="relative w-full carousel-item">
     <img src="/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" alt="Tailwind CSS slide example" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

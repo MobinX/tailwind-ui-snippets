@@ -1,4 +1,4 @@
-<div className="carousel carousel-center rounded-box" data-svelte-h="svelte-1crxgzs">
+<div className="carousel carousel-center rounded-box">
   <div className="carousel-item">
     <img src="/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Tailwind CSS slider" />
   </div>

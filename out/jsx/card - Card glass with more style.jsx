@@ -1,4 +1,4 @@
-<div className="card w-96 glass" data-svelte-h="svelte-11sivfk">
+<div className="card w-96 glass">
   <figure>
     <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" />
   </figure>

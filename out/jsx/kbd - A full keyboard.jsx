@@ -1,4 +1,4 @@
-<div className="overflow-x-auto" data-svelte-h="svelte-1eudf6l">
+<div className="overflow-x-auto">
   <div className="flex justify-center gap-1 w-full">
     <kbd className="kbd">q</kbd> <kbd className="kbd">w</kbd> <kbd className="kbd">e</kbd>
     <kbd className="kbd">r</kbd> <kbd className="kbd">t</kbd> <kbd className="kbd">y</kbd>

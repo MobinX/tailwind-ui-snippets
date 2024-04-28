@@ -1,4 +1,4 @@
-<div className="h-96 carousel carousel-vertical rounded-box" data-svelte-h="svelte-133i2jz">
+<div className="h-96 carousel carousel-vertical rounded-box">
   <div className="carousel-item h-full">
     <img src="/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Free Tailwind CSS Slider" />
   </div>

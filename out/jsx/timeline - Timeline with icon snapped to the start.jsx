@@ -1,4 +1,4 @@
-<ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical" data-svelte-h="svelte-dakvuy">
+<ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
   <li>
     <div className="timeline-middle">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">

@@ -1,4 +1,4 @@
-<div className="navbar bg-base-100 mb-40 shadow-xl rounded-box" data-svelte-h="svelte-j9snpn">
+<div className="navbar bg-base-100 mb-40 shadow-xl rounded-box">
   <div className="flex-1">
     <button className="btn btn-ghost text-xl">daisyUI</button>
   </div>

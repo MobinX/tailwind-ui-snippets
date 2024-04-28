@@ -1,4 +1,4 @@
-<div className="stack mb-4" data-svelte-h="svelte-i60m64">
+<div className="stack mb-4">
   <div className="shadow-md card bg-primary text-primary-content">
     <div className="card-body">
       <h2 className="card-title">Notification 1</h2>

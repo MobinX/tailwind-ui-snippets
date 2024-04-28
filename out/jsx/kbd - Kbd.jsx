@@ -1,1 +1,1 @@
-<kbd className="kbd" data-svelte-h="svelte-1qc0gcp">A</kbd>
+<kbd className="kbd">A</kbd>

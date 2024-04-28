@@ -1,3 +1,3 @@
-<div className="mockup-code" data-svelte-h="svelte-sm52yy">
+<div className="mockup-code">
   <pre><code>without prefix</code></pre>
 </div>

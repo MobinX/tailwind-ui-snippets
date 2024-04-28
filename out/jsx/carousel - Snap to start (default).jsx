@@ -1,4 +1,4 @@
-<div className="carousel rounded-box" data-svelte-h="svelte-ov686z">
+<div className="carousel rounded-box">
   <div className="carousel-item">
     <img src="/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Carousel slider" />
   </div>

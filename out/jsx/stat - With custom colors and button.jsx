@@ -1,4 +1,4 @@
-<div className="stats bg-primary text-primary-content" data-svelte-h="svelte-t53wjz">
+<div className="stats bg-primary text-primary-content">
   <div className="stat">
     <div className="stat-title">Account balance</div>
     <div className="stat-value">$89,400</div>

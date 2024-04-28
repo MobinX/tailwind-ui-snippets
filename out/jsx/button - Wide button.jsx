@@ -1,1 +1,1 @@
-<button className="btn btn-wide" data-svelte-h="svelte-1nce17c">Wide</button>
+<button className="btn btn-wide">Wide</button>

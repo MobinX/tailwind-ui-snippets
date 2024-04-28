@@ -1,4 +1,4 @@
-<div className="collapse bg-base-200" data-svelte-h="svelte-1t6oc6e">
+<div className="collapse bg-base-200">
   <input type="checkbox" />
   <div className="collapse-title text-xl font-medium">
     Click me to show/hide content

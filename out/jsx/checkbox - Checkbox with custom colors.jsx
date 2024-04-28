@@ -1,2 +1,1 @@
-<><input type="checkbox" checked={true} className="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]" />
-<input type="checkbox" checked={true} className="checkbox [--chkbg:oklch(var(--a))] [--chkfg:oklch(var(--p))]" /></>
+<input type="checkbox" checked={true} className="checkbox border-orange-400 checked:border-indigo-800 [--chkbg:theme(colors.indigo.600)] [--chkfg:orange]" />

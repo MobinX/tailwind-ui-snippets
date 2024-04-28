@@ -1,4 +1,4 @@
-<div className="join" data-svelte-h="svelte-m6i666">
+<div className="join">
   <button className="join-item btn">1</button>
   <button className="join-item btn">2</button>
   <button className="join-item btn btn-disabled">...</button>

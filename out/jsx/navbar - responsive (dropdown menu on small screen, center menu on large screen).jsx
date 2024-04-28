@@ -1,4 +1,4 @@
-<div className="navbar bg-base-100 mb-48 shadow-xl rounded-box" data-svelte-h="svelte-vgn36m">
+<div className="navbar bg-base-100 mb-48 shadow-xl rounded-box">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

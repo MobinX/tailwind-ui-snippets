@@ -1,3 +1,3 @@
-<div className="radial-progress text-primary" style={{ -Value: "70" }} role="progressbar" data-svelte-h="svelte-187x3cq">
+<div className="radial-progress text-primary" style={{ -Value: "70" }} role="progressbar">
   70%
 </div>

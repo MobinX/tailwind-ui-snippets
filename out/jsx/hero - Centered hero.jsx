@@ -1,4 +1,4 @@
-<div className="hero min-h-[30rem] rounded bg-base-200" data-svelte-h="svelte-b1oxtm">
+<div className="hero min-h-[30rem] rounded bg-base-200">
   <div className="text-center hero-content">
     <div className="max-w-md">
       <h3 className="text-5xl font-bold">Hello there</h3>

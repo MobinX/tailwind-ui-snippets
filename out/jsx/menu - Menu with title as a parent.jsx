@@ -1,4 +1,4 @@
-<ul className="menu bg-base-200 w-56 rounded-box" data-svelte-h="svelte-z3lfdl">
+<ul className="menu bg-base-200 w-56 rounded-box">
   <li>
     <h2 className="menu-title">Title</h2>
     <ul>
